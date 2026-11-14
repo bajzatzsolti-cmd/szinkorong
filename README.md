@@ -20,7 +20,9 @@ A Mérleg könnyű szintje súlyosztályokat használ (`content/suly.json`, terv
 a gép méri (`npm run image-props`, `content/kepjellemzok.json`), a szókincsben felülírható.
 **4a sprint (hang, első fele):** Hangoló plusz (kezdőhang, végső hang, szótagszám; feladatonként saját hanggal),
 ElevenLabs-hanggyártás (`npm run hang`, Aggie hangja), saját felvétel bármelyik klip helyett, Hangpróba a szülői menüben.
-A Hol van?, a Ha–akkor és a rímpárok tervezete jóváhagyásra vár: [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md).
+**4b sprint (hang, második fele):** Hol van? (saját rajzú, szemből nézett jelenetek), Ha–akkor (érvényes
+következtetések, ütköző képek kizárva), rímek a Hangoló plusz 3. szintjén; minden szöveg Aggie hangján (339 klip, 4,8 MB).
+A kézi tartalom: [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md) (jóváhagyva).
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 

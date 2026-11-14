@@ -54,6 +54,17 @@
   "kredit": 54,
   "generalva": "2026-11-14T13:43:35.995Z"
  },
+ "0099df3d": {
+  "fp": "60733e0a",
+  "szoveg": "A labda a két kosár között van.",
+  "azonositok": [
+   "holvan-labda-kosar-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.72,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:36.252Z"
+ },
  "00ba6f27": {
   "fp": "4de48fba",
   "szoveg": "olló",
@@ -109,6 +120,17 @@
   "kredit": 18,
   "generalva": "2026-11-14T13:29:23.797Z"
  },
+ "01e813c0": {
+  "fp": "8bc7e9cf",
+  "szoveg": "A kutya az ágytól balra van.",
+  "azonositok": [
+   "holvan-kutya-agy-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.56,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:19.409Z"
+ },
  "038515b9": {
   "fp": "12b742c6",
   "szoveg": "ananász",
@@ -142,6 +164,39 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:18.324Z"
  },
+ "098f30a2": {
+  "fp": "8db27b79",
+  "szoveg": "Ha hideg van, kesztyűt húzunk. Kint minden fehér, és befagyott a tó. Mit húzunk?",
+  "azonositok": [
+   "haakkor-fagy-kesztyu"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.92,
+  "kredit": 32,
+  "generalva": "2026-11-14T14:17:50.285Z"
+ },
+ "0b7f45d9": {
+  "fp": "c8b6c378",
+  "szoveg": "Koppints a képre, és meghallgatod, mit keress! A jel is megmutatja: az első hangot, az utolsó hangot, a rímet, vagy tapsold el a szót. Húzd a színes korongot a párja mellé!",
+  "azonositok": [
+   "utasitas-hangolo-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 11.92,
+  "kredit": 69,
+  "generalva": "2026-11-14T14:17:06.041Z"
+ },
+ "0ce11c08": {
+  "fp": "f152d205",
+  "szoveg": "A maci az ágytól balra van.",
+  "azonositok": [
+   "holvan-maci-agy-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.16,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:27.566Z"
+ },
  "0d82f9a1": {
   "fp": "e93dfd26",
   "szoveg": "vonat",
@@ -153,6 +208,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:08.792Z"
  },
+ "0dc96304": {
+  "fp": "6c4d3943",
+  "szoveg": "Ha nagyon meleg van, fagyit eszünk. Tűz a nap, mindenki izzad. Mit eszünk?",
+  "azonositok": [
+   "haakkor-meleg-fagyi"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.68,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:17:55.481Z"
+ },
  "0e3ed3ca": {
   "fp": "5d0f25a9",
   "szoveg": "autó",
@@ -163,6 +229,28 @@
   "hossz_mp": 0.72,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:08.791Z"
+ },
+ "0e6944ba": {
+  "fp": "2cf85737",
+  "szoveg": "A maci a kosár előtt van.",
+  "azonositok": [
+   "holvan-maci-kosar-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.84,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:32.617Z"
+ },
+ "0f7dc945": {
+  "fp": "7f86a43c",
+  "szoveg": "A kutya a doboz mellett van.",
+  "azonositok": [
+   "holvan-kutya-doboz-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.08,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:21.333Z"
  },
  "1098bfe8": {
   "fp": "8219c4a9",
@@ -241,6 +329,83 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:24.891Z"
  },
+ "19cb22a3": {
+  "fp": "7a094e4a",
+  "szoveg": "A maci a két doboz között van.",
+  "azonositok": [
+   "holvan-maci-doboz-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:29.596Z"
+ },
+ "1a740987": {
+  "fp": "f860d7a6",
+  "szoveg": "Ha éhes a nyuszi, répát eszik. Éhes a nyuszi. Mit eszik?",
+  "azonositok": [
+   "haakkor-nyuszi-repa"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.04,
+  "kredit": 22,
+  "generalva": "2026-11-14T14:17:42.731Z"
+ },
+ "1ae65208": {
+  "fp": "849d2627",
+  "szoveg": "Vagy vonattal utazunk, vagy repülővel. Repülővel nem utazunk. Mivel utazunk?",
+  "azonositok": [
+   "haakkor-vonat-repulo"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.12,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:18:07.376Z"
+ },
+ "1b92b8b4": {
+  "fp": "ec63979f",
+  "szoveg": "A cica az ágytól jobbra van.",
+  "azonositok": [
+   "holvan-cica-agy-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.48,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:11.929Z"
+ },
+ "1bb997f9": {
+  "fp": "9afb94ce",
+  "szoveg": "Ha hideg van, sapkát veszünk fel. Hideg van. Mit veszünk fel?",
+  "azonositok": [
+   "haakkor-hideg-sapka"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.28,
+  "kredit": 24,
+  "generalva": "2026-11-14T14:17:37.390Z"
+ },
+ "1c60c12f": {
+  "fp": "baeabe46",
+  "szoveg": "A maci a kosárban van.",
+  "azonositok": [
+   "holvan-maci-kosar-benne"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.84,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:30.948Z"
+ },
+ "1da3198e": {
+  "fp": "a1c0c1cf",
+  "szoveg": "A kutya az ágytól jobbra van.",
+  "azonositok": [
+   "holvan-kutya-agy-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.72,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:19.410Z"
+ },
  "1dc70751": {
   "fp": "76d6a5f8",
   "szoveg": "nyuszi",
@@ -262,6 +427,28 @@
   "hossz_mp": 0.72,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:23.188Z"
+ },
+ "1de3c019": {
+  "fp": "c732b9fc",
+  "szoveg": "A kutya a szék fölött van.",
+  "azonositok": [
+   "holvan-kutya-szek-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:15.261Z"
+ },
+ "1df89c2f": {
+  "fp": "39e62076",
+  "szoveg": "Ha éhes a kutya, csontot kap. Éhes a kutya. Mit kap?",
+  "azonositok": [
+   "haakkor-kutya-csont"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.56,
+  "kredit": 21,
+  "generalva": "2026-11-14T14:17:38.407Z"
  },
  "1ec37190": {
   "fp": "8cb1a1ad",
@@ -296,6 +483,17 @@
   "kredit": 43,
   "generalva": "2026-11-14T13:29:24.312Z"
  },
+ "20ab4628": {
+  "fp": "8cf3b697",
+  "szoveg": "Ha reggelizünk, vajas kenyeret eszünk. Reggel van, már ülünk az asztalnál. Mit eszünk?",
+  "azonositok": [
+   "haakkor-reggeli-kenyer"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.32,
+  "kredit": 34,
+  "generalva": "2026-11-14T14:17:52.852Z"
+ },
  "21409b21": {
   "fp": "cd30a16c",
   "szoveg": "Melyik végződik ugyanazzal a hanggal, mint ez:",
@@ -328,6 +526,39 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:43:54.184Z"
+ },
+ "245bad40": {
+  "fp": "97aacd71",
+  "szoveg": "Ha esik az eső, esernyőt viszünk. Esik az eső. Mit viszünk?",
+  "azonositok": [
+   "haakkor-eso-esernyo"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.6,
+  "kredit": 24,
+  "generalva": "2026-11-14T14:17:37.874Z"
+ },
+ "2474f81a": {
+  "fp": "c8e9f669",
+  "szoveg": "A maci a kosár fölött van.",
+  "azonositok": [
+   "holvan-maci-kosar-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.92,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:31.552Z"
+ },
+ "26b61915": {
+  "fp": "02e206ce",
+  "szoveg": "A cica a kosártól jobbra van.",
+  "azonositok": [
+   "holvan-cica-kosar-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.8,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:14.351Z"
  },
  "2823f8bb": {
   "fp": "3632eb5a",
@@ -362,6 +593,28 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:29:27.920Z"
  },
+ "2bfa4700": {
+  "fp": "841eb427",
+  "szoveg": "A cica a széken van.",
+  "azonositok": [
+   "holvan-cica-szek-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 8,
+  "generalva": "2026-11-14T14:17:06.966Z"
+ },
+ "2d43533c": {
+  "fp": "fd4e48df",
+  "szoveg": "Vagy narancsot hámozunk, vagy citromot. Citromot nem hámozunk. Mit hámozunk?",
+  "azonositok": [
+   "haakkor-narancs-citrom"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.95,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:18:11.791Z"
+ },
  "2d8189ee": {
   "fp": "537a5b95",
   "szoveg": "róka",
@@ -372,6 +625,28 @@
   "hossz_mp": 0.72,
   "kredit": 2,
   "generalva": "2026-11-14T13:43:50.440Z"
+ },
+ "2da44d35": {
+  "fp": "8f443950",
+  "szoveg": "Koppints a hangszóróra, és hallgasd meg, hol van! Figyelj a jobbra és a balra is! Húzd a színes korongot a jó kép mellé!",
+  "azonositok": [
+   "utasitas-holvan-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.92,
+  "kredit": 48,
+  "generalva": "2026-11-14T14:17:00.467Z"
+ },
+ "2df27109": {
+  "fp": "482b6d34",
+  "szoveg": "Ha levest eszünk, kanalat kérünk. Levest eszünk. Mit kérünk?",
+  "azonositok": [
+   "haakkor-leves-kanal"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.52,
+  "kredit": 24,
+  "generalva": "2026-11-14T14:17:40.749Z"
  },
  "2f2493d3": {
   "fp": "9d3f213a",
@@ -395,6 +670,28 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:09.400Z"
  },
+ "30ba3087": {
+  "fp": "42132630",
+  "szoveg": "Ha álmosak vagyunk, ágyba bújunk. Álmosak vagyunk. Hová bújunk?",
+  "azonositok": [
+   "haakkor-almos-agy"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.2,
+  "kredit": 25,
+  "generalva": "2026-11-14T14:17:47.531Z"
+ },
+ "320f0d86": {
+  "fp": "dfb4e6b3",
+  "szoveg": "A kutya a kosár mögött van.",
+  "azonositok": [
+   "holvan-kutya-kosar-mogott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:24.750Z"
+ },
  "33130c49": {
   "fp": "7c48c32c",
   "szoveg": "hegedű",
@@ -417,6 +714,28 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:22.623Z"
  },
+ "384238ad": {
+  "fp": "30d6e156",
+  "szoveg": "A maci a doboz mellett van.",
+  "azonositok": [
+   "holvan-maci-doboz-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.84,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:28.690Z"
+ },
+ "38a160a0": {
+  "fp": "d3279291",
+  "szoveg": "A labda a kosár mögött van.",
+  "azonositok": [
+   "holvan-labda-kosar-mogott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.16,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:35.195Z"
+ },
  "38f43c3b": {
   "fp": "bb9680ea",
   "szoveg": "delfin",
@@ -438,6 +757,17 @@
   "hossz_mp": 0.63,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:00.678Z"
+ },
+ "39eb155a": {
+  "fp": "a82c794b",
+  "szoveg": "Ha a méhecske virágot talál, mézet készít. A méhecske rászállt egy virágra. Mit készít?",
+  "azonositok": [
+   "haakkor-meh-mez"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.04,
+  "kredit": 35,
+  "generalva": "2026-11-14T14:17:50.531Z"
  },
  "3a3eb26b": {
   "fp": "32cc85ec",
@@ -504,6 +834,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:34.016Z"
+ },
+ "3df786f2": {
+  "fp": "2bb37c37",
+  "szoveg": "Ha a tyúk tojik, tojást találunk a fészekben. Kotkodácsol a tyúk a fészkén. Mit találunk?",
+  "azonositok": [
+   "haakkor-tyuk-tojas"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.88,
+  "kredit": 36,
+  "generalva": "2026-11-14T14:17:53.729Z"
  },
  "3f0ab221": {
   "fp": "f755b158",
@@ -593,6 +934,28 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:24.879Z"
  },
+ "428875e5": {
+  "fp": "5099f470",
+  "szoveg": "A cica a kosárban van.",
+  "azonositok": [
+   "holvan-cica-kosar-benne"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:12.353Z"
+ },
+ "42d648eb": {
+  "fp": "7f66d910",
+  "szoveg": "Vagy almát eszünk, vagy banánt. Almát nem eszünk. Mit eszünk?",
+  "azonositok": [
+   "haakkor-alma-banan"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4,
+  "kredit": 24,
+  "generalva": "2026-11-14T14:18:02.526Z"
+ },
  "4398bbd3": {
   "fp": "7812737c",
   "szoveg": "sapka",
@@ -626,6 +989,28 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:07.273Z"
  },
+ "45d2f7e4": {
+  "fp": "69e68c8b",
+  "szoveg": "Ha esik az eső, csizmát húzunk. Kopognak az esőcseppek az ablakon. Mit húzunk?",
+  "azonositok": [
+   "haakkor-kopog-csizma"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.24,
+  "kredit": 31,
+  "generalva": "2026-11-14T14:17:50.285Z"
+ },
+ "45f0a3db": {
+  "fp": "6a18cc2e",
+  "szoveg": "Koppints a hangszóróra, és hallgasd meg, hol van! Keresd meg a képet, és húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-holvan-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.64,
+  "kredit": 41,
+  "generalva": "2026-11-14T14:16:59.150Z"
+ },
  "46054d64": {
   "fp": "3c2b8071",
   "szoveg": "kabát",
@@ -647,6 +1032,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:01.302Z"
+ },
+ "473e08c6": {
+  "fp": "780bf479",
+  "szoveg": "A cica a két ágy között van.",
+  "azonositok": [
+   "holvan-cica-agy-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.72,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:11.028Z"
  },
  "47a8ae9b": {
   "fp": "082983aa",
@@ -683,6 +1079,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:43:55.899Z"
  },
+ "48affda9": {
+  "fp": "910bbee8",
+  "szoveg": "A maci vagy a széken ül, vagy az ágyon. A széken nem ül. Hol ül?",
+  "azonositok": [
+   "haakkor-szek-agy"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.08,
+  "kredit": 26,
+  "generalva": "2026-11-14T14:18:04.547Z"
+ },
  "497531d8": {
   "fp": "56d5fb75",
   "szoveg": "kanál",
@@ -694,6 +1101,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:29.691Z"
  },
+ "4c2e4d27": {
+  "fp": "8e61cf4a",
+  "szoveg": "Ha levelet kapunk, a postaládában találjuk. Levelet kaptunk. Hol találjuk?",
+  "azonositok": [
+   "haakkor-level-postalada"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:17:47.026Z"
+ },
  "4c4d1775": {
   "fp": "9d3f669c",
   "szoveg": "tyúk",
@@ -704,6 +1122,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:43:55.899Z"
+ },
+ "4d769f7b": {
+  "fp": "ca281680",
+  "szoveg": "A kutya a két doboz között van.",
+  "azonositok": [
+   "holvan-kutya-doboz-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.39,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:22.430Z"
  },
  "4f1cf882": {
   "fp": "95254a4b",
@@ -727,6 +1156,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:02.379Z"
  },
+ "4fcb92e7": {
+  "fp": "3347974c",
+  "szoveg": "A kutya a szék előtt van.",
+  "azonositok": [
+   "holvan-kutya-szek-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:16.716Z"
+ },
  "4ff5ca4f": {
   "fp": "823f4e3e",
   "szoveg": "kanapé",
@@ -749,6 +1189,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:29:26.822Z"
  },
+ "5225b412": {
+  "fp": "0e0fb5c7",
+  "szoveg": "A kutya a kosár fölött van.",
+  "azonositok": [
+   "holvan-kutya-kosar-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:23.381Z"
+ },
  "52ab799e": {
   "fp": "c57eb8b5",
   "szoveg": "Mi hiányzik a kérdőjel helyéről? Figyeld meg a sorokat és az oszlopokat! Húzd a színes korongot a hiányzó kép mellé!",
@@ -762,6 +1213,61 @@
   "kredit": 46,
   "generalva": "2026-11-14T13:43:39.252Z"
  },
+ "52cd9d60": {
+  "fp": "3ee30463",
+  "szoveg": "Koppints a hangszóróra, hallgasd meg figyelmesen, és találd ki a választ! Húzd a színes korongot a jó kép mellé!",
+  "azonositok": [
+   "utasitas-haakkor-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.68,
+  "kredit": 45,
+  "generalva": "2026-11-14T14:17:03.620Z"
+ },
+ "5303fae7": {
+  "fp": "12d3c3c0",
+  "szoveg": "A kutya a kosárban van.",
+  "azonositok": [
+   "holvan-kutya-kosar-benne"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:23.083Z"
+ },
+ "54a2d758": {
+  "fp": "872f665f",
+  "szoveg": "Ha fogat mosunk, elővesszük a fogkefét. Fogat mosunk. Mit veszünk elő?",
+  "azonositok": [
+   "haakkor-fogmosas-fogkefe"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.56,
+  "kredit": 28,
+  "generalva": "2026-11-14T14:17:40.418Z"
+ },
+ "54db0fed": {
+  "fp": "7ecf2284",
+  "szoveg": "Ha születésnapi zsúr van, lufit fújunk. Ma van a maci zsúrja, jönnek a vendégek. Mit fújunk?",
+  "azonositok": [
+   "haakkor-szulinap-lufi"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.8,
+  "kredit": 37,
+  "generalva": "2026-11-14T14:18:00.182Z"
+ },
+ "5572b462": {
+  "fp": "5a693f71",
+  "szoveg": "A kutya a doboz előtt van.",
+  "azonositok": [
+   "holvan-kutya-doboz-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.84,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:21.826Z"
+ },
  "55bcb506": {
   "fp": "663e865f",
   "szoveg": "Melyik ugyanaz az alakzat, csak elforgatva? Húzd mellé a színes korongot!",
@@ -772,6 +1278,28 @@
   "hossz_mp": 5.92,
   "kredit": 29,
   "generalva": "2026-11-14T13:43:35.434Z"
+ },
+ "55c12be1": {
+  "fp": "40d59044",
+  "szoveg": "A cica az ágy előtt van.",
+  "azonositok": [
+   "holvan-cica-agy-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.08,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:10.649Z"
+ },
+ "56d406bf": {
+  "fp": "e9798b92",
+  "szoveg": "A maci a dobozban van.",
+  "azonositok": [
+   "holvan-maci-doboz-benne"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.76,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:27.567Z"
  },
  "57a170fb": {
   "fp": "6d695730",
@@ -784,6 +1312,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:29.880Z"
  },
+ "5baae36f": {
+  "fp": "5a2fd32e",
+  "szoveg": "A labda a kosár mellett van.",
+  "azonositok": [
+   "holvan-labda-kosar-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:34.792Z"
+ },
  "5bb1294f": {
   "fp": "4ae176dc",
   "szoveg": "vödör",
@@ -794,6 +1333,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:23.057Z"
+ },
+ "5bbf1c2a": {
+  "fp": "024952dd",
+  "szoveg": "A maci a doboz fölött van.",
+  "azonositok": [
+   "holvan-maci-doboz-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.99,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:28.542Z"
  },
  "5bed8e8e": {
   "fp": "41b49497",
@@ -828,6 +1378,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:43:57.388Z"
  },
+ "5d4a5456": {
+  "fp": "5e0a4d19",
+  "szoveg": "A kutya a széktől balra van.",
+  "azonositok": [
+   "holvan-kutya-szek-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.72,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:17.482Z"
+ },
  "5de33923": {
   "fp": "03fa41d4",
   "szoveg": "óra",
@@ -838,6 +1399,39 @@
   "hossz_mp": 0.56,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:23.979Z"
+ },
+ "5fb7a965": {
+  "fp": "877c35f8",
+  "szoveg": "A kutya a kosár mellett van.",
+  "azonositok": [
+   "holvan-kutya-kosar-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.4,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:23.967Z"
+ },
+ "5fc0b85c": {
+  "fp": "5e0495a5",
+  "szoveg": "A labda a kosár fölött van.",
+  "azonositok": [
+   "holvan-labda-kosar-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.16,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:34.147Z"
+ },
+ "5fda6c1e": {
+  "fp": "cdd8afb1",
+  "szoveg": "A cica az ágy mellett van.",
+  "azonositok": [
+   "holvan-cica-agy-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.48,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:10.647Z"
  },
  "5ffb6539": {
   "fp": "0e1fea28",
@@ -861,6 +1455,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:25.431Z"
  },
+ "6063d8d8": {
+  "fp": "13507929",
+  "szoveg": "A kutya a két ágy között van.",
+  "azonositok": [
+   "holvan-kutya-agy-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.48,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:18.765Z"
+ },
  "61ba76f9": {
   "fp": "c6d14a32",
   "szoveg": "kéz",
@@ -882,6 +1487,50 @@
   "hossz_mp": 1.12,
   "kredit": 4,
   "generalva": "2026-11-14T13:44:20.979Z"
+ },
+ "61d88574": {
+  "fp": "61fcb6f7",
+  "szoveg": "A cica a kosár fölött van.",
+  "azonositok": [
+   "holvan-cica-kosar-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.4,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:13.039Z"
+ },
+ "623aad85": {
+  "fp": "6ce1908c",
+  "szoveg": "A cica a két kosár között van.",
+  "azonositok": [
+   "holvan-cica-kosar-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.56,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:14.072Z"
+ },
+ "6255a221": {
+  "fp": "17cfd978",
+  "szoveg": "Ha valami magasan van, létrára állunk. A könyv a legfelső polcon van. Mire állunk?",
+  "azonositok": [
+   "haakkor-polc-letra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.04,
+  "kredit": 33,
+  "generalva": "2026-11-14T14:18:00.616Z"
+ },
+ "6363d9f3": {
+  "fp": "8869e136",
+  "szoveg": "A maci a két kosár között van.",
+  "azonositok": [
+   "holvan-maci-kosar-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:33.534Z"
  },
  "639dc774": {
   "fp": "cf889819",
@@ -916,6 +1565,39 @@
   "kredit": 1,
   "generalva": "2026-11-14T13:44:20.181Z"
  },
+ "652072ec": {
+  "fp": "19778f09",
+  "szoveg": "A cica a széktől balra van.",
+  "azonositok": [
+   "holvan-cica-szek-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.88,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:08.609Z"
+ },
+ "653aae9d": {
+  "fp": "7ad487e0",
+  "szoveg": "A cica a szék alatt van.",
+  "azonositok": [
+   "holvan-cica-szek-alatt"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.4,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:05.778Z"
+ },
+ "65c1bef3": {
+  "fp": "877f70f4",
+  "szoveg": "A maci a doboztól jobbra van.",
+  "azonositok": [
+   "holvan-maci-doboz-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.4,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:30.262Z"
+ },
  "6a837106": {
   "fp": "5d9b95c9",
   "szoveg": "csizma",
@@ -948,6 +1630,17 @@
   "hossz_mp": 0.88,
   "kredit": 4,
   "generalva": "2026-11-14T13:44:32.477Z"
+ },
+ "6c7042c6": {
+  "fp": "eb510ff1",
+  "szoveg": "A maci vagy trombitál, vagy dobol. Dobolni nem fog. Mit fúj?",
+  "azonositok": [
+   "haakkor-trombita-dob"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.2,
+  "kredit": 24,
+  "generalva": "2026-11-14T14:18:10.032Z"
  },
  "6c7e8a17": {
   "fp": "24ea4ff6",
@@ -993,6 +1686,17 @@
   "kredit": 4,
   "generalva": "2026-11-14T13:44:09.456Z"
  },
+ "6de8d1d6": {
+  "fp": "c0fe2575",
+  "szoveg": "A maci az ágytól jobbra van.",
+  "azonositok": [
+   "holvan-maci-agy-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.8,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:27.345Z"
+ },
  "6f74e22c": {
   "fp": "14ee4f7b",
   "szoveg": "bárány",
@@ -1003,6 +1707,17 @@
   "hossz_mp": 0.72,
   "kredit": 3,
   "generalva": "2026-11-14T13:43:52.058Z"
+ },
+ "6fb854b5": {
+  "fp": "104d4ad6",
+  "szoveg": "Ha szomjasak a virágok, vödörrel hozunk nekik vizet. Lekonyultak a virágok. Mivel hozunk vizet?",
+  "azonositok": [
+   "haakkor-virag-vodor"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.28,
+  "kredit": 38,
+  "generalva": "2026-11-14T14:18:03.190Z"
  },
  "7038d713": {
   "fp": "3721d9ae",
@@ -1048,6 +1763,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:43:59.106Z"
  },
+ "7432443a": {
+  "fp": "c55b18f7",
+  "szoveg": "A kutya a széken van.",
+  "azonositok": [
+   "holvan-kutya-szek-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.08,
+  "kredit": 8,
+  "generalva": "2026-11-14T14:17:15.473Z"
+ },
  "7499948f": {
   "fp": "59f25248",
   "szoveg": "zebra",
@@ -1082,6 +1808,17 @@
   "kredit": 41,
   "generalva": "2026-11-14T13:43:45.645Z"
  },
+ "76e6b062": {
+  "fp": "fe7c2be1",
+  "szoveg": "A cica a széktől jobbra van.",
+  "azonositok": [
+   "holvan-cica-szek-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.4,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:08.609Z"
+ },
  "7983df46": {
   "fp": "7ab0ae5f",
   "szoveg": "kalap",
@@ -1115,6 +1852,39 @@
   "kredit": 15,
   "generalva": "2026-11-14T13:29:25.900Z"
  },
+ "7ea64dee": {
+  "fp": "51069337",
+  "szoveg": "Vagy autóval megyünk, vagy busszal. Autóval nem megyünk. Mivel megyünk?",
+  "azonositok": [
+   "haakkor-auto-busz"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.38,
+  "kredit": 28,
+  "generalva": "2026-11-14T14:18:11.481Z"
+ },
+ "7f8ec520": {
+  "fp": "58e915f7",
+  "szoveg": "A maci a két ágy között van.",
+  "azonositok": [
+   "holvan-maci-agy-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.4,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:26.403Z"
+ },
+ "810a6527": {
+  "fp": "0661975e",
+  "szoveg": "A maci vagy hegedül, vagy szaxofonozik. Szaxofonozni nem fog. Min játszik?",
+  "azonositok": [
+   "haakkor-hegedu-szaxofon"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.32,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:18:12.394Z"
+ },
  "81fe88b4": {
   "fp": "265a084b",
   "szoveg": "tücsök",
@@ -1125,6 +1895,28 @@
   "hossz_mp": 0.71,
   "kredit": 3,
   "generalva": "2026-11-14T13:43:59.942Z"
+ },
+ "84c2482e": {
+  "fp": "af21bd55",
+  "szoveg": "A maci a kosár mögött van.",
+  "azonositok": [
+   "holvan-maci-kosar-mogott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.16,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:32.174Z"
+ },
+ "85331cff": {
+  "fp": "f2cf2fd2",
+  "szoveg": "Vagy gitározunk, vagy zongorázunk. Gitározni nem fogunk. Min játszunk?",
+  "azonositok": [
+   "haakkor-gitar-zongora"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.04,
+  "kredit": 28,
+  "generalva": "2026-11-14T14:18:05.704Z"
  },
  "8536fedf": {
   "fp": "827fcc4c",
@@ -1159,6 +1951,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:19.504Z"
  },
+ "886c6229": {
+  "fp": "25a72c36",
+  "szoveg": "Ha esik a hó, hóembert építünk. Esik a hó. Mit építünk?",
+  "azonositok": [
+   "haakkor-ho-hoember"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.92,
+  "kredit": 22,
+  "generalva": "2026-11-14T14:17:42.082Z"
+ },
  "88dfb8e2": {
   "fp": "336fd103",
   "szoveg": "víz",
@@ -1180,6 +1983,28 @@
   "hossz_mp": 5.28,
   "kredit": 31,
   "generalva": "2026-11-14T13:43:47.650Z"
+ },
+ "8a71ef7d": {
+  "fp": "ad13dd12",
+  "szoveg": "A maci a kosár mellett van.",
+  "azonositok": [
+   "holvan-maci-kosar-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.92,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:32.175Z"
+ },
+ "8bdd89ec": {
+  "fp": "8325c5d9",
+  "szoveg": "A kutya a szék mellett van.",
+  "azonositok": [
+   "holvan-kutya-szek-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:16.226Z"
  },
  "8c8137b9": {
   "fp": "23629c00",
@@ -1225,6 +2050,50 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:04.230Z"
  },
+ "8e25a11c": {
+  "fp": "5c089955",
+  "szoveg": "Ha zenélünk, a maci a dobot üti. Megszólal a zene, zenélünk. Mit üt a maci?",
+  "azonositok": [
+   "haakkor-zene-dob"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.64,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:17:56.313Z"
+ },
+ "8f29d89b": {
+  "fp": "5956e68c",
+  "szoveg": "A cica a szék fölött van.",
+  "azonositok": [
+   "holvan-cica-szek-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.56,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:05.780Z"
+ },
+ "8fdf52e1": {
+  "fp": "ac5ebadc",
+  "szoveg": "A cica a szék előtt van.",
+  "azonositok": [
+   "holvan-cica-szek-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.47,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:07.341Z"
+ },
+ "9113edf7": {
+  "fp": "7f69a888",
+  "szoveg": "A cica a kosár mellett van.",
+  "azonositok": [
+   "holvan-cica-kosar-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.48,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:12.942Z"
+ },
  "9225f456": {
   "fp": "b40c2c77",
   "szoveg": "vaj",
@@ -1257,6 +2126,17 @@
   "hossz_mp": 0.72,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:31.758Z"
+ },
+ "9491bccf": {
+  "fp": "0cb3e8fe",
+  "szoveg": "Ha szomjas a cica, tejet kap. Szomjas a cica. Mit kap?",
+  "azonositok": [
+   "haakkor-cica-tej"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.08,
+  "kredit": 22,
+  "generalva": "2026-11-14T14:17:44.917Z"
  },
  "9788893e": {
   "fp": "31400feb",
@@ -1291,6 +2171,28 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:04.986Z"
  },
+ "991d10d8": {
+  "fp": "bc5bbb67",
+  "szoveg": "Vagy biciklivel megyünk, vagy busszal. Busszal nem megyünk. Mivel megyünk?",
+  "azonositok": [
+   "haakkor-bicikli-busz"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.8,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:18:05.396Z"
+ },
+ "996d127a": {
+  "fp": "a45cb003",
+  "szoveg": "Ha beesteledik, feljön a hold. Lement a nap, és sötét lett. Mi jön fel?",
+  "azonositok": [
+   "haakkor-este-hold"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.6,
+  "kredit": 28,
+  "generalva": "2026-11-14T14:17:57.677Z"
+ },
  "9a7ac871": {
   "fp": "f8d5690a",
   "szoveg": "levél",
@@ -1312,6 +2214,39 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:06.430Z"
+ },
+ "9e9773d0": {
+  "fp": "51008c2b",
+  "szoveg": "Vagy dinnyét vágunk fel, vagy ananászt. Ananászt nem vágunk fel. Mit vágunk fel?",
+  "azonositok": [
+   "haakkor-dinnye-ananasz"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.84,
+  "kredit": 32,
+  "generalva": "2026-11-14T14:18:14.252Z"
+ },
+ "9fab2fb0": {
+  "fp": "6f0dbf5b",
+  "szoveg": "Ha piszkos a padló, söprűt veszünk elő. Morzsás lett a padló. Mit veszünk elő?",
+  "azonositok": [
+   "haakkor-morzsa-sepru"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.52,
+  "kredit": 31,
+  "generalva": "2026-11-14T14:18:01.344Z"
+ },
+ "a00cd1ed": {
+  "fp": "2616cfd4",
+  "szoveg": "A kutya az ágy fölött van.",
+  "azonositok": [
+   "holvan-kutya-agy-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:17.979Z"
  },
  "a0a20ec5": {
   "fp": "f460c564",
@@ -1345,6 +2280,39 @@
   "hossz_mp": 0.56,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:22.334Z"
+ },
+ "a331ca18": {
+  "fp": "0f3364ef",
+  "szoveg": "Vagy sapkát veszünk fel, vagy kalapot. Kalapot nem veszünk fel. Mit veszünk fel?",
+  "azonositok": [
+   "haakkor-sapka-kalap"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.76,
+  "kredit": 32,
+  "generalva": "2026-11-14T14:18:03.579Z"
+ },
+ "a334599b": {
+  "fp": "504295e4",
+  "szoveg": "A cica az ágy fölött van.",
+  "azonositok": [
+   "holvan-cica-agy-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:09.479Z"
+ },
+ "a363b84b": {
+  "fp": "3daca18a",
+  "szoveg": "Vagy cipőt húzunk, vagy csizmát. Csizmát nem húzunk. Mit húzunk?",
+  "azonositok": [
+   "haakkor-cipo-csizma"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.36,
+  "kredit": 26,
+  "generalva": "2026-11-14T14:18:09.486Z"
  },
  "a384b349": {
   "fp": "d3b28024",
@@ -1412,6 +2380,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:30.823Z"
  },
+ "a88417f2": {
+  "fp": "a1f4ad2b",
+  "szoveg": "A kutya a doboz fölött van.",
+  "azonositok": [
+   "holvan-kutya-doboz-folott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:20.754Z"
+ },
  "aa2dcfaf": {
   "fp": "3e33f318",
   "szoveg": "ecset",
@@ -1423,6 +2402,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:29.061Z"
  },
+ "aa322365": {
+  "fp": "243a8ea2",
+  "szoveg": "Ha születésnap van, tortát sütünk. Ma van a maci születésnapja. Mit sütünk?",
+  "azonositok": [
+   "haakkor-szulinap-torta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.68,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:17:44.529Z"
+ },
  "aa5df419": {
   "fp": "11c269e6",
   "szoveg": "könyv",
@@ -1433,6 +2423,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:27.528Z"
+ },
+ "aa9adf4a": {
+  "fp": "5ef38543",
+  "szoveg": "A maci a doboz előtt van.",
+  "azonositok": [
+   "holvan-maci-doboz-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.44,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:29.513Z"
  },
  "aab20feb": {
   "fp": "e29431b2",
@@ -1501,6 +2502,17 @@
   "kredit": 31,
   "generalva": "2026-11-14T13:43:30.021Z"
  },
+ "ad4cd758": {
+  "fp": "a30fe44f",
+  "szoveg": "A maci az ágy mellett van.",
+  "azonositok": [
+   "holvan-maci-agy-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.14,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:25.922Z"
+ },
  "adc649b8": {
   "fp": "edfadbf3",
   "szoveg": "hold",
@@ -1511,6 +2523,17 @@
   "hossz_mp": 0.56,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:16.313Z"
+ },
+ "ae7f1c50": {
+  "fp": "cc922fdb",
+  "szoveg": "Koppints a hangszóróra, hallgasd meg, és találd ki a választ! Húzd a színes korongot a jó kép mellé!",
+  "azonositok": [
+   "utasitas-haakkor-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.4,
+  "kredit": 40,
+  "generalva": "2026-11-14T14:17:01.655Z"
  },
  "aea58d84": {
   "fp": "89d403a9",
@@ -1523,6 +2546,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:30.431Z"
  },
+ "aea96522": {
+  "fp": "ab23684b",
+  "szoveg": "Vagy tortát eszünk, vagy fánkot. Tortát nem eszünk. Mit eszünk?",
+  "azonositok": [
+   "haakkor-torta-fank"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.12,
+  "kredit": 25,
+  "generalva": "2026-11-14T14:18:06.730Z"
+ },
  "b18688da": {
   "fp": "cc0d50d7",
   "szoveg": "postaláda",
@@ -1534,6 +2568,17 @@
   "kredit": 4,
   "generalva": "2026-11-14T13:44:25.920Z"
  },
+ "b1a15d8b": {
+  "fp": "7a008d12",
+  "szoveg": "A maci az ágy előtt van.",
+  "azonositok": [
+   "holvan-maci-agy-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.48,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:26.116Z"
+ },
  "b2937ae8": {
   "fp": "06d8c1b7",
   "szoveg": "szék",
@@ -1544,6 +2589,17 @@
   "hossz_mp": 0.56,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:26.677Z"
+ },
+ "b356c35f": {
+  "fp": "4802d47e",
+  "szoveg": "A maci az ágy alatt van.",
+  "azonositok": [
+   "holvan-maci-agy-alatt"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.09,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:24.563Z"
  },
  "b5bfab5f": {
   "fp": "ac03fba4",
@@ -1622,6 +2678,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:29:28.325Z"
  },
+ "bb33fb84": {
+  "fp": "8fb9d6b9",
+  "szoveg": "Vagy epret szedünk, vagy cseresznyét. Epret nem szedünk. Mit szedünk?",
+  "azonositok": [
+   "haakkor-eper-cseresznye"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.32,
+  "kredit": 28,
+  "generalva": "2026-11-14T14:18:09.487Z"
+ },
  "bba80a01": {
   "fp": "cf866ee6",
   "szoveg": "krumpli",
@@ -1654,6 +2721,17 @@
   "hossz_mp": 0.86,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:18.950Z"
+ },
+ "c0461ce8": {
+  "fp": "941ff235",
+  "szoveg": "A kutya az ágyon van.",
+  "azonositok": [
+   "holvan-kutya-agy-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.98,
+  "kredit": 8,
+  "generalva": "2026-11-14T14:17:17.980Z"
  },
  "c2386544": {
   "fp": "264894dd",
@@ -1699,6 +2777,17 @@
   "kredit": 46,
   "generalva": "2026-11-14T13:43:33.074Z"
  },
+ "c4b453a2": {
+  "fp": "f09e7019",
+  "szoveg": "Vagy ceruzával rajzolunk, vagy ecsettel festünk. Ecsetet nem veszünk elő. Mivel rajzolunk?",
+  "azonositok": [
+   "haakkor-ceruza-ecset"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.72,
+  "kredit": 36,
+  "generalva": "2026-11-14T14:18:08.261Z"
+ },
  "c59fb253": {
   "fp": "92176012",
   "szoveg": "maci",
@@ -1710,6 +2799,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:18.003Z"
  },
+ "c6019cde": {
+  "fp": "c83c853f",
+  "szoveg": "A cica az ágytól balra van.",
+  "azonositok": [
+   "holvan-cica-agy-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.72,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:11.931Z"
+ },
  "c6355d1e": {
   "fp": "f1266121",
   "szoveg": "cseresznye",
@@ -1720,6 +2820,17 @@
   "hossz_mp": 0.96,
   "kredit": 4,
   "generalva": "2026-11-14T13:44:01.495Z"
+ },
+ "c6862589": {
+  "fp": "fafa1cc4",
+  "szoveg": "A kutya a dobozon van.",
+  "azonositok": [
+   "holvan-kutya-doboz-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.68,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:20.332Z"
  },
  "c694d6f6": {
   "fp": "9ab1c565",
@@ -1764,6 +2875,39 @@
   "hossz_mp": 0.64,
   "kredit": 4,
   "generalva": "2026-11-14T13:29:27.420Z"
+ },
+ "c91f7c13": {
+  "fp": "b989ee68",
+  "szoveg": "Ha zárva van az ajtó, kulcs kell hozzá. Zárva van az ajtó. Mi kell hozzá?",
+  "azonositok": [
+   "haakkor-ajto-kulcs"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.6,
+  "kredit": 29,
+  "generalva": "2026-11-14T14:17:42.730Z"
+ },
+ "c992b51d": {
+  "fp": "a12cb588",
+  "szoveg": "A cica a kosártól balra van.",
+  "azonositok": [
+   "holvan-cica-kosar-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 3.04,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:14.980Z"
+ },
+ "ca3cfd95": {
+  "fp": "5c4b2cc4",
+  "szoveg": "Melyik kép rímel erre:",
+  "azonositok": [
+   "hangolo-rim"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.84,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:04.578Z"
  },
  "caf08472": {
   "fp": "fc919c03",
@@ -1831,6 +2975,28 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:43:56.927Z"
  },
+ "ce44892b": {
+  "fp": "3b0cee20",
+  "szoveg": "Koppints a hangszóróra, és hallgasd meg, hol van! Figyelj, kétféle tárgy is van! Húzd a színes korongot a jó kép mellé!",
+  "azonositok": [
+   "utasitas-holvan-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 8.32,
+  "kredit": 48,
+  "generalva": "2026-11-14T14:17:00.211Z"
+ },
+ "d084800c": {
+  "fp": "a55a73d1",
+  "szoveg": "A kutya a széktől jobbra van.",
+  "azonositok": [
+   "holvan-kutya-szek-jobbra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:16.717Z"
+ },
  "d0b6311f": {
   "fp": "19e3c4ba",
   "szoveg": "kecske",
@@ -1853,6 +3019,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:43:54.991Z"
  },
+ "d211756e": {
+  "fp": "79c11e25",
+  "szoveg": "A cica az ágyon van.",
+  "azonositok": [
+   "holvan-cica-agy-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.08,
+  "kredit": 8,
+  "generalva": "2026-11-14T14:17:09.796Z"
+ },
  "d30c088f": {
   "fp": "7b8dbb56",
   "szoveg": "Minden sorban és minden oszlopban minden kép egyszer van. Melyik kép hiányzik a kérdőjel helyéről? Húzd mellé a színes korongot!",
@@ -1864,6 +3041,17 @@
   "hossz_mp": 10.4,
   "kredit": 51,
   "generalva": "2026-11-14T13:43:42.859Z"
+ },
+ "d351591e": {
+  "fp": "6c949689",
+  "szoveg": "A cica a szék mellett van.",
+  "azonositok": [
+   "holvan-cica-szek-mellett"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.32,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:07.342Z"
  },
  "d4b7f08f": {
   "fp": "87949b82",
@@ -1887,6 +3075,17 @@
   "kredit": 1,
   "generalva": "2026-11-14T13:43:52.058Z"
  },
+ "d65335e6": {
+  "fp": "4e472d87",
+  "szoveg": "A cica a két szék között van.",
+  "azonositok": [
+   "holvan-cica-szek-kozott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.64,
+  "kredit": 12,
+  "generalva": "2026-11-14T14:17:08.276Z"
+ },
  "d6cc8cbb": {
   "fp": "5742c568",
   "szoveg": "méz",
@@ -1897,17 +3096,6 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:05.046Z"
- },
- "d89d23c3": {
-  "fp": "ac71d8c0",
-  "szoveg": "Koppints a képre, és meghallgatod, mit keress! A jel is megmutatja: az első hangot, az utolsó hangot, vagy tapsold el a szót. Húzd a színes korongot a párja mellé!",
-  "azonositok": [
-   "utasitas-hangolo-2"
-  ],
-  "modszer": "mondat",
-  "hossz_mp": 10.56,
-  "kredit": 65,
-  "generalva": "2026-11-14T13:29:25.899Z"
  },
  "da6394f6": {
   "fp": "23a7ab27",
@@ -1975,6 +3163,39 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:13.993Z"
  },
+ "ddcd7f04": {
+  "fp": "037b5975",
+  "szoveg": "A cica a kosár előtt van.",
+  "azonositok": [
+   "holvan-cica-kosar-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:13.542Z"
+ },
+ "de252be5": {
+  "fp": "cb2489d8",
+  "szoveg": "Ha sír a kisbaba, cumisüveget kap. Sír a kisbaba. Mit kap?",
+  "azonositok": [
+   "haakkor-baba-cumisuveg"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.88,
+  "kredit": 23,
+  "generalva": "2026-11-14T14:17:45.175Z"
+ },
+ "dea56f18": {
+  "fp": "7b07e88d",
+  "szoveg": "Ha a királylány bálba megy, koronát tesz a fejére. A királylány indul a bálba. Mit tesz a fejére?",
+  "azonositok": [
+   "haakkor-bal-korona"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.72,
+  "kredit": 39,
+  "generalva": "2026-11-14T14:17:57.092Z"
+ },
  "defd8329": {
   "fp": "c931e62a",
   "szoveg": "sín",
@@ -2007,6 +3228,17 @@
   "hossz_mp": 0.88,
   "kredit": 3,
   "generalva": "2026-11-14T13:44:10.624Z"
+ },
+ "e0f4e42d": {
+  "fp": "64b31bfa",
+  "szoveg": "A labda a kosárban van.",
+  "azonositok": [
+   "holvan-labda-kosar-benne"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:33.626Z"
  },
  "e4006bdc": {
   "fp": "6f3463d3",
@@ -2064,6 +3296,28 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:14.904Z"
  },
+ "e68a1281": {
+  "fp": "3b3e4a06",
+  "szoveg": "A maci a dobozon van.",
+  "azonositok": [
+   "holvan-maci-doboz-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.68,
+  "kredit": 8,
+  "generalva": "2026-11-14T14:17:28.401Z"
+ },
+ "e7379e47": {
+  "fp": "7c23cc2c",
+  "szoveg": "A kutya a dobozban van.",
+  "azonositok": [
+   "holvan-kutya-doboz-benne"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2,
+  "kredit": 9,
+  "generalva": "2026-11-14T14:17:20.128Z"
+ },
  "e8028468": {
   "fp": "6eda39d3",
   "szoveg": "Melyik kettő való egy csoportba? Húzd a színes korongot a társa mellé!",
@@ -2099,6 +3353,28 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:15.696Z"
  },
+ "e99945a2": {
+  "fp": "00848f19",
+  "szoveg": "Ha a kutya játszani akar, labdát dobunk neki. A kutya csóválja a farkát, és játszani hív. Mit dobunk neki?",
+  "azonositok": [
+   "haakkor-kutya-labda"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 8.4,
+  "kredit": 42,
+  "generalva": "2026-11-14T14:17:54.040Z"
+ },
+ "ea5eb253": {
+  "fp": "c6db06ce",
+  "szoveg": "A maci a doboztól balra van.",
+  "azonositok": [
+   "holvan-maci-doboz-balra"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.72,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:30.949Z"
+ },
  "eabf0b2a": {
   "fp": "689c8743",
   "szoveg": "hal",
@@ -2120,6 +3396,17 @@
   "hossz_mp": 0.96,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:17.279Z"
+ },
+ "ec089ce6": {
+  "fp": "0db2e227",
+  "szoveg": "A kutya a doboz mögött van.",
+  "azonositok": [
+   "holvan-kutya-doboz-mogott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 11,
+  "generalva": "2026-11-14T14:17:21.827Z"
  },
  "ec15f601": {
   "fp": "c11650b2",
@@ -2156,6 +3443,28 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:43:59.944Z"
  },
+ "eddac99d": {
+  "fp": "a6d91448",
+  "szoveg": "A cica az ágy alatt van.",
+  "azonositok": [
+   "holvan-cica-agy-alatt"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.24,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:09.331Z"
+ },
+ "eeb08000": {
+  "fp": "f92f7b53",
+  "szoveg": "A maci az ágyon van.",
+  "azonositok": [
+   "holvan-maci-agy-rajta"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.76,
+  "kredit": 8,
+  "generalva": "2026-11-14T14:17:25.205Z"
+ },
  "eee029e7": {
   "fp": "246216b6",
   "szoveg": "bolygó",
@@ -2166,6 +3475,39 @@
   "hossz_mp": 0.72,
   "kredit": 3,
   "generalva": "2026-11-14T13:44:17.730Z"
+ },
+ "eef6d825": {
+  "fp": "ba0568c0",
+  "szoveg": "Ha eső után kisüt a nap, szivárvány lesz az égen. Elállt az eső, és kisütött a nap. Mi lesz az égen?",
+  "azonositok": [
+   "haakkor-eso-szivarvany"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.28,
+  "kredit": 40,
+  "generalva": "2026-11-14T14:17:59.253Z"
+ },
+ "ef158fa3": {
+  "fp": "556d68b2",
+  "szoveg": "Ha rajzolni akarunk, ceruzát veszünk elő. Rajzolni akarunk. Mit veszünk elő?",
+  "azonositok": [
+   "haakkor-rajz-ceruza"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.08,
+  "kredit": 30,
+  "generalva": "2026-11-14T14:17:47.297Z"
+ },
+ "f0f394ee": {
+  "fp": "c72f7457",
+  "szoveg": "Koppints a hangszóróra! Figyelj jól: vagy az egyik, vagy a másik. Találd ki, melyik! Húzd a színes korongot a jó kép mellé!",
+  "azonositok": [
+   "utasitas-haakkor-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 9.12,
+  "kredit": 49,
+  "generalva": "2026-11-14T14:17:04.332Z"
  },
  "f184d3df": {
   "fp": "95850e14",
@@ -2277,6 +3619,17 @@
   "kredit": 4,
   "generalva": "2026-11-14T13:44:32.262Z"
  },
+ "fa010fdc": {
+  "fp": "dac8373b",
+  "szoveg": "A labda a kosár előtt van.",
+  "azonositok": [
+   "holvan-labda-kosar-elott"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.92,
+  "kredit": 10,
+  "generalva": "2026-11-14T14:17:35.195Z"
+ },
  "fa163c88": {
   "fp": "449b753d",
   "szoveg": "elefánt",
@@ -2331,6 +3684,17 @@
   "hossz_mp": 0.96,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:33.219Z"
+ },
+ "fbb5b6be": {
+  "fp": "e8d4415b",
+  "szoveg": "Ha sötét van, gyertyát gyújtunk. Sötét van. Mit gyújtunk?",
+  "azonositok": [
+   "haakkor-sotet-gyertya"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.28,
+  "kredit": 23,
+  "generalva": "2026-11-14T14:17:39.588Z"
  },
  "fc1d64d4": {
   "fp": "dcb8d025",

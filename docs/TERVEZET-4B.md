@@ -10,12 +10,13 @@
 - Jobbra–balra: a képet néző gyerek szemszögéből (az ő jobb keze felé), nem a szereplőéből.
 - A „mellett” és a „jobbra/balra” nem lehet egy lapon ugyanazzal a tárggyal (a jobbra álló szereplő „mellett” is van).
 - Az „előtt” és a „mögött” rajza: takarással (előtt: a szereplő takarja a tárgyat; mögött: a tárgy takarja a szereplőt).
+- A tárgyak saját, szemből rajzolt képek (az OpenMoji doboza zárt, a széke és az ágya oldalnézetű, a kosarának füle van). A doboz csak a „benne” képen nyitott.
 
 **Szintbeosztás (javaslat):**
 
-- **1. szint (6 korong):** egy szereplő, egy tárgy, 6 viszony az 1. szintűekből és az előtt/mögött közül
-- **2. szint (8 korong):** egy szereplő, két tárgy (pl. szék és doboz), 4 + 4 viszony; egy tárgy egyedül 7 viszonynál többet nem tud
-- **3. szint (10 korong):** egy szereplő, két tárgy, 5 + 5 viszony, köztük jobbra és balra (a „mellett” ilyenkor kimarad)
+- **1. szint (6 korong):** egy szereplő, egy tárgy, 6 viszony az alatt, rajta, benne, mellett, fölött, előtt, mögött, között közül (amit a tárgy tud)
+- **2. szint (8 korong):** egy szereplő, két tárgy, 4 + 4 viszony ugyanezekből
+- **3. szint (10 korong):** egy szereplő, két tárgy, 5 + 5 viszony: tárgyanként jobbra és balra + 3 másik (a mellett és a mögött ilyenkor kimarad, mert oldalt állnak)
 
 **Viszonyok és rajzuk:**
 
@@ -27,15 +28,15 @@
 | mellett | 1. | a szereplő a tárgy mellett, a földön (a jobb–bal lapokon nem szerepel) |
 | fölött | 1. | a szereplő a tárgy fölött a levegőben, nem érinti [ELLENŐRIZNI: a lebegő cica/kutya furcsa lehet] |
 | előtt | 2. | a szereplő a tárgy előtt, takarja a tárgy alsó részét |
-| mögött | 2. | a szereplőnek csak a feje látszik ki a tárgy mögül |
-| között | 2. | két egyforma tárgy, a szereplő a kettő között |
+| mögött | 2. | a tárgy oldalt takarja a szereplőt (kb. a fele látszik); a széknél nincs, mert a szék szemből átlátszó a lábai között, és a mögötte álló szereplő ugyanúgy nézne ki, mint az alatta lévő |
+| között | 1. | két egyforma tárgy, a szereplő a kettő között |
 | jobbra | 3. | a szereplő a tárgytól jobbra, a KÉPET NÉZŐ gyerek jobb keze felé |
 | balra | 3. | a szereplő a tárgytól balra, a képet néző gyerek bal keze felé |
 
 **Szereplők:** 🐈 cica, 🐕 kutya, 🧸 maci, ⚽ labda.
-**Tárgyak:** szék (🪑 szék), ágy (🛏️ ágy), doboz ([ÚJ KÉP] doboz (OpenMoji 📦)), kosár ([ÚJ KÉP] kosár (OpenMoji 🧺)).
+**Tárgyak:** szék (**saját rajz (szemből)** [nincs a szókincsben]), ágy (**saját rajz (szemből)** [nincs a szókincsben]), doboz (**saját rajz (szemből)** [nincs a szókincsben]), kosár (**saját rajz (szemből)** [nincs a szókincsben]).
 
-**Mondatok (136 db), a cicával; a többi szereplővel ugyanígy:**
+**Mondatok (132 db), a cicával; a többi szereplővel ugyanígy:**
 
 | Azonosító | Mondat |
 |---|---|
@@ -43,7 +44,6 @@
 | `cica-szek-folott` | A cica a szék fölött van. |
 | `cica-szek-rajta` | A cica a széken van. |
 | `cica-szek-mellett` | A cica a szék mellett van. |
-| `cica-szek-mogott` | A cica a szék mögött van. |
 | `cica-szek-elott` | A cica a szék előtt van. |
 | `cica-szek-kozott` | A cica a két szék között van. |
 | `cica-szek-jobbra` | A cica a széktől jobbra van. |

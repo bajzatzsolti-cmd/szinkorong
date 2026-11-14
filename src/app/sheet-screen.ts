@@ -286,7 +286,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     let cols = 1;
     let rows = n;
     let rowH = (H - GAP * (rows - 1)) / rows;
-    if (rowH < ROW_MIN) {
+    if (rowH < (topic.answerRowMin ?? ROW_MIN)) {
       cols = 2;
       rows = Math.ceil(n / 2);
       rowH = (H - GAP * (rows - 1)) / rows;
@@ -295,9 +295,12 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     // Álló nézetben a megoldásoszlop szélesebb, ha a feladatok két oszlopban állnak (a feladat-képek bőven elférnek),
     // mert az árnyékok és a megoldás-képek különben túl kicsik lennének. Hosszú sorok (Sorminta) mellett a feladatoké a hely.
     const portrait = screen.clientHeight > screen.clientWidth;
-    const acol = topic.answerWide
-      ? cols === 2 ? '62%' : '54%'
-      : cols === 2 ? '48%' : portrait && topic.taskCols === 2 ? '42%' : '34%';
+    const acol =
+      topic.answerWide === 'max'
+        ? cols === 2 ? '76%' : '66%'
+        : topic.answerWide
+          ? cols === 2 ? '62%' : '54%'
+          : cols === 2 ? '48%' : portrait && topic.taskCols === 2 ? '42%' : '34%';
     paper.style.setProperty('--acol', acol);
     answersEl.classList.toggle('two-col', cols === 2);
 

@@ -5,7 +5,9 @@ import { arnyek } from './arnyek';
 import { betu } from './betu';
 import { csoport } from './csoport';
 import { felkep } from './felkep';
+import { haakkor } from './haakkor';
 import { hangolo } from './hangolo';
+import { holvan } from './holvan';
 import { kakukk } from './kakukk';
 import { kodfejto } from './kodfejto';
 import { matrix } from './matrix';
@@ -18,7 +20,7 @@ import type { Topic } from './types';
 
 /** A témakörök jegyzéke (a kezdőlapon ebben a sorrendben). Új témakör = új mappa + egy sor ide. */
 export const TOPICS: readonly Topic[] = [
-  arnyek, minta, par, csoport, betu, tukor, matrix, analogia, kakukk, sudoku, merleg, felkep, kodfejto, hangolo,
+  arnyek, minta, par, csoport, betu, tukor, matrix, analogia, kakukk, sudoku, merleg, felkep, kodfejto, holvan, haakkor, hangolo,
 ];
 
 export function getTopic(id: TopicId): Topic {

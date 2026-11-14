@@ -278,6 +278,10 @@ svg {
   stroke-width: 7;
   stroke-linecap: round;
 }
+/* Hallás utáni feladat képe: „hallgasd meg” */
+.vlisten {
+  fill: #2d7fe0;
+}
 /* Szókincs-képek: az .im a színes kép, az .sh az árnyék (az árnyék színe a currentColor) */
 .sh {
   color: #2d3a55;

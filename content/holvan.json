@@ -4,12 +4,13 @@
     "Egy lapon minden képen ugyanaz a szereplő; így csak a viszonyszó (és a tárgy) dönt (terv, 10. kérdés).",
     "Jobbra–balra: a képet néző gyerek szemszögéből (az ő jobb keze felé), nem a szereplőéből.",
     "A „mellett” és a „jobbra/balra” nem lehet egy lapon ugyanazzal a tárggyal (a jobbra álló szereplő „mellett” is van).",
-    "Az „előtt” és a „mögött” rajza: takarással (előtt: a szereplő takarja a tárgyat; mögött: a tárgy takarja a szereplőt)."
+    "Az „előtt” és a „mögött” rajza: takarással (előtt: a szereplő takarja a tárgyat; mögött: a tárgy takarja a szereplőt).",
+    "A tárgyak saját, szemből rajzolt képek (az OpenMoji doboza zárt, a széke és az ágya oldalnézetű, a kosarának füle van). A doboz csak a „benne” képen nyitott."
   ],
   "_szintek_javaslat": {
-    "1. szint (6 korong)": "egy szereplő, egy tárgy, 6 viszony az 1. szintűekből és az előtt/mögött közül",
-    "2. szint (8 korong)": "egy szereplő, két tárgy (pl. szék és doboz), 4 + 4 viszony; egy tárgy egyedül 7 viszonynál többet nem tud",
-    "3. szint (10 korong)": "egy szereplő, két tárgy, 5 + 5 viszony, köztük jobbra és balra (a „mellett” ilyenkor kimarad)"
+    "1. szint (6 korong)": "egy szereplő, egy tárgy, 6 viszony az alatt, rajta, benne, mellett, fölött, előtt, mögött, között közül (amit a tárgy tud)",
+    "2. szint (8 korong)": "egy szereplő, két tárgy, 4 + 4 viszony ugyanezekből",
+    "3. szint (10 korong)": "egy szereplő, két tárgy, 5 + 5 viszony: tárgyanként jobbra és balra + 3 másik (a mellett és a mögött ilyenkor kimarad, mert oldalt állnak)"
   },
   "szereplok": [
     "cica",
@@ -20,13 +21,12 @@
   "helyek": {
     "szek": {
       "nev": "szék",
-      "kep": "szek",
+      "kep": "saját rajz (szemből)",
       "viszonyok": [
         "alatt",
         "folott",
         "rajta",
         "mellett",
-        "mogott",
         "elott",
         "kozott",
         "jobbra",
@@ -35,7 +35,7 @@
     },
     "agy": {
       "nev": "ágy",
-      "kep": "agy",
+      "kep": "saját rajz (szemből)",
       "viszonyok": [
         "alatt",
         "folott",
@@ -49,7 +49,7 @@
     },
     "doboz": {
       "nev": "doboz",
-      "kep": "[ÚJ KÉP] doboz (OpenMoji 📦)",
+      "kep": "saját rajz (szemből)",
       "viszonyok": [
         "benne",
         "rajta",
@@ -64,7 +64,7 @@
     },
     "kosar": {
       "nev": "kosár",
-      "kep": "[ÚJ KÉP] kosár (OpenMoji 🧺)",
+      "kep": "saját rajz (szemből)",
       "viszonyok": [
         "benne",
         "folott",
@@ -111,11 +111,11 @@
     "mogott": {
       "nev": "mögött",
       "szint": 2,
-      "rajz": "a szereplőnek csak a feje látszik ki a tárgy mögül"
+      "rajz": "a tárgy oldalt takarja a szereplőt (kb. a fele látszik); a széknél nincs, mert a szék szemből átlátszó a lábai között, és a mögötte álló szereplő ugyanúgy nézne ki, mint az alatta lévő"
     },
     "kozott": {
       "nev": "között",
-      "szint": 2,
+      "szint": 1,
       "rajz": "két egyforma tárgy, a szereplő a kettő között"
     },
     "jobbra": {
@@ -134,7 +134,6 @@
     "cica-szek-folott": "A cica a szék fölött van.",
     "cica-szek-rajta": "A cica a széken van.",
     "cica-szek-mellett": "A cica a szék mellett van.",
-    "cica-szek-mogott": "A cica a szék mögött van.",
     "cica-szek-elott": "A cica a szék előtt van.",
     "cica-szek-kozott": "A cica a két szék között van.",
     "cica-szek-jobbra": "A cica a széktől jobbra van.",
@@ -168,7 +167,6 @@
     "kutya-szek-folott": "A kutya a szék fölött van.",
     "kutya-szek-rajta": "A kutya a széken van.",
     "kutya-szek-mellett": "A kutya a szék mellett van.",
-    "kutya-szek-mogott": "A kutya a szék mögött van.",
     "kutya-szek-elott": "A kutya a szék előtt van.",
     "kutya-szek-kozott": "A kutya a két szék között van.",
     "kutya-szek-jobbra": "A kutya a széktől jobbra van.",
@@ -202,7 +200,6 @@
     "maci-szek-folott": "A maci a szék fölött van.",
     "maci-szek-rajta": "A maci a széken van.",
     "maci-szek-mellett": "A maci a szék mellett van.",
-    "maci-szek-mogott": "A maci a szék mögött van.",
     "maci-szek-elott": "A maci a szék előtt van.",
     "maci-szek-kozott": "A maci a két szék között van.",
     "maci-szek-jobbra": "A maci a széktől jobbra van.",
@@ -236,7 +233,6 @@
     "labda-szek-folott": "A labda a szék fölött van.",
     "labda-szek-rajta": "A labda a széken van.",
     "labda-szek-mellett": "A labda a szék mellett van.",
-    "labda-szek-mogott": "A labda a szék mögött van.",
     "labda-szek-elott": "A labda a szék előtt van.",
     "labda-szek-kozott": "A labda a két szék között van.",
     "labda-szek-jobbra": "A labda a széktől jobbra van.",

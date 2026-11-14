@@ -9,7 +9,7 @@ import { WORD_BY_ID, type Word } from '../../data/vocab';
 import type { Sheet } from '../../engine/sheet';
 import { verifyCommon } from '../../engine/verify';
 import type { Visual } from '../../render/visual';
-import { MAX_SYLLABLES, RULE_SYM, SIZES, confusable, fitsRule, shortcut, soundOf, type Rule } from './rules';
+import { MAX_SYLLABLES, RULE_SYM, SIZES, confusable, fitsRule, rhymePartner, rimeKey, shortcut, soundOf, type Rule } from './rules';
 
 const RULE_OF_SYM = new Map<string, Rule>(Object.entries(RULE_SYM).map(([rule, sym]) => [sym, rule as Rule]));
 
@@ -65,6 +65,14 @@ export function verify(sheet: Sheet): string[] {
     let fits: number[];
     if (t.rule === 'szotag') {
       fits = answers.flatMap((a, ai) => (a?.kind === 'count' && a.k === t.w.syllables ? [ai] : []));
+    } else if (t.rule === 'rim') {
+      // A jóváhagyott pár, és minden más, ami a rímkulcs szerint rímelne (majdnem-rím is kétértelmű).
+      const partner = rhymePartner(t.w);
+      fits = answers.flatMap((a, ai) => (a?.kind === 'word' && (a.w.id === partner?.id || rimeKey(a.w) === rimeKey(t.w)) ? [ai] : []));
+      if (fits.length === 1) {
+        const a = answers[fits[0]!]!;
+        if (a.kind !== 'word' || a.w.id !== partner?.id) problems.push(`${label}: a rímelő kép nem a jóváhagyott pár.`);
+      }
     } else {
       const rule = t.rule;
       fits = answers.flatMap((a, ai) => (a?.kind === 'word' && confusable(soundOf(t.w, rule), soundOf(a.w, rule)) ? [ai] : []));
@@ -75,9 +83,11 @@ export function verify(sheet: Sheet): string[] {
     }
     const ai = fits[0]!;
     const a = answers[ai]!;
-    if (t.rule !== 'szotag' && a.kind === 'word') {
+    if ((t.rule === 'kezdo' || t.rule === 'veg') && a.kind === 'word') {
       if (soundOf(t.w, t.rule) !== soundOf(a.w, t.rule)) problems.push(`${label}: a megoldás csak hasonló hangú, nem azonos.`);
-      if (shortcut(t.w, a.w)) problems.push(`${label}: a megoldás hang nélkül is kitalálható (csoport vagy pár).`);
+    }
+    if (t.rule !== 'szotag' && a.kind === 'word' && shortcut(t.w, a.w)) {
+      problems.push(`${label}: a megoldás hang nélkül is kitalálható (csoport vagy pár).`);
     }
     claimed.set(ai, (claimed.get(ai) ?? 0) + 1);
     if (sheet.answers[ai]!.disc !== sheet.tasks[ti]!.disc) problems.push(`${label}: az illő megoldás más koronghoz van rendelve.`);

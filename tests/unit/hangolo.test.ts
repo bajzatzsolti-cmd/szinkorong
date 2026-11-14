@@ -5,7 +5,7 @@ import type { Visual } from '../../src/render/visual';
 import { buildSheet } from '../../src/topics';
 import { hangolo } from '../../src/topics/hangolo';
 import { planFor } from '../../src/topics/hangolo/generate';
-import { confusable, fitsRule, shortcut, soundOf } from '../../src/topics/hangolo/rules';
+import { RHYME_PAIRS, confusable, fitsRule, rimeKey, shortcut, soundOf } from '../../src/topics/hangolo/rules';
 import { verify } from '../../src/topics/hangolo/verify';
 import { clone, topicSuite } from './topic-suite';
 
@@ -41,21 +41,29 @@ describe('Hangoló plusz – hangtani szabályok', () => {
     expect(shortcut(w('kutya'), w('cica'))).toBe(true);
   });
 
-  it('szintbeosztás: 1. kezdőhang, 2. végső hang, 3. vegyes (4 szótagszám)', () => {
-    expect(planFor(0, 6)).toEqual({ kezdo: 6, veg: 0, szotag: 0 });
-    expect(planFor(1, 8)).toEqual({ kezdo: 0, veg: 8, szotag: 0 });
-    expect(planFor(2, 10)).toEqual({ kezdo: 3, veg: 3, szotag: 4 });
+  it('szintbeosztás: 1. kezdőhang, 2. végső hang, 3. vegyes (3 szótagszám, 3 rím, 2 + 2 hang)', () => {
+    expect(planFor(0, 6)).toEqual({ kezdo: 6, veg: 0, szotag: 0, rim: 0 });
+    expect(planFor(1, 8)).toEqual({ kezdo: 0, veg: 8, szotag: 0, rim: 0 });
+    expect(planFor(2, 10)).toEqual({ kezdo: 2, veg: 2, szotag: 3, rim: 3 });
     for (const index of range(15)) {
       const rules = buildSheet(hangolo, index).tasks.map((t) => ruleOf(t.visual));
       if (index < 5) expect(new Set(rules)).toEqual(new Set(['snd-start']));
       else if (index < 10) expect(new Set(rules)).toEqual(new Set(['snd-end']));
-      else expect(rules.filter((r) => r === 'syl')).toHaveLength(4);
+      else {
+        expect(rules.filter((r) => r === 'syl')).toHaveLength(3);
+        expect(rules.filter((r) => r === 'snd-rhyme')).toHaveLength(3);
+      }
     }
+  });
+
+  it('a rímpárok rímkulcsa azonos (kéz–méz: éz, róka–nyalóka: ka, olló–ló: ló)', () => {
+    for (const [a, b] of RHYME_PAIRS) expect(rimeKey(w(a)), `${a}–${b}`).toBe(rimeKey(w(b)));
+    expect(rimeKey(w('kutya'))).not.toBe(rimeKey(w('cica')));
   });
 
   it('minden feladat hangja: kérdéssablon + a kép neve', () => {
     for (const index of [0, 6, 12]) {
-      for (const t of buildSheet(hangolo, index).tasks) expect(t.say).toMatch(/^hangolo-(kezdo|veg|szotag)\+szo-/);
+      for (const t of buildSheet(hangolo, index).tasks) expect(t.say).toMatch(/^hangolo-(kezdo|veg|szotag|rim)\+szo-/);
     }
   });
 });

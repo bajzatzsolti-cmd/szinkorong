@@ -13,8 +13,13 @@ export interface Topic {
   sizes: readonly [number, number, number];
   /** Hány oszlopban álljanak a feladatok a lap bal oldalán. */
   taskCols: 1 | 2;
-  /** Széles megoldásoszlop (pl. a Kódfejtő képsorai): a megoldások kapják a lap nagyobb részét. */
-  answerWide?: boolean;
+  /**
+   * Széles megoldásoszlop (pl. a Kódfejtő képsorai): a megoldások kapják a lap nagyobb részét.
+   * 'max': a feladat csak egy hangszóró (hallás utáni témakör), a lap legnagyobb része a megoldásoké.
+   */
+  answerWide?: boolean | 'max';
+  /** Ha egy oszlopban ennél alacsonyabb lenne a megoldássor, a megoldások két oszlopba törnek (alapból 62 px). */
+  answerRowMin?: number;
   /** Ha egy oszlopban túl alacsonyak lennének a feladatsorok, két oszlopba törhetnek (rövid feladatoknál). */
   flexTaskCols?: boolean;
   /** Hallás utáni témakör: minden feladat mellett kis hangszóró jelzi, hogy koppintásra elhangzik a feladat. */

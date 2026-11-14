@@ -1,6 +1,7 @@
 // A feladatok és megoldások deklaratív leírása („jelenetfa”), és SVG-vé alakítása.
 // Ugyanezt a leírást rajzolja majd a képernyő és a nyomtatás is.
 import { extent, normalize } from './lattice';
+import { SCENE_H, SCENE_W, drawScene, type PlaceId, type RelId, type Side } from './scene';
 import { SHAPES, type ShapeId } from './shapes';
 
 /** Alakzat kitöltése: telt, körvonalas (üres), halvány. */
@@ -12,7 +13,7 @@ export const TINTS: readonly Tint[] = ['red', 'blue', 'yellow', 'green', 'purple
  * Kis jelek: nyíl (ebből lesz), elválasztó, „forgatva keresd”, „a tükörképét keresd”, és a Hangoló jelei:
  * kezdőhang (az első hangdoboz világít), végső hang (az utolsó), szótagszám (szótagívek, mint az iskolában).
  */
-export type SymId = 'arrow' | 'sep' | 'rotate' | 'mirror' | 'snd-start' | 'snd-end' | 'syl';
+export type SymId = 'arrow' | 'sep' | 'rotate' | 'mirror' | 'snd-start' | 'snd-end' | 'snd-rhyme' | 'syl' | 'listen';
 /**
  * Fél kép: true vagy 'L' = csak a bal fele látszik, 'R' = csak a jobb fele.
  * (A korábbi `half: true` jelentése változatlan: bal fél.)
@@ -51,7 +52,9 @@ export type Visual =
   /** Rácsnégyzetekből álló alakzat ([x, y] cellák). */
   | { t: 'poly'; cells: number[][] }
   /** Vonalas, betűszerű jel (rácspontok közti [x1, y1, x2, y2] élek). */
-  | { t: 'rune'; edges: number[][] };
+  | { t: 'rune'; edges: number[][] }
+  /** „Hol van?” jelenet: szereplő (szókincs-kép) + tárgy (saját rajz) adott viszonyban; side: mellett/mögött oldala. */
+  | { t: 'scene'; fig: string; place: PlaceId; rel: RelId; side?: Side };
 
 export interface Drawn {
   w: number;
@@ -177,14 +180,25 @@ function drawSym(id: SymId): Drawn {
           '<path class="vbf" d="M35 50 L20 38 V62 Z"/><path class="vbf" d="M49 50 L64 38 V62 Z"/>',
       };
     case 'snd-start':
-    case 'snd-end': {
-      // Három hangdoboz egymás mellett; a keresett hely kitöltve.
-      const on = id === 'snd-start' ? 0 : 2;
+    case 'snd-end':
+    case 'snd-rhyme': {
+      // Három hangdoboz egymás mellett; a keresett hely kitöltve (rím: a szó vége, az utolsó kettő).
+      const on = id === 'snd-start' ? [0] : id === 'snd-end' ? [2] : [1, 2];
       const boxes = [0, 1, 2]
-        .map((i) => `<rect class="${i === on ? 'vsnd-on' : 'vsnd'}" x="${6 + i * 26}" y="38" width="22" height="24" rx="5"/>`)
+        .map((i) => `<rect class="${on.includes(i) ? 'vsnd-on' : 'vsnd'}" x="${6 + i * 26}" y="38" width="22" height="24" rx="5"/>`)
         .join('');
       return { w: 84, h: CELL, svg: boxes };
     }
+    case 'listen':
+      // „Hallgasd meg”: kék kör, benne hangszóró és hanghullámok (a hallás utáni feladatok képe).
+      return {
+        w: CELL,
+        h: CELL,
+        svg:
+          '<circle class="vlisten" cx="50" cy="50" r="42"/>' +
+          '<path class="vbf" d="M28 42 H38 L52 30 V70 L38 58 H28 Z"/>' +
+          '<path class="vbi" d="M60 40 Q66 50 60 60 M67 33 Q78 50 67 67"/>',
+      };
     case 'syl':
       // Szótagívek (két ív a szó alatt), mint az első osztályban.
       return {
@@ -310,6 +324,8 @@ export function draw(v: Visual): Drawn {
         .join('');
       return { w: CELL, h: CELL, svg: `<g class="vr">${lines}</g>` };
     }
+    case 'scene':
+      return { w: SCENE_W, h: SCENE_H, svg: drawScene(v.fig, v.place, v.rel, v.side) };
   }
 }
 
@@ -357,12 +373,15 @@ export function visualKey(v: Visual): string {
       return `poly:${JSON.stringify(normalize(v.cells))}`;
     case 'rune':
       return `rune:${JSON.stringify(normalize(v.edges))}`;
+    case 'scene':
+      return `scene:${v.fig}:${v.place}:${v.rel}:${v.side ?? 'R'}`;
   }
 }
 
 /** A jelenetfában szereplő szókincs-képek (a hiányzó képek ellenőrzéséhez). */
 export function collectImages(v: Visual, out: { id: string; shadow: boolean }[] = []): { id: string; shadow: boolean }[] {
   if (v.t === 'img') out.push({ id: v.id, shadow: !!v.shadow });
+  else if (v.t === 'scene') out.push({ id: v.fig, shadow: false });
   else if (v.t === 'seq' || v.t === 'grid' || v.t === 'pack') for (const item of v.items) collectImages(item, out);
   else if (v.t === 'balance') for (const item of [...v.left, ...v.right]) collectImages(item, out);
   return out;

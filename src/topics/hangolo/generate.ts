@@ -1,21 +1,21 @@
 // Hangoló plusz (beszédhanghallás): a feladat egy kép és egy jel; a jel mondja meg, mit kell keresni.
 //  • kezdőhang (első doboz világít): melyik kép kezdődik ugyanazzal a hanggal;
 //  • végső hang (utolsó doboz világít): melyik kép végződik ugyanazzal a hanggal;
-//  • szótagszám (két ív): tapsold el a szót; a megoldás a tapsok száma, pöttyökkel.
+//  • szótagszám (két ív): tapsold el a szót; a megoldás a tapsok száma, pöttyökkel;
+//  • rím (az utolsó két doboz világít): melyik kép rímel rá (content/rimek.json, jóváhagyott párok).
 // A feladatra koppintva elhangzik a kérdés és a szó („Melyik kezdődik ugyanazzal a hanggal, mint ez: … macska”),
 // a megoldás képére koppintva a kép neve (a hangtani feladathoz kell a név, ez nem árulja el a megoldást).
 //
 // Szintek (ideiglenes beosztás, a szülő jóváhagyására vár):
 //  • 1. szint (6): kezdőhang.
 //  • 2. szint (8): végső hang.
-//  • 3. szint (10): vegyes: 4 szótagszám (1–4 taps) + 3 kezdőhang + 3 végső hang.
-// A rímpárok a 4b sprintben jönnek (content/rimek.json tervezet, jóváhagyás után).
+//  • 3. szint (10): vegyes: 3 szótagszám + 3 rím + 2 kezdőhang + 2 végső hang.
 import { WORDS, type Word } from '../../data/vocab';
 import { mulberry32, shuffle, type Rng } from '../../engine/rng';
 import type { Sheet, SheetSpec } from '../../engine/sheet';
 import type { Visual } from '../../render/visual';
 import { img, sayId, sheetFromPairs, type Matched } from '../common';
-import { MAX_SYLLABLES, RULE_SYM, SIZES, confusable, fitsRule, shortcut, soundOf, type Rule, type SoundRule } from './rules';
+import { RULE_SYM, SIZES, confusable, fitsRule, rhymePartner, shortcut, soundOf, type Rule, type SoundRule } from './rules';
 import { verify } from './verify';
 
 export const CONTENT_VERSION = 1;
@@ -23,11 +23,12 @@ export { SIZES };
 
 /** Szintenként: hány feladat melyik szabály szerint. */
 export function planFor(level: number, n: number): Record<Rule, number> {
-  if (level === 0) return { kezdo: n, veg: 0, szotag: 0 };
-  if (level === 1) return { kezdo: 0, veg: n, szotag: 0 };
-  const szotag = Math.min(MAX_SYLLABLES, n - 2);
-  const kezdo = Math.ceil((n - szotag) / 2);
-  return { kezdo, veg: n - szotag - kezdo, szotag };
+  if (level === 0) return { kezdo: n, veg: 0, szotag: 0, rim: 0 };
+  if (level === 1) return { kezdo: 0, veg: n, szotag: 0, rim: 0 };
+  const szotag = Math.min(3, Math.max(0, n - 4));
+  const rim = Math.min(3, Math.max(0, n - szotag - 2));
+  const kezdo = Math.ceil((n - szotag - rim) / 2);
+  return { kezdo, veg: n - szotag - rim - kezdo, szotag, rim };
 }
 
 /** A feladat képe: a kép és mellette a szabály jele. */
@@ -40,6 +41,7 @@ const POOL: Readonly<Record<Rule, readonly Word[]>> = {
   kezdo: WORDS.filter((w) => fitsRule(w, 'kezdo')),
   veg: WORDS.filter((w) => fitsRule(w, 'veg')),
   szotag: WORDS.filter((w) => fitsRule(w, 'szotag')),
+  rim: WORDS.filter((w) => fitsRule(w, 'rim')),
 };
 
 function attempt(r: Rng, spec: SheetSpec): Matched[] | null {
@@ -52,6 +54,18 @@ function attempt(r: Rng, spec: SheetSpec): Matched[] | null {
     used.add(w.id);
     if (w.twin) twins.add(w.twin);
   };
+
+  // Rímpárok: a pár egyik tagja a feladat, a másik a megoldás. (Csak ha kell: így az 1–2. szint lapjai a
+  // rímek bevezetése előttivel azonosak maradtak.)
+  for (const t of plan.rim > 0 ? shuffle(r, POOL.rim) : []) {
+    if (out.filter((p) => p.taskSay?.startsWith('hangolo-rim+')).length >= plan.rim) break;
+    const a = rhymePartner(t)!;
+    if (!free(t) || !free(a) || shortcut(t, a)) continue;
+    take(t);
+    take(a);
+    out.push({ task: taskVisual(t, 'rim'), answer: img(a.id), taskSay: taskSay(t, 'rim'), answerSay: sayId(a.id) });
+  }
+  if (out.length < plan.rim) return null;
 
   // Szótagszám: 1, 2, 3, 4 taps (mind különböző).
   for (const k of shuffle(r, [1, 2, 3, 4]).slice(0, plan.szotag)) {
