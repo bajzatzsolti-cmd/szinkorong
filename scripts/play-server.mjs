@@ -24,6 +24,8 @@ const TYPES = {
   '.json': 'application/json',
   '.webmanifest': 'application/manifest+json',
   '.mp3': 'audio/mpeg',
+  '.wav': 'audio/wav',
+  '.m4a': 'audio/mp4',
 };
 
 const REPORTER = `<script>

@@ -18,6 +18,9 @@ szöveg nélküli bemutató a Mátrix és az Analógia első lapja előtt.
 **3b sprint (logikai témakörök, második fele):** Kakukktojás, Képes sudoku (bemutatóval), Mérleg, Fél kép, Kódfejtő.
 A Mérleg könnyű szintje súlyosztályokat használ (`content/suly.json`, tervezet); a képek színét, irányát és féloldalasságát
 a gép méri (`npm run image-props`, `content/kepjellemzok.json`), a szókincsben felülírható.
+**4a sprint (hang, első fele):** Hangoló plusz (kezdőhang, végső hang, szótagszám; feladatonként saját hanggal),
+ElevenLabs-hanggyártás (`npm run hang`, Aggie hangja), saját felvétel bármelyik klip helyett, Hangpróba a szülői menüben.
+A Hol van?, a Ha–akkor és a rímpárok tervezete jóváhagyásra vár: [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md).
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 
@@ -32,6 +35,10 @@ npm run test:e2e       # iPad mini méretű Playwright-tesztek (előbb: npm run 
 npm run check:fonts    # megvan-e az ő/ű a csomagolt betűtípusban
 npm run icons          # az ikonok újragyártása (public/icons/icon.svg → PNG)
 npm run content        # szókincs-változás után: képek (sprite), hang-manifest, jóváhagyási tábla
+npm run hang:fiok      # ElevenLabs: kulcs, kreditegyenleg, hangok (nem fogyaszt kreditet)
+npm run hang:becsles   # mit gyártana a hangscript és mennyibe kerülne
+npm run hang           # hangfájlok gyártása (rákérdez; részletek: docs/HANGOK.md)
+npm run tervezet:report  # a 4b tervezetek jóváhagyási táblázata (docs/TERVEZET-4B.md)
 ```
 
 Ha a gépen nincs rendszerszintű Node.js, a projekt hordozható Node-ot is használhat a `.tools/node` mappában:
@@ -43,6 +50,9 @@ PowerShellben `. .\scripts\env.ps1` betölti a PATH-ba.
 - [docs/GYEREKZAR.md](docs/GYEREKZAR.md): mit old meg a kód, és az iPad Irányított hozzáférés beállítása
 - [docs/TARTALOM-SZERKESZTES.md](docs/TARTALOM-SZERKESZTES.md): a szókincs, a párok és a hangszövegek szerkesztése kód nélkül
 - [docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md): minden szó, besorolás és pár jóváhagyásra (generált)
+- [docs/HANGOK.md](docs/HANGOK.md): hanggyártás (ElevenLabs), API-kulcs, rossz klipek javítása, saját felvétel, betűhangok, licenc
+- [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md): Hol van?, Ha–akkor, rímpárok tervezete jóváhagyásra (generált)
+- [SPEC-2-profil-hang.md](SPEC-2-profil-hang.md): kiegészítő specifikáció (játékosprofil, ElevenLabs-hangok)
 - [LICENSES.md](LICENSES.md): harmadik féltől származó elemek (OpenMoji CC BY-SA 4.0, betűtípusok OFL)
 
 ## Felépítés

@@ -1,0 +1,25 @@
+{
+  "_leiras": "A hangfájlok gyártásának beállításai (scripts/hang-generalas.mjs). Ha itt bármi változik, a script minden klipet újragenerál (a lenyomat része). A kulcs NEM ide kerül, hanem a .env.local fájlba.",
+  "szolgaltato": "elevenlabs",
+  "hang": {
+    "nev": "Aggie",
+    "azonosito": "Dme3o25EiC1DfrBQd73f",
+    "forras": "ElevenLabs Hanggyűjtemény (Voice Library), magyar női mesélőhang; Lárus választotta, 2026-11-14"
+  },
+  "modell": "eleven_v3",
+  "_modell_megjegyzes": "Magyarul tud: eleven_v4, eleven_v3, eleven_flash_v2_5 (a multilingual_v2 NEM). Mért ár Aggie hangjával: v3 és v4 0,40, Flash 0,20 kredit/karakter.",
+  "nyelv": "hu",
+  "beallitasok": { "stability": 0.5, "similarity_boost": 0.75 },
+  "egyszavas": {
+    "modszer": "pont",
+    "_modszerek": "puszta = a szó magában; pont = nagy kezdőbetű + pont („Alma.”); keret = „Ez egy alma.” mondatból kivágva (betűnkénti időzítéssel)",
+    "_mi_szamit_egyszavasnak": "szóköz nélküli szöveg, írásjel nélkül (pl. a szo-* bejegyzések)"
+  },
+  "rossz_klipek": {
+    "_leiras": "A Hangpróba oldalon „rossz”-nak jelölt klipek azonosítói a content/audio/rossz.json-ba kerülnek; ezeket a script ezzel a módosított beállítással gyártja újra.",
+    "beallitasok": { "stability": 1.0, "similarity_boost": 0.75 },
+    "egyszavas_modszer": "keret"
+  },
+  "kimenet": { "mintaveteli_frekvencia": 24000, "kbps": 48, "celhangero_db": -20, "csucs_db": -1 },
+  "kredit_per_karakter": 0.4
+}

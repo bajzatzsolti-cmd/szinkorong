@@ -19,7 +19,11 @@
     "image-props": "node scripts/image-props.mjs",
     "content": "npm run sprite && npm run image-props && npm run manifest && npm run vocab:report",
     "vocab:report": "node scripts/vocab-report.mjs",
+    "tervezet:report": "node scripts/tervezet-report.mjs",
     "check:fonts": "node scripts/check-fonts.mjs",
+    "hang": "node scripts/hang-generalas.mjs",
+    "hang:becsles": "node scripts/hang-generalas.mjs --becsles",
+    "hang:fiok": "node scripts/hang-fiok.mjs",
     "check": "npm run build && npm test"
   },
   "devDependencies": {

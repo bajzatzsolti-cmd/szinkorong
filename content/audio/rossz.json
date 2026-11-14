@@ -1,0 +1,4 @@
+{
+  "_leiras": "A rossznak hallott klipek azonosítói (a Hangpróba oldal „Lista másolása” gombjával kapott lista). A scripts/hang-generalas.mjs ezeket a hang-beallitas.json „rossz_klipek” beállításával gyártja újra.",
+  "azonositok": []
+}

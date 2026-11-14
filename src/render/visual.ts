@@ -8,8 +8,11 @@ export type Fill = 'solid' | 'outline' | 'light';
 /** Alakzat színe (ha nincs megadva: a szokásos sötétkék). */
 export type Tint = 'red' | 'blue' | 'yellow' | 'green' | 'purple' | 'orange';
 export const TINTS: readonly Tint[] = ['red', 'blue', 'yellow', 'green', 'purple', 'orange'];
-/** Kis jelek: nyíl (ebből lesz), elválasztó, „forgatva keresd”, „a tükörképét keresd”. */
-export type SymId = 'arrow' | 'sep' | 'rotate' | 'mirror';
+/**
+ * Kis jelek: nyíl (ebből lesz), elválasztó, „forgatva keresd”, „a tükörképét keresd”, és a Hangoló jelei:
+ * kezdőhang (az első hangdoboz világít), végső hang (az utolsó), szótagszám (szótagívek, mint az iskolában).
+ */
+export type SymId = 'arrow' | 'sep' | 'rotate' | 'mirror' | 'snd-start' | 'snd-end' | 'syl';
 /**
  * Fél kép: true vagy 'L' = csak a bal fele látszik, 'R' = csak a jobb fele.
  * (A korábbi `half: true` jelentése változatlan: bal fél.)
@@ -172,6 +175,22 @@ function drawSym(id: SymId): Drawn {
           '<circle class="vbadge mir" cx="42" cy="50" r="36"/>' +
           '<g class="vbi"><path d="M42 28 V72" stroke-dasharray="5 6"/></g>' +
           '<path class="vbf" d="M35 50 L20 38 V62 Z"/><path class="vbf" d="M49 50 L64 38 V62 Z"/>',
+      };
+    case 'snd-start':
+    case 'snd-end': {
+      // Három hangdoboz egymás mellett; a keresett hely kitöltve.
+      const on = id === 'snd-start' ? 0 : 2;
+      const boxes = [0, 1, 2]
+        .map((i) => `<rect class="${i === on ? 'vsnd-on' : 'vsnd'}" x="${6 + i * 26}" y="38" width="22" height="24" rx="5"/>`)
+        .join('');
+      return { w: 84, h: CELL, svg: boxes };
+    }
+    case 'syl':
+      // Szótagívek (két ív a szó alatt), mint az első osztályban.
+      return {
+        w: 84,
+        h: CELL,
+        svg: '<path class="vsyl" d="M8 40 Q22 68 38 40"/><path class="vsyl" d="M46 40 Q62 68 76 40"/>',
       };
   }
 }

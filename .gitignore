@@ -8,3 +8,7 @@ screenshots/
 .DS_Store
 .play/
 .claude/
+# Titkok (pl. ELEVENLABS_API_KEY): soha nem kerülhetnek a repóba
+.env
+.env.*
+!.env.example

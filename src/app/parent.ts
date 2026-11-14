@@ -5,6 +5,7 @@ import { getSettings, resetProgress, updateSettings } from '../engine/progress';
 import { ICONS } from '../render/icons';
 import { TOPICS } from '../topics';
 import { el } from './dom';
+import { renderHangproba } from './hangproba';
 
 export const HOLD_MS = 3000;
 
@@ -55,6 +56,8 @@ function openPanel(onClose: () => void): void {
     `<div class="psec">Témakörök (a kikapcsoltak nem látszanak a kezdőlapon)</div>${topicRows}` +
     `<div class="psec">Haladás</div>` +
     `<button class="pbtn danger" data-act="reset">Haladás törlése</button>` +
+    `<div class="psec">Hangok</div>` +
+    `<button class="pbtn" data-act="hangproba">Hangpróba: minden hang meghallgatása, rossz jelölése</button>` +
     `<div class="psec">Nyomtatás</div>` +
     `<button class="pbtn" disabled>Nyomtatható lapok (hamarosan)</button>` +
     `<div class="pfoot"><span>Színkorong ${typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : ''}<br>` +
@@ -73,6 +76,16 @@ function openPanel(onClose: () => void): void {
     if (t === overlay) return close();
     const act = t.closest<HTMLElement>('[data-act]')?.dataset.act;
     if (act === 'close') close();
+    if (act === 'hangproba') {
+      // A Hangpróba ugyanabban a kártyában nyílik; a „Vissza” újranyitja a beállításokat.
+      e.stopPropagation();
+      const card = overlay.querySelector<HTMLElement>('.pcard')!;
+      renderHangproba(card, () => {
+        overlay.remove();
+        openPanel(onClose);
+      });
+      return;
+    }
     if (act === 'reset') {
       const b = t.closest<HTMLButtonElement>('[data-act]')!;
       if (resetArmed === undefined) {

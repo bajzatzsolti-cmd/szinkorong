@@ -18,6 +18,16 @@ export default defineConfig({
     sourcemap: false,
   },
   plugins: [
+    {
+      // A build végén kiírja a hangcsomag méretét (a specifikáció elfogadási feltétele).
+      name: 'szinkorong-hangcsomag',
+      apply: 'build',
+      writeBundle(_options, bundle) {
+        const audio = Object.values(bundle).filter((f) => /\.(mp3|m4a)$/.test(f.fileName));
+        const bytes = audio.reduce((s, f) => s + (f.type === 'asset' ? (typeof f.source === 'string' ? f.source.length : f.source.byteLength) : 0), 0);
+        console.log(`\nHangcsomag: ${audio.length} fájl, ${(bytes / 1024 / 1024).toFixed(2)} MB`);
+      },
+    },
     VitePWA({
       // "prompt": az új verziót mi telepítjük, akkor, amikor a gyerek nincs lap közben
       // (lásd src/pwa.ts). Az első telepítéskor a clientsClaim miatt rögtön offline is megy.
@@ -43,7 +53,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2,mp3,json,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,woff2,mp3,m4a,json,webmanifest}'],
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         skipWaiting: false,

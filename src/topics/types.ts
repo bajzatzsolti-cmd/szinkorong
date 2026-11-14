@@ -17,6 +17,8 @@ export interface Topic {
   answerWide?: boolean;
   /** Ha egy oszlopban túl alacsonyak lennének a feladatsorok, két oszlopba törhetnek (rövid feladatoknál). */
   flexTaskCols?: boolean;
+  /** Hallás utáni témakör: minden feladat mellett kis hangszóró jelzi, hogy koppintásra elhangzik a feladat. */
+  taskSpeaker?: boolean;
   /**
    * Ha meg van adva: a témakör első lapja előtt egyszer animált, szöveg nélküli bemutató játszódik le
    * egy ekkora (2 korongos) példalapon. A nehezebb logikai témakörökhöz való.

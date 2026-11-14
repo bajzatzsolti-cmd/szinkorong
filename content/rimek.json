@@ -1,0 +1,21 @@
+{
+  "_leiras": "TERVEZET, jóváhagyásra vár (4b sprint). Rímpárok a Hangoló pluszhoz: a feladat egy kép (koppintásra: „Melyik rímel erre: …”), a megoldás a vele rímelő kép. Csak a szókincs egyértelmű nevű, ellenőrzésre nem váró képei. Egy szó csak egy párban szerepel. Kód nélkül szerkeszthető; javasolj további párokat, vagy jelöld, melyik nem jó.",
+  "_elv": "Rím = a szó vége (az utolsó magánhangzótól, rövid szónál az utolsó szótagtól) ugyanúgy hangzik. Az egy magánhangzós egyezés (pl. kutya–cica: mindkettő -a) NEM rím.",
+  "parok": [
+    ["kez", "mez"],
+    ["nap", "kalap"],
+    ["eger", "kenyer"],
+    ["sal", "kanal"],
+    ["roka", "nyaloka"],
+    ["barany", "szivarvany"],
+    ["esernyo", "fenyo"],
+    ["uborka", "cukorka"],
+    ["madar", "gitar"],
+    ["szolo", "repulo"],
+    ["lo", "ollo"]
+  ],
+  "bizonytalan": [
+    { "par": ["kigyo", "hernyo"], "megjegyzes": "[ELLENŐRIZNI] -gyó / -nyó: hasonló, de nem azonos; inkább csengés, mint rím" },
+    { "par": ["ajto", "auto"], "megjegyzes": "[ELLENŐRIZNI] jó rím, de az „autó” szótagszáma (au) bizonytalan, ezért a Hangoló plusz nem használja" }
+  ]
+}

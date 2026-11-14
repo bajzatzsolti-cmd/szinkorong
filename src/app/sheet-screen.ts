@@ -75,7 +75,8 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     const row = el('div', 'task');
     row.dataset.disc = String(t.disc);
     if (t.say) row.dataset.say = t.say;
-    row.innerHTML = `${discSpan(t.disc, 'dot')}<div class="vis-wrap">${renderVisual(t.visual)}</div>`;
+    const speaker = topic.taskSpeaker && t.say ? `<span class="tspk" aria-hidden="true">${ICONS.speaker}</span>` : '';
+    row.innerHTML = `${discSpan(t.disc, 'dot')}<div class="vis-wrap">${renderVisual(t.visual)}</div>${speaker}`;
     taskEls.push(row);
     tasksEl.append(row);
   }

@@ -37,7 +37,8 @@ export function topicSuite(topic: Topic, extra?: { seeds?: number }): void {
       for (const index of range(SHEETS_PER_TOPIC)) {
         const sheet = buildSheet(topic, index);
         for (const c of [...sheet.tasks, ...sheet.answers]) {
-          if (c.say) expect(manifest[c.say], `${c.say} hiányzik a manifestből`).toBeTruthy();
+          // Egy hanganyag több klip sora is lehet ("sablon+szo-macska"): mindegyik része kell.
+          for (const part of c.say?.split('+') ?? []) expect(manifest[part], `${part} hiányzik a manifestből`).toBeTruthy();
         }
         expect(manifest[topic.instructionId(sheet.spec.level)]).toBeTruthy();
       }
