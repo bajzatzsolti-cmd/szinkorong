@@ -36,6 +36,7 @@ export function createApp(root: HTMLElement, onSafeScreen: () => void): App {
       show('map', () => mountMap(root, topicId, nav));
     },
     sheet: (topicId, index) => show('sheet', () => mountSheet(root, topicId, index, nav)),
+    demo: (topicId, thenIndex) => show('sheet', () => mountSheet(root, topicId, thenIndex, nav, true)),
   };
 
   return {

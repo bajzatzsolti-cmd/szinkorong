@@ -1,11 +1,29 @@
 import type { Locator, Page } from '@playwright/test';
-import { buildSheet, getTopic } from '../../src/topics';
+import { TOPICS, buildSheet, getTopic } from '../../src/topics';
 import type { Sheet } from '../../src/engine/sheet';
 
 export const sheetOf = (index: number, topicId = 'minta'): Sheet => buildSheet(getTopic(topicId), index);
 
+/**
+ * A bemutatók (demo) „már látta” jelölése egy üres tárolóban, hogy a tesztek rögtön a lapra jussanak.
+ * Csak akkor ír, ha még nincs tárolt állapot (így az újratöltés utáni haladás-ellenőrzést nem zavarja).
+ */
+export async function skipDemos(page: Page): Promise<void> {
+  const demoTopics = TOPICS.filter((t) => t.demoSize).map((t) => t.id);
+  await page.addInitScript((ids) => {
+    try {
+      if (!localStorage.getItem('szinkorong:v1')) {
+        localStorage.setItem('szinkorong:v1', JSON.stringify({ v: 1, done: {}, settings: { volume: 0.8, disabled: [] }, demos: ids }));
+      }
+    } catch {
+      // nincs tároló: a teszt enélkül is fut
+    }
+  }, demoTopics);
+}
+
 /** Kezdőlap → témakör → lap (a gyerek útvonala). */
 export async function openSheet(page: Page, index: number, topicId = 'minta'): Promise<void> {
+  await skipDemos(page);
   await page.goto('/');
   await page.locator(`.tile[data-topic="${topicId}"]`).click();
   await page.locator(`.card[data-index="${index}"]`).click();

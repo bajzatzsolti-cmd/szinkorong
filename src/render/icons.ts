@@ -14,6 +14,10 @@ export const ICONS = {
   gear: svg(
     '<circle cx="24" cy="24" r="6"/><path d="M24 5 V10 M24 38 V43 M5 24 H10 M38 24 H43 M10.6 10.6 L14.1 14.1 M33.9 33.9 L37.4 37.4 M10.6 37.4 L14.1 33.9 M33.9 14.1 L37.4 10.6" stroke-width="4"/>',
   ),
+  play: svg('<path d="M17 10 L39 24 L17 38 Z" fill="currentColor"/>'),
+  /** Mutató kéz a bemutatóhoz; az ujjhegy a (26, 4) pontnál van a 64 × 64-es térben. */
+  hand:
+    '<svg viewBox="0 0 64 64" focusable="false" aria-hidden="true"><path d="M20 8 a6 6 0 0 1 12 0 V27 l13 3 a7 7 0 0 1 5.4 8.2 l-3 14 A9 9 0 0 1 38.600 59 H27 a9 9 0 0 1 -7.200 -3.600 L7.500 39 a5 5 0 0 1 7.600 -6.400 L20 37 Z" fill="#fff" stroke="#1f2a40" stroke-width="3" stroke-linejoin="round"/></svg>',
   star: '<svg viewBox="0 0 100 100" focusable="false" aria-hidden="true"><polygon points="50,6 62,38 96,38 68,58 79,92 50,72 21,92 32,58 4,38 38,38" fill="currentColor"/></svg>',
 } as const;
 

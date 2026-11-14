@@ -3,7 +3,9 @@ import {
   _resetMemoryForTests,
   doneCount,
   getSettings,
+  isDemoSeen,
   isDone,
+  markDemoSeen,
   markDone,
   nextUndone,
   resetProgress,
@@ -87,6 +89,26 @@ describe('haladás', () => {
     markDone('minta', 0, 1);
     resetProgress();
     expect(doneCount('minta')).toBe(0);
+  });
+
+  it('bemutató: a „már látta” jelölés megmarad, a haladás törlése ezt is törli', () => {
+    const st = fakeStorage();
+    vi.stubGlobal('localStorage', st);
+    expect(isDemoSeen('matrix')).toBe(false);
+    markDemoSeen('matrix');
+    markDemoSeen('matrix');
+    _resetMemoryForTests();
+    expect(isDemoSeen('matrix')).toBe(true);
+    expect(isDemoSeen('analogia')).toBe(false);
+    expect((JSON.parse(st.data['szinkorong:v1']!) as { demos: string[] }).demos).toEqual(['matrix']);
+    resetProgress();
+    expect(isDemoSeen('matrix')).toBe(false);
+  });
+
+  it('régi (bemutató-jelölés nélküli) tárolt állapot is betölthető', () => {
+    vi.stubGlobal('localStorage', fakeStorage({ 'szinkorong:v1': JSON.stringify({ v: 1, done: { 'minta:0': { at: 1, tries: 1 } }, settings: { volume: 0.5, disabled: [] } }) }));
+    expect(isDone('minta', 0)).toBe(true);
+    expect(isDemoSeen('matrix')).toBe(false);
   });
 
   it('beállítások: hangerő és kikapcsolt témakörök megmaradnak', () => {

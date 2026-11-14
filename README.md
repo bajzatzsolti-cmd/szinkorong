@@ -12,7 +12,10 @@ A zöld pipa megmutatja a helyes színeket.
 **1. sprint kész:** projektváz, PWA, gyerekzár, játékmotor.
 **2. sprint (képkészlet és szókincs):** OpenMoji SVG-képkészlet, központi szókincs, négy témakör
 (Árnyékvadász, Sorminta, Mi tartozik össze?, Csoportosító), 15–15 lap szinten. A szókincs és a párok jóváhagyásra várnak:
-[docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md). A sprintek listája és a nyitott kérdések a fejlesztési tervben vannak.
+[docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md).
+**3a sprint (vizuális és logikai témakörök, első fele):** Betűkereső, Tükör és forgatás, Mátrix, Analógia, valamint az animált,
+szöveg nélküli bemutató a Mátrix és az Analógia első lapja előtt. A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
+A sprintek listája és a nyitott kérdések a fejlesztési tervben vannak.
 
 ## Parancsok
 
@@ -48,7 +51,7 @@ src/topics/<téma>/  témakörönként: generate.ts (lapok gyártása) + verify.
 src/app/            képernyők: kezdőlap, lapválasztó, lap, szülői menü
 tests/unit/         egységtesztek
 tests/e2e/          Playwright, iPad mini álló és fekvő nézetben
-scripts/            ikon-, betűtípus-ellenőrző script
+scripts/            ikon-, sprite-, manifest-, betűtípus-ellenőrző script; play-server.mjs: naplózó kiszolgáló a helyi hálózati kipróbáláshoz
 ```
 
 ## Új témakör hozzáadása

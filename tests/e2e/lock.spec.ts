@@ -86,20 +86,26 @@ test.describe('gyerekzár', () => {
       page.evaluate(() => {
         const out: string[] = [];
         document.querySelectorAll('#app *').forEach((e) => {
+          // A feladatok képeiben (SVG) lehet "?" jel, betű vagy számjegy: az tartalom, nem felirat.
+          if (e.closest('svg')) return;
           const own = [...e.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent!.trim()).join('');
           if (own && getComputedStyle(e).display !== 'none' && !e.closest('.sr-only')) out.push(own);
         });
         return out;
       });
-    // A kezdőlapon csak a témakör-csempe képe látszik (benne a "?" jel az SVG-ben), szó nem.
-    expect((await visibleText()).filter((t) => t !== '?')).toEqual([]);
+    // A kezdőlapon csak a témakör-csempék képe látszik, felirat nem.
+    expect(await visibleText()).toEqual([]);
     await page.locator('.tile[data-topic="minta"]').click();
     // A lapválasztón csak a lapok sorszámai látszanak.
-    const map = (await visibleText()).filter((t) => t !== '?'); // a "?" a témakör ikonjában van
+    const map = await visibleText();
+    expect(map.length).toBe(15);
     expect(map.every((t) => /^\d+$/.test(t))).toBe(true);
     await page.locator('.card').first().click();
-    // A lapon csak a "?" jel látszhat (az SVG-ben), szó nem.
-    expect((await visibleText()).filter((t) => !/^[?\d]+$/.test(t))).toEqual([]);
+    // A lapon nincs felirat.
+    expect(await visibleText()).toEqual([]);
+    // Az SVG-kben sincs szó: legfeljebb 1–2 karakteres jelek (?, betű, számjegy).
+    const svgTexts = await page.evaluate(() => [...document.querySelectorAll('#app svg text')].map((t) => t.textContent ?? ''));
+    expect(svgTexts.filter((t) => [...t].length > 2)).toEqual([]);
   });
 });
 

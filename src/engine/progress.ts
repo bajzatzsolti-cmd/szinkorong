@@ -22,9 +22,11 @@ export interface Store {
   v: 1;
   done: Record<string, DoneEntry>;
   settings: Settings;
+  /** Azok a témakörök, amelyeknek a bemutatóját a gyerek már látta. */
+  demos: TopicId[];
 }
 
-const defaults = (): Store => ({ v: 1, done: {}, settings: { volume: 0.8, disabled: [] } });
+const defaults = (): Store => ({ v: 1, done: {}, settings: { volume: 0.8, disabled: [] }, demos: [] });
 
 let memory: Store | null = null;
 
@@ -42,6 +44,7 @@ function sanitize(raw: unknown): Store {
     if (typeof s.volume === 'number' && s.volume >= 0 && s.volume <= 1) base.settings.volume = s.volume;
     if (Array.isArray(s.disabled)) base.settings.disabled = s.disabled.filter((x) => typeof x === 'string');
   }
+  if (Array.isArray(o.demos)) base.demos = o.demos.filter((x) => typeof x === 'string');
   return base;
 }
 
@@ -90,6 +93,14 @@ export function nextUndone(topic: TopicId, count: number): number {
 
 export function resetProgress(): void {
   load().done = {};
+  load().demos = [];
+  save();
+}
+
+export const isDemoSeen = (topic: TopicId): boolean => load().demos.includes(topic);
+
+export function markDemoSeen(topic: TopicId): void {
+  if (!load().demos.includes(topic)) load().demos.push(topic);
   save();
 }
 

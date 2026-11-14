@@ -8,7 +8,7 @@ export function verifyCommon(sheet: Sheet, expectedSizes: readonly number[]): st
   const { tasks, answers, spec } = sheet;
   const n = spec.n;
 
-  if (expectedSizes[spec.level] !== n) {
+  if (!spec.demo && expectedSizes[spec.level] !== n) {
     problems.push(`A lap mérete (${n}) nem egyezik a szinthez tartozóval (${expectedSizes[spec.level]}).`);
   }
   if (tasks.length !== n) problems.push(`A feladatok száma ${tasks.length}, kellene: ${n}.`);

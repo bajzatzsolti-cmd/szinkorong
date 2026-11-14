@@ -138,6 +138,87 @@ svg {
   stroke-width: 5;
   stroke-dasharray: 10 8;
 }
+.vl {
+  fill: #cfd9e6;
+  stroke: var(--shape);
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+/* Vonalas, betűszerű jelek */
+.vr path {
+  fill: none;
+  stroke: var(--shape);
+  stroke-width: 11;
+  stroke-linecap: round;
+}
+/* Betűk és számjegyek */
+.vg {
+  fill: #2a3550;
+  font-family: var(--font-num);
+  font-weight: 600;
+}
+.vgbox {
+  fill: #fff3c4;
+  stroke: var(--sun);
+  stroke-width: 5;
+}
+/* Tízes keret pöttyei */
+.vdot-on {
+  fill: #2a3550;
+}
+.vdot-off {
+  fill: none;
+  stroke: #c9c2ad;
+  stroke-width: 3;
+}
+/* Rács (mátrix) */
+.vcell {
+  fill: #fff;
+  stroke: #c9c2ad;
+  stroke-width: 2.5;
+}
+.vframe {
+  fill: none;
+  stroke: #8f96a8;
+  stroke-width: 3;
+}
+/* Kis jelek: nyíl, elválasztó, fél kép vágásvonala, forgatás / tükör jelvény */
+.vsym {
+  fill: none;
+  stroke: #8f96a8;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vsep {
+  fill: none;
+  stroke: #c9c2ad;
+  stroke-width: 5;
+  stroke-dasharray: 2 11;
+  stroke-linecap: round;
+}
+.vcut {
+  fill: none;
+  stroke: #9aa3b5;
+  stroke-width: 3;
+  stroke-dasharray: 6 6;
+}
+.vbadge.rot {
+  fill: #2d7fe0;
+}
+.vbadge.mir {
+  fill: #f5892b;
+}
+.vbi {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vbf {
+  fill: #fff;
+}
 /* Szókincs-képek: az .im a színes kép, az .sh az árnyék (az árnyék színe a currentColor) */
 .sh {
   color: #2d3a55;
@@ -238,8 +319,8 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding: 24px;
+  gap: 22px;
+  padding: 20px;
 }
 .strip {
   display: flex;
@@ -249,21 +330,28 @@ svg {
   width: 30px;
   height: 30px;
 }
+/* Csempék: álló nézetben 3, fekvőben 4 oszlop. */
 .tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: min(100%, 700px);
+}
+@media (orientation: landscape) {
+  .tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: min(100%, 1000px);
+  }
 }
 .tile {
-  width: 250px;
+  min-width: 0;
   display: grid;
-  gap: 16px;
+  gap: 12px;
   justify-items: center;
-  padding: 24px 20px 20px;
-  border-radius: 34px;
+  padding: 18px 12px 14px;
+  border-radius: 28px;
   background: var(--tc);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.3);
 }
 .tile:active {
   transform: translateY(5px);
@@ -272,7 +360,7 @@ svg {
 .tile-icon {
   position: relative;
   width: 100%;
-  height: 88px;
+  height: 76px;
 }
 .tile-icon .vis {
   position: absolute;
@@ -436,6 +524,11 @@ svg {
   justify-content: space-between;
   padding-right: 60px; /* a szülői gomb helye (álló nézetben a jobb felső sarok) */
 }
+.sbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .paper {
   grid-area: paper;
   min-height: 0;
@@ -522,11 +615,16 @@ svg {
     transform: translateX(6px);
   }
 }
-.slot {
+.slot-wrap {
   position: relative;
   flex: none;
   width: var(--slot);
   height: var(--slot);
+}
+.slot {
+  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: var(--slot-bg);
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
@@ -535,11 +633,22 @@ svg {
   outline: 4px solid var(--sun);
   outline-offset: 2px;
 }
+/* A kulcs: a helyes korong kicsiben, a hely jobb alsó sarkán (ellenőrzés után látszik). */
 .key {
-  flex: none;
-  width: var(--dot);
-  height: var(--dot);
+  position: absolute;
+  right: -7px;
+  bottom: -7px;
+  z-index: 3;
+  width: 48%;
+  height: 48%;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px #fff,
+    0 2px 5px rgba(0, 0, 0, 0.45);
   visibility: hidden;
+  pointer-events: none;
 }
 .paper.shown .key {
   visibility: visible;
@@ -601,6 +710,20 @@ svg {
   animation: pulse 1s ease-in-out infinite;
 }
 
+/* Álló nézetben a kétoszlopos feladatok dobozai magasabbak, mint szélesek: a pötty a kép FÖLÉ kerül,
+   így a kép (árnyék, mátrix) a doboz teljes szélességét megkapja. */
+@media (orientation: portrait) {
+  .tasks[data-cols='2'] .task {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 6px 8px;
+  }
+  .tasks[data-cols='2'] .task .disc.dot {
+    align-self: flex-start;
+  }
+}
+
 /* Fekvő nézet: a gombok oldalsávba kerülnek (a magasság a szűk erőforrás, a szélesség bőséges). */
 @media (orientation: landscape) {
   .sheet {
@@ -616,9 +739,48 @@ svg {
     gap: 14px;
     padding-right: 0;
   }
+  .sbar-right {
+    flex-direction: column;
+    gap: 14px;
+  }
   .homes {
     padding-right: 60px; /* a szülői gomb helye (fekvő nézetben a jobb alsó sarok) */
   }
+}
+
+/* ===== Animált bemutató (demo) ===== */
+.demo-hand {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 85;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
+}
+.demo-hand svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: 40% 10%;
+  transition: transform 0.15s;
+}
+.demo-hand.press svg {
+  transform: scale(0.86);
+}
+.demo-pulse {
+  outline: 5px solid var(--sun);
+  outline-offset: 2px;
+  animation: demo-pulse 0.65s ease-in-out infinite alternate;
+}
+@keyframes demo-pulse {
+  to {
+    outline-color: #f5892b;
+    outline-offset: 5px;
+  }
+}
+.sheet[data-demo] .go:not([data-mode='next']) {
+  opacity: 0.55;
 }
 
 /* ===== Ünneplés ===== */

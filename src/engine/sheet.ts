@@ -20,6 +20,8 @@ export interface SheetSpec {
   /** A korongok (és a feladatok) száma a lapon. */
   n: number;
   seed: number;
+  /** Bemutató (demo) lap: kisebb, mint a rendes lapok; a haladásba nem számít. */
+  demo?: boolean;
 }
 
 export interface TaskCell {

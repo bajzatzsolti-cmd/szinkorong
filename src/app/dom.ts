@@ -18,4 +18,6 @@ export interface Nav {
   home(): void;
   map(topicId: string): void;
   sheet(topicId: string, index: number): void;
+  /** A témakör animált bemutatója; a végén a megadott sorszámú lap nyílik meg. */
+  demo(topicId: string, thenIndex: number): void;
 }

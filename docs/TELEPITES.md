@@ -13,17 +13,19 @@ az iPad pedig appként a Főképernyőre teszi, és a legelső betöltés után 
 
 ## 2. A kód feltöltése
 
-A projektmappában (`C:\dev\szinkorong`), a `main` ágra:
+A projektmappában (`C:\dev\szinkorong`) a `main` ág már létezik, és a legutóbbi kész, tesztelt sprint állapotát tartalmazza. Csak fel kell tölteni:
 
 ```bash
-git add .
-git commit -m "Színkorong: 1. sprint"
-git branch -M main
 git remote add origin https://github.com/<felhasznalonev>/szinkorong.git
+```
+
+```bash
 git push -u origin main
 ```
 
-(A `<felhasznalonev>` helyére a saját GitHub-felhasználóneved kerül.)
+(A `<felhasznalonev>` helyére a saját GitHub-felhasználóneved kerül. Az első feltöltéskor a Git böngészőablakban kéri a GitHub-bejelentkezést.)
+
+A fejlesztés sprintenként külön ágon folyik (`sprint-…`); egy sprint akkor kerül a `main` ágra, amikor kész és a tesztek zöldek.
 
 ## 3. A GitHub Pages bekapcsolása (egyszer)
 
@@ -63,7 +65,16 @@ Ha az új verzió nem jelenik meg: zárd be az appot (csúsztatás felfelé), ny
 Ha a repónak privátnak kell maradnia: Cloudflare Pages, a repó összekötésével. Build parancs: `npm run build`, kimeneti mappa: `dist`.
 Az app relatív útvonalakat használ, ezért ugyanaz a build működik. A beállítás részletes leírását kérésre elkészítem.
 
-## 8. Helyi fejlesztés
+## 8. Gyors kipróbálás a helyi hálózaton (telepítés nélkül)
+
+Ha a gép és az iPad ugyanazon a Wi-Fi-n van, a játék a gépről is megnyitható az iPad Safarijában:
+`http://<a gép IP-címe>:5180` (a szerver a `.play` mappában lévő kész buildet szolgálja ki).
+
+Korlátok: csak akkor megy, amíg a gép be van kapcsolva és a szerver fut; **nincs offline mód** (a service worker csak HTTPS-en működik);
+a haladás ehhez a címhez kötődik, a későbbi GitHub Pages-címre nem megy át. Ha az iPad nem éri el a címet, a Windows tűzfala blokkolja:
+a megjelenő „Windows biztonság” ablakban engedélyezni kell a Node.js-t (céges gépen ehhez rendszergazdai jog kellhet).
+
+## 9. Helyi fejlesztés
 
 Szükséges: Node.js 22 vagy újabb.
 

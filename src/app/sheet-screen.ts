@@ -1,14 +1,15 @@
 // A feladatlap képernyője: feladatok (bal), megoldások + üres helyek (jobb), korongtálca alul,
 // ellenőrzés / újra / következő gomb. Minden felirat nélkül: csak ikonok, képek, számok.
+// Ugyanez a képernyő játssza le az animált bemutatót is (demo): ott egy kéz oldja meg a példalapot.
 import { attachDrag } from '../engine/drag';
 import { moveWithFlip } from '../engine/flip';
-import { markDone } from '../engine/progress';
+import { markDemoSeen, markDone } from '../engine/progress';
 import { say, sfx, stopSpeech } from '../engine/audio';
 import { SHEETS_PER_TOPIC, type Sheet } from '../engine/sheet';
 import { DISCS, discInner, discSpan } from '../render/disc';
 import { ICONS } from '../render/icons';
 import { renderVisual } from '../render/visual';
-import { buildSheet, getTopic } from '../topics';
+import { buildDemo, buildSheet, getTopic } from '../topics';
 import { clamp, el, type Cleanup, type Nav } from './dom';
 
 // Méretek (CSS px). A gyerekujj miatt: korong ≥ 56, üres hely ≥ 56 (a kért minimum: 52).
@@ -22,9 +23,9 @@ const GAP = 6;
 
 type Mode = 'check' | 'retry' | 'next';
 
-export function mountSheet(root: HTMLElement, topicId: string, index: number, nav: Nav): Cleanup {
+export function mountSheet(root: HTMLElement, topicId: string, index: number, nav: Nav, demo = false): Cleanup {
   const topic = getTopic(topicId);
-  const sheet: Sheet = buildSheet(topic, index);
+  const sheet: Sheet = demo ? buildDemo(topic) : buildSheet(topic, index);
   const n = sheet.spec.n;
 
   // ---------- állapot ----------
@@ -34,22 +35,29 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   let tries = 0;
   let mode: Mode = 'check';
   let discPx = DISC_MIN;
+  let alive = true;
+  const timers: number[] = [];
+  let handEl: HTMLElement | null = null;
 
   // ---------- DOM ----------
   const screen = el('section', 'screen sheet');
   screen.dataset.topic = topic.id;
   screen.dataset.index = String(index);
   screen.dataset.n = String(n);
+  if (demo) screen.dataset.demo = '1';
 
   const bar = el(
     'div',
     'sbar',
     `<button class="rb" data-act="back" aria-label="vissza">${ICONS.back}</button>` +
-      `<button class="rb" data-act="speak" aria-label="felolvasás">${ICONS.speaker}</button>`,
+      `<div class="sbar-right">` +
+      (topic.demoSize && !demo ? `<button class="rb" data-act="demo" aria-label="bemutató">${ICONS.play}</button>` : '') +
+      `<button class="rb" data-act="speak" aria-label="felolvasás">${ICONS.speaker}</button></div>`,
   );
   const paper = el('div', 'paper');
   paper.style.setProperty('--tcols', String(topic.taskCols));
   const tasksEl = el('div', 'tasks');
+  tasksEl.dataset.cols = String(topic.taskCols);
   const answersEl = el('div', 'answers');
   paper.append(tasksEl, answersEl);
   const homesEl = el('div', 'homes');
@@ -57,11 +65,13 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   go.setAttribute('aria-label', 'ellenőrzés');
   screen.append(bar, paper, homesEl, go);
 
+  const taskEls: HTMLElement[] = [];
   for (const t of sheet.tasks) {
     const row = el('div', 'task');
     row.dataset.disc = String(t.disc);
     if (t.say) row.dataset.say = t.say;
     row.innerHTML = `${discSpan(t.disc, 'dot')}<div class="vis-wrap">${renderVisual(t.visual)}</div>`;
+    taskEls.push(row);
     tasksEl.append(row);
   }
 
@@ -72,7 +82,8 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     const row = el('div', 'row');
     row.dataset.j = String(j);
     if (a.say) row.dataset.say = a.say;
-    row.innerHTML = `<div class="vis-wrap">${renderVisual(a.visual)}</div><div class="slot"></div><div class="key"></div>`;
+    // A kulcs (a helyes korong jele) ellenőrzéskor a hely sarkán jelenik meg, így nem vesz el helyet a képtől.
+    row.innerHTML = `<div class="vis-wrap">${renderVisual(a.visual)}</div><div class="slot-wrap"><div class="slot"></div><div class="key"></div></div>`;
     const slot = row.querySelector<HTMLElement>('.slot')!;
     const key = row.querySelector<HTMLElement>('.key')!;
     rowEls.push(row);
@@ -106,14 +117,14 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     moveWithFlip(b, () => homeEls.get(id)!.append(b), animate);
   };
 
-  const placeInto = (id: number, slotIdx: number): void => {
+  const placeInto = (id: number, slotIdx: number, duration?: number): void => {
     const occupant = slotDisc[slotIdx];
     if (occupant !== null && occupant !== id) sendHome(occupant!);
     const prev = slotDisc.indexOf(id);
     if (prev >= 0) slotDisc[prev] = null;
     slotDisc[slotIdx] = id;
     const b = discEls.get(id)!;
-    moveWithFlip(b, () => slotEls[slotIdx]!.append(b));
+    moveWithFlip(b, () => slotEls[slotIdx]!.append(b), true, duration);
     sfx('place');
   };
 
@@ -133,7 +144,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
 
   for (const [id, b] of discEls) {
     attachDrag(b, {
-      canStart: () => !locked,
+      canStart: () => !locked && !demo,
       slotBoxes: () => slotEls.map((s) => s.getBoundingClientRect()),
       snapRadius: () => Math.max(discPx * 1.5, 80),
       onDragStart: () => select(null),
@@ -143,7 +154,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
         else placeInto(id, slot);
       },
       onTap: () => {
-        if (locked) return;
+        if (locked || demo) return;
         sfx('tap');
         select(selected === id ? null : id);
       },
@@ -154,7 +165,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   // koppintva elhangzik a neve (csak ahol ez nem árulja el a megoldást: ezt a témakör dönti el a say mezővel).
   answersEl.addEventListener('click', (e) => {
     const row = (e.target as HTMLElement).closest<HTMLElement>('.row');
-    if (!row) return;
+    if (!row || demo) return;
     if (!locked && selected !== null) {
       placeInto(selected, Number(row.dataset.j));
       select(null);
@@ -164,10 +175,10 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   });
   tasksEl.addEventListener('click', (e) => {
     const task = (e.target as HTMLElement).closest<HTMLElement>('.task');
-    if (task?.dataset.say) say(task.dataset.say);
+    if (!demo && task?.dataset.say) say(task.dataset.say);
   });
   homesEl.addEventListener('click', () => {
-    if (locked || selected === null) return;
+    if (locked || demo || selected === null) return;
     if (slotDisc.includes(selected)) sendHome(selected);
     select(null);
   });
@@ -210,7 +221,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     });
     paper.classList.add('shown');
     if (good === n) {
-      markDone(topic.id, index, tries);
+      if (!demo) markDone(topic.id, index, tries); // a bemutató nem számít a haladásba
       sfx('ok');
       party();
       screen.classList.add('solved');
@@ -234,6 +245,13 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   };
 
   go.addEventListener('click', () => {
+    if (demo) {
+      // A bemutató alatt a gomb nem él; a végén (➜) a rendes lap nyílik meg.
+      if (mode !== 'next') return;
+      markDemoSeen(topic.id);
+      nav.sheet(topic.id, index);
+      return;
+    }
     if (mode === 'check') check();
     else if (mode === 'retry') retry();
     else if (index < SHEETS_PER_TOPIC - 1) nav.sheet(topic.id, index + 1);
@@ -245,6 +263,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     const act = (e.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
     if (act === 'back') nav.map(topic.id);
     else if (act === 'speak') speakInstruction();
+    else if (act === 'demo') nav.demo(topic.id, index);
   });
 
   // ---------- elrendezés ----------
@@ -281,6 +300,60 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     screen.style.setProperty('--dot', `${dot}px`);
   };
 
+  // ---------- animált bemutató ----------
+  // Szöveg nélkül: felvillan a feladat, felvillan a hozzá illő megoldás, majd egy kéz a feladat pöttyével
+  // egyező korongot a megoldás mellé húzza. A végén a kéz megnyomja a pipát, és jön az ünneplés.
+  const wait = (ms: number): Promise<void> =>
+    new Promise((resolve, reject) => {
+      timers.push(window.setTimeout(() => (alive ? resolve() : reject(new Error('megszakítva'))), ms));
+    });
+
+  const runDemo = async (): Promise<void> => {
+    const hand = el('div', 'demo-hand', ICONS.hand);
+    handEl = hand;
+    const tipTo = (target: Element, ms: number): Promise<void> => {
+      const r = target.getBoundingClientRect();
+      hand.style.transition = ms ? `transform ${ms}ms cubic-bezier(.4,0,.2,1)` : 'none';
+      // az ujjhegy a (26, 4) pontnál van a 64 px-es kézben
+      hand.style.transform = `translate(${r.left + r.width / 2 - 26}px, ${r.top + r.height / 2 - 4}px)`;
+      return wait(ms);
+    };
+    await tipTo(go, 0);
+    document.body.append(hand);
+    await wait(1200);
+
+    for (let ti = 0; ti < sheet.tasks.length; ti++) {
+      const task = sheet.tasks[ti]!;
+      const ai = sheet.answers.findIndex((a) => a.disc === task.disc);
+      const disc = discEls.get(task.disc)!;
+
+      taskEls[ti]!.classList.add('demo-pulse');
+      await wait(1500);
+      rowEls[ai]!.classList.add('demo-pulse');
+      await wait(1500);
+      taskEls[ti]!.classList.remove('demo-pulse');
+      rowEls[ai]!.classList.remove('demo-pulse');
+
+      await tipTo(disc, 800);
+      hand.classList.add('press');
+      await wait(300);
+      const slot = slotEls[ai]!;
+      placeInto(task.disc, ai, 1000);
+      await tipTo(slot, 1000);
+      hand.classList.remove('press');
+      await wait(700);
+    }
+
+    await tipTo(go, 800);
+    hand.classList.add('press');
+    await wait(300);
+    check();
+    hand.classList.remove('press');
+    await wait(500);
+    hand.remove();
+    handEl = null;
+  };
+
   root.replaceChildren(screen);
   setMode('check');
   layout();
@@ -291,8 +364,12 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
 
   // Minden lap megnyitásakor elhangzik a feladat (a megnyitás egy koppintás volt, így a hang elindulhat).
   speakInstruction();
+  if (demo) runDemo().catch(() => undefined);
 
   return () => {
+    alive = false;
+    timers.forEach((t) => window.clearTimeout(t));
+    handEl?.remove();
     ro.disconnect();
     window.removeEventListener('orientationchange', onOrientation);
     stopSpeech();

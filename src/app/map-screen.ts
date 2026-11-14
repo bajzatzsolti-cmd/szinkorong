@@ -1,4 +1,4 @@
-import { isDone, nextUndone } from '../engine/progress';
+import { isDemoSeen, isDone, nextUndone } from '../engine/progress';
 import { LEVELS, SHEETS_PER_LEVEL, SHEETS_PER_TOPIC } from '../engine/sheet';
 import { discSpan } from '../render/disc';
 import { ICONS } from '../render/icons';
@@ -35,7 +35,11 @@ export function mountMap(root: HTMLElement, topicId: string, nav: Nav): Cleanup 
     const t = e.target as HTMLElement;
     if (t.closest('[data-act="home"]')) return nav.home();
     const card = t.closest<HTMLElement>('.card');
-    if (card) nav.sheet(topic.id, Number(card.dataset.index));
+    if (!card) return;
+    const index = Number(card.dataset.index);
+    // A nehezebb logikai témakörök első lapja előtt egyszer lejátszódik az animált bemutató.
+    if (index === 0 && topic.demoSize && !isDemoSeen(topic.id)) nav.demo(topic.id, 0);
+    else nav.sheet(topic.id, index);
   });
   root.replaceChildren(screen);
   return () => undefined;
