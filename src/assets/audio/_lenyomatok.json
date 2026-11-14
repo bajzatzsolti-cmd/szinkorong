@@ -1,4 +1,26 @@
 {
+ "32882272": {
+  "fp": "440ed4d5",
+  "szoveg": "kapu",
+  "azonositok": [
+   "szo-kapu"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.62,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:31.826Z"
+ },
+ "42757529": {
+  "fp": "bac5dd64",
+  "szoveg": "korona",
+  "azonositok": [
+   "szo-korona"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:33.217Z"
+ },
  "55068734": {
   "fp": "16e59173",
   "szoveg": "béka",
@@ -10,6 +32,39 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:29:26.354Z"
  },
+ "79746507": {
+  "fp": "6894842a",
+  "szoveg": "eper",
+  "azonositok": [
+   "szo-eper"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.63,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:00.717Z"
+ },
+ "0067a47b": {
+  "fp": "13cd1172",
+  "szoveg": "A keretben a betű nagy és kis alakja van. Keresd meg mindkettőt! Hányszor látod összesen? Húzd a színes korongot a megfelelő szám mellé!",
+  "azonositok": [
+   "utasitas-betu-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 9.12,
+  "kredit": 54,
+  "generalva": "2026-11-14T13:43:35.995Z"
+ },
+ "00ba6f27": {
+  "fp": "4de48fba",
+  "szoveg": "olló",
+  "azonositok": [
+   "szo-ollo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:28.214Z"
+ },
  "00e01d46": {
   "fp": "cee3c91d",
   "szoveg": "Figyeld meg a sort! Mi következik? Húzd a színes korongot a megfelelő kép mellé!",
@@ -20,6 +75,28 @@
   "hossz_mp": 5.92,
   "kredit": 32,
   "generalva": "2026-11-14T13:29:22.083Z"
+ },
+ "00f32429": {
+  "fp": "3a94c284",
+  "szoveg": "roller",
+  "azonositok": [
+   "szo-roller"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:11.058Z"
+ },
+ "01a8c5b6": {
+  "fp": "ce33fae7",
+  "szoveg": "zokni",
+  "azonositok": [
+   "szo-zokni"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:13.176Z"
  },
  "01d6efb3": {
   "fp": "0a956d4a",
@@ -43,6 +120,94 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:29:27.130Z"
  },
+ "04ca785c": {
+  "fp": "2247728b",
+  "szoveg": "Az árnyékok el vannak forgatva. Melyik árnyék kié? Húzd a színes korongot az árnyék mellé!",
+  "azonositok": [
+   "utasitas-arnyek-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.12,
+  "kredit": 36,
+  "generalva": "2026-11-14T13:43:30.603Z"
+ },
+ "0594f103": {
+  "fp": "e995dcf0",
+  "szoveg": "labda",
+  "azonositok": [
+   "szo-labda"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:18.324Z"
+ },
+ "0d82f9a1": {
+  "fp": "e93dfd26",
+  "szoveg": "vonat",
+  "azonositok": [
+   "szo-vonat"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:08.792Z"
+ },
+ "0e3ed3ca": {
+  "fp": "5d0f25a9",
+  "szoveg": "autó",
+  "azonositok": [
+   "szo-auto"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:08.791Z"
+ },
+ "1098bfe8": {
+  "fp": "8219c4a9",
+  "szoveg": "medve",
+  "azonositok": [
+   "szo-medve"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:50.843Z"
+ },
+ "109fbda8": {
+  "fp": "20161a23",
+  "szoveg": "szemüveg",
+  "azonositok": [
+   "szo-szemuveg"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:34.016Z"
+ },
+ "10d5606f": {
+  "fp": "c454147a",
+  "szoveg": "Nézd meg mindkét mérleget! Melyik a legnehezebb? Húzd a színes korongot a legnehezebb mellé!",
+  "azonositok": [
+   "utasitas-merleg-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.4,
+  "kredit": 37,
+  "generalva": "2026-11-14T13:43:46.023Z"
+ },
+ "118ee480": {
+  "fp": "031ba16d",
+  "szoveg": "nap",
+  "azonositok": [
+   "szo-nap"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.48,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:16.507Z"
+ },
  "1329c96f": {
   "fp": "ad3b1782",
   "szoveg": "Melyik árnyék kié? Húzd a színes korongot az árnyék mellé!",
@@ -53,6 +218,72 @@
   "hossz_mp": 4.48,
   "kredit": 23,
   "generalva": "2026-11-14T13:29:21.404Z"
+ },
+ "1890d4ff": {
+  "fp": "5b1b71ac",
+  "szoveg": "csavarkulcs",
+  "azonositok": [
+   "szo-csavarkulcs"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.2,
+  "kredit": 5,
+  "generalva": "2026-11-14T13:44:20.017Z"
+ },
+ "18d23506": {
+  "fp": "afc5ffe3",
+  "szoveg": "fogkefe",
+  "azonositok": [
+   "szo-fogkefe"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:24.891Z"
+ },
+ "1dc70751": {
+  "fp": "76d6a5f8",
+  "szoveg": "nyuszi",
+  "azonositok": [
+   "szo-nyuszi"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:50.212Z"
+ },
+ "1dcc9bc2": {
+  "fp": "95697877",
+  "szoveg": "seprű",
+  "azonositok": [
+   "szo-sepru"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:23.188Z"
+ },
+ "1ec37190": {
+  "fp": "8cb1a1ad",
+  "szoveg": "sárkány",
+  "azonositok": [
+   "szo-sarkany"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:18.567Z"
+ },
+ "1ee2744d": {
+  "fp": "6a3e1c88",
+  "szoveg": "fészek",
+  "azonositok": [
+   "szo-feszek"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:31.478Z"
  },
  "1ef4b4b3": {
   "fp": "eabb4306",
@@ -76,6 +307,50 @@
   "kredit": 18,
   "generalva": "2026-11-14T13:29:25.399Z"
  },
+ "225571df": {
+  "fp": "bfef9292",
+  "szoveg": "oroszlán",
+  "azonositok": [
+   "szo-oroszlan"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:43:53.895Z"
+ },
+ "228c517a": {
+  "fp": "ec9bc95b",
+  "szoveg": "kígyó",
+  "azonositok": [
+   "szo-kigyo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:54.184Z"
+ },
+ "2823f8bb": {
+  "fp": "3632eb5a",
+  "szoveg": "ruha",
+  "azonositok": [
+   "szo-ruha"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.48,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:12.685Z"
+ },
+ "2851ff77": {
+  "fp": "8a477272",
+  "szoveg": "barack",
+  "azonositok": [
+   "szo-barack"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:02.376Z"
+ },
  "2b64cc66": {
   "fp": "af2d5afb",
   "szoveg": "tojás",
@@ -86,6 +361,204 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:29:27.920Z"
+ },
+ "2d8189ee": {
+  "fp": "537a5b95",
+  "szoveg": "róka",
+  "azonositok": [
+   "szo-roka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:50.440Z"
+ },
+ "2f2493d3": {
+  "fp": "9d3f213a",
+  "szoveg": "uborka",
+  "azonositok": [
+   "szo-uborka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.63,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:03.510Z"
+ },
+ "2ff9c6bb": {
+  "fp": "ec7368e2",
+  "szoveg": "repülő",
+  "azonositok": [
+   "szo-repulo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:09.400Z"
+ },
+ "33130c49": {
+  "fp": "7c48c32c",
+  "szoveg": "hegedű",
+  "azonositok": [
+   "szo-hegedu"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:15.697Z"
+ },
+ "380b3697": {
+  "fp": "0794f5f8",
+  "szoveg": "létra",
+  "azonositok": [
+   "szo-letra"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:22.623Z"
+ },
+ "38f43c3b": {
+  "fp": "bb9680ea",
+  "szoveg": "delfin",
+  "azonositok": [
+   "szo-delfin"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.94,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:54.778Z"
+ },
+ "3924d555": {
+  "fp": "58d28f32",
+  "szoveg": "körte",
+  "azonositok": [
+   "szo-korte"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.63,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:00.678Z"
+ },
+ "3a3eb26b": {
+  "fp": "32cc85ec",
+  "szoveg": "majom",
+  "azonositok": [
+   "szo-majom"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:51.487Z"
+ },
+ "3b5c0731": {
+  "fp": "c83643f2",
+  "szoveg": "papír",
+  "azonositok": [
+   "szo-papir"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:29.062Z"
+ },
+ "3c7caf56": {
+  "fp": "360d787b",
+  "szoveg": "mókus",
+  "azonositok": [
+   "szo-mokus"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:54.880Z"
+ },
+ "3cb1112a": {
+  "fp": "ecf253b3",
+  "szoveg": "cumisüveg",
+  "azonositok": [
+   "szo-cumisuveg"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.01,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:25.227Z"
+ },
+ "3d010162": {
+  "fp": "cd4697ab",
+  "szoveg": "madár",
+  "azonositok": [
+   "szo-madar"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.71,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:58.239Z"
+ },
+ "3db1b3d1": {
+  "fp": "7c4dd30c",
+  "szoveg": "baba",
+  "azonositok": [
+   "szo-baba"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:34.016Z"
+ },
+ "3f0ab221": {
+  "fp": "f755b158",
+  "szoveg": "Az árnyékok tükörképek. Melyik árnyék kié? Húzd a színes korongot az árnyék mellé!",
+  "azonositok": [
+   "utasitas-arnyek-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.48,
+  "kredit": 33,
+  "generalva": "2026-11-14T13:43:30.267Z"
+ },
+ "3f3f9b0e": {
+  "fp": "5c9b15a5",
+  "szoveg": "Melyik az alakzat tükörképe? Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-tukor-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.08,
+  "kredit": 23,
+  "generalva": "2026-11-14T13:43:35.995Z"
+ },
+ "3f414895": {
+  "fp": "de4e2ab8",
+  "szoveg": "Mondd ki hangosan a képek nevét! Melyik végződik ugyanazzal a hanggal? Húzd a színes korongot a párja mellé!",
+  "azonositok": [
+   "utasitas-hangolo-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.92,
+  "kredit": 43,
+  "generalva": "2026-11-14T13:43:49.446Z"
+ },
+ "3f7790bc": {
+  "fp": "63bb5feb",
+  "szoveg": "krokodil",
+  "azonositok": [
+   "szo-krokodil"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:43:53.133Z"
+ },
+ "40bc78a4": {
+  "fp": "f556d3bf",
+  "szoveg": "dinnye",
+  "azonositok": [
+   "szo-dinnye"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:01.433Z"
  },
  "40e003aa": {
   "fp": "1c623a15",
@@ -98,6 +571,173 @@
   "kredit": 22,
   "generalva": "2026-11-14T13:29:21.069Z"
  },
+ "40e43341": {
+  "fp": "9ed86fb0",
+  "szoveg": "bagoly",
+  "azonositok": [
+   "szo-bagoly"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:56.733Z"
+ },
+ "42111dfc": {
+  "fp": "e7a2f7fd",
+  "szoveg": "telefon",
+  "azonositok": [
+   "szo-telefon"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:24.879Z"
+ },
+ "4398bbd3": {
+  "fp": "7812737c",
+  "szoveg": "sapka",
+  "azonositok": [
+   "szo-sapka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:14.290Z"
+ },
+ "43dfc346": {
+  "fp": "7b8bd6f5",
+  "szoveg": "paradicsom",
+  "azonositok": [
+   "szo-paradicsom"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:03.278Z"
+ },
+ "44f8a34c": {
+  "fp": "bdcd21b1",
+  "szoveg": "csoki",
+  "azonositok": [
+   "szo-csoki"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:07.273Z"
+ },
+ "46054d64": {
+  "fp": "3c2b8071",
+  "szoveg": "kabát",
+  "azonositok": [
+   "szo-kabat"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:14.781Z"
+ },
+ "46ddc8ac": {
+  "fp": "92dc4ce5",
+  "szoveg": "szőlő",
+  "azonositok": [
+   "szo-szolo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:01.302Z"
+ },
+ "47a8ae9b": {
+  "fp": "082983aa",
+  "szoveg": "palacsinta",
+  "azonositok": [
+   "szo-palacsinta"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:05.697Z"
+ },
+ "484becf3": {
+  "fp": "1c8b0b60",
+  "szoveg": "Fejtsd meg a titkos írást! Fent látod, melyik jel melyik képet jelenti. Melyik képsor illik a jelekhez? Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-kodfejto-0",
+   "utasitas-kodfejto-1",
+   "utasitas-kodfejto-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 9.84,
+  "kredit": 53,
+  "generalva": "2026-11-14T13:43:49.775Z"
+ },
+ "4896590a": {
+  "fp": "96569613",
+  "szoveg": "kakas",
+  "azonositok": [
+   "szo-kakas"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:55.899Z"
+ },
+ "497531d8": {
+  "fp": "56d5fb75",
+  "szoveg": "kanál",
+  "azonositok": [
+   "szo-kanal"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:29.691Z"
+ },
+ "4c4d1775": {
+  "fp": "9d3f669c",
+  "szoveg": "tyúk",
+  "azonositok": [
+   "szo-tyuk"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:55.899Z"
+ },
+ "4f1cf882": {
+  "fp": "95254a4b",
+  "szoveg": "esernyő",
+  "azonositok": [
+   "szo-esernyo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:24.320Z"
+ },
+ "4f9f6b7f": {
+  "fp": "6a8b77a0",
+  "szoveg": "narancs",
+  "azonositok": [
+   "szo-narancs"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:02.379Z"
+ },
+ "4ff5ca4f": {
+  "fp": "823f4e3e",
+  "szoveg": "kanapé",
+  "azonositok": [
+   "szo-kanape"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:27.405Z"
+ },
  "51b57e0b": {
   "fp": "7d900e8a",
   "szoveg": "teknős",
@@ -108,6 +748,140 @@
   "hossz_mp": 0.88,
   "kredit": 3,
   "generalva": "2026-11-14T13:29:26.822Z"
+ },
+ "52ab799e": {
+  "fp": "c57eb8b5",
+  "szoveg": "Mi hiányzik a kérdőjel helyéről? Figyeld meg a sorokat és az oszlopokat! Húzd a színes korongot a hiányzó kép mellé!",
+  "azonositok": [
+   "utasitas-matrix-0",
+   "utasitas-matrix-1",
+   "utasitas-matrix-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 8.24,
+  "kredit": 46,
+  "generalva": "2026-11-14T13:43:39.252Z"
+ },
+ "55bcb506": {
+  "fp": "663e865f",
+  "szoveg": "Melyik ugyanaz az alakzat, csak elforgatva? Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-tukor-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.92,
+  "kredit": 29,
+  "generalva": "2026-11-14T13:43:35.434Z"
+ },
+ "57a170fb": {
+  "fp": "6d695730",
+  "szoveg": "villa",
+  "azonositok": [
+   "szo-villa"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:29.880Z"
+ },
+ "5bb1294f": {
+  "fp": "4ae176dc",
+  "szoveg": "vödör",
+  "azonositok": [
+   "szo-vodor"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:23.057Z"
+ },
+ "5bed8e8e": {
+  "fp": "41b49497",
+  "szoveg": "csont",
+  "azonositok": [
+   "szo-csont"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:31.074Z"
+ },
+ "5c68532e": {
+  "fp": "a895dccf",
+  "szoveg": "lámpa",
+  "azonositok": [
+   "szo-lampa"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:23.670Z"
+ },
+ "5d2f4013": {
+  "fp": "a5d5b840",
+  "szoveg": "csibe",
+  "azonositok": [
+   "szo-csibe"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.7,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:57.388Z"
+ },
+ "5de33923": {
+  "fp": "03fa41d4",
+  "szoveg": "óra",
+  "azonositok": [
+   "szo-ora"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:23.979Z"
+ },
+ "5ffb6539": {
+  "fp": "0e1fea28",
+  "szoveg": "busz",
+  "azonositok": [
+   "szo-busz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:08.994Z"
+ },
+ "60268b8c": {
+  "fp": "1d3f3d6d",
+  "szoveg": "gyertya",
+  "azonositok": [
+   "szo-gyertya"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:25.431Z"
+ },
+ "61ba76f9": {
+  "fp": "c6d14a32",
+  "szoveg": "kéz",
+  "azonositok": [
+   "szo-kez"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:21.746Z"
+ },
+ "61d08da2": {
+  "fp": "33712d45",
+  "szoveg": "napraforgó",
+  "azonositok": [
+   "szo-napraforgo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.12,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:20.979Z"
  },
  "639dc774": {
   "fp": "cf889819",
@@ -120,6 +894,160 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:29:28.526Z"
  },
+ "63af0911": {
+  "fp": "487eca88",
+  "szoveg": "hajó",
+  "azonositok": [
+   "szo-hajo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:10.325Z"
+ },
+ "6422eb68": {
+  "fp": "3ce2374f",
+  "szoveg": "fa",
+  "azonositok": [
+   "szo-fa"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.4,
+  "kredit": 1,
+  "generalva": "2026-11-14T13:44:20.181Z"
+ },
+ "6a837106": {
+  "fp": "5d9b95c9",
+  "szoveg": "csizma",
+  "azonositok": [
+   "szo-csizma"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:14.292Z"
+ },
+ "6b6a4c23": {
+  "fp": "dc4514cc",
+  "szoveg": "pókháló",
+  "azonositok": [
+   "szo-pokhalo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.12,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:31.246Z"
+ },
+ "6b9e4a8b": {
+  "fp": "2eb3d5a6",
+  "szoveg": "hópehely",
+  "azonositok": [
+   "szo-hopehely"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:32.477Z"
+ },
+ "6c7e8a17": {
+  "fp": "24ea4ff6",
+  "szoveg": "répa",
+  "azonositok": [
+   "szo-repa"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:03.076Z"
+ },
+ "6d289d7e": {
+  "fp": "cd824f1f",
+  "szoveg": "csiga",
+  "azonositok": [
+   "szo-csiga"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:55.430Z"
+ },
+ "6d4b02ae": {
+  "fp": "cf55393f",
+  "szoveg": "kifli",
+  "azonositok": [
+   "szo-kifli"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.7,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:05.641Z"
+ },
+ "6dde5128": {
+  "fp": "9815c457",
+  "szoveg": "helikopter",
+  "azonositok": [
+   "szo-helikopter"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.04,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:09.456Z"
+ },
+ "6f74e22c": {
+  "fp": "14ee4f7b",
+  "szoveg": "bárány",
+  "azonositok": [
+   "szo-barany"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:52.058Z"
+ },
+ "7038d713": {
+  "fp": "3721d9ae",
+  "szoveg": "hangya",
+  "azonositok": [
+   "szo-hangya"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:59.105Z"
+ },
+ "724c0294": {
+  "fp": "b2d74a51",
+  "szoveg": "mentő",
+  "azonositok": [
+   "szo-mento"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:11.619Z"
+ },
+ "72da1776": {
+  "fp": "4abd9ee1",
+  "szoveg": "katica",
+  "azonositok": [
+   "szo-katica"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:58.899Z"
+ },
+ "733b86ed": {
+  "fp": "901e941a",
+  "szoveg": "pók",
+  "azonositok": [
+   "szo-pok"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.63,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:59.106Z"
+ },
  "7499948f": {
   "fp": "59f25248",
   "szoveg": "zebra",
@@ -130,6 +1058,51 @@
   "hossz_mp": 0.72,
   "kredit": 2,
   "generalva": "2026-11-14T13:29:26.701Z"
+ },
+ "761c0091": {
+  "fp": "234fe8a8",
+  "szoveg": "galamb",
+  "azonositok": [
+   "szo-galamb"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:57.386Z"
+ },
+ "7691ea86": {
+  "fp": "13d73c55",
+  "szoveg": "Melyik a nehezebb? A mérleg a nehezebb oldalon lefelé billen. Húzd a színes korongot a nehezebb mellé!",
+  "azonositok": [
+   "utasitas-merleg-0",
+   "utasitas-merleg-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.36,
+  "kredit": 41,
+  "generalva": "2026-11-14T13:43:45.645Z"
+ },
+ "7983df46": {
+  "fp": "7ab0ae5f",
+  "szoveg": "kalap",
+  "azonositok": [
+   "szo-kalap"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:15.055Z"
+ },
+ "7ca2cb81": {
+  "fp": "788ed71c",
+  "szoveg": "póló",
+  "azonositok": [
+   "szo-polo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:12.360Z"
  },
  "7d8d39b4": {
   "fp": "5ce61737",
@@ -142,6 +1115,17 @@
   "kredit": 15,
   "generalva": "2026-11-14T13:29:25.900Z"
  },
+ "81fe88b4": {
+  "fp": "265a084b",
+  "szoveg": "tücsök",
+  "azonositok": [
+   "szo-tucsok"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.71,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:59.942Z"
+ },
  "8536fedf": {
   "fp": "827fcc4c",
   "szoveg": "ajándék",
@@ -152,6 +1136,480 @@
   "hossz_mp": 0.96,
   "kredit": 3,
   "generalva": "2026-11-14T13:29:29.028Z"
+ },
+ "85682ff9": {
+  "fp": "9cf17c06",
+  "szoveg": "torta",
+  "azonositok": [
+   "szo-torta"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:06.618Z"
+ },
+ "86322fd8": {
+  "fp": "b2548ce3",
+  "szoveg": "fűrész",
+  "azonositok": [
+   "szo-furesz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:19.504Z"
+ },
+ "88dfb8e2": {
+  "fp": "336fd103",
+  "szoveg": "víz",
+  "azonositok": [
+   "szo-viz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:32.477Z"
+ },
+ "89cd2bba": {
+  "fp": "9ea767ed",
+  "szoveg": "Melyik darab hiányzik a képből? Húzd a színes korongot a kivágott darab mellé!",
+  "azonositok": [
+   "utasitas-felkep-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.28,
+  "kredit": 31,
+  "generalva": "2026-11-14T13:43:47.650Z"
+ },
+ "8c8137b9": {
+  "fp": "23629c00",
+  "szoveg": "Figyeld a jelet! A körbe forduló nyílnál az elforgatott jelet keresd, a tükörnél a tükörképét! Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-tukor-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 9.84,
+  "kredit": 50,
+  "generalva": "2026-11-14T13:43:39.259Z"
+ },
+ "8d34fb3c": {
+  "fp": "7a51fc77",
+  "szoveg": "szivárvány",
+  "azonositok": [
+   "szo-szivarvany"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.04,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:17.573Z"
+ },
+ "8d6ba895": {
+  "fp": "f9e0b15e",
+  "szoveg": "papagáj",
+  "azonositok": [
+   "szo-papagaj"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:57.826Z"
+ },
+ "8e1bc944": {
+  "fp": "1d55728b",
+  "szoveg": "hagyma",
+  "azonositok": [
+   "szo-hagyma"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:04.230Z"
+ },
+ "9225f456": {
+  "fp": "b40c2c77",
+  "szoveg": "vaj",
+  "azonositok": [
+   "szo-vaj"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:06.330Z"
+ },
+ "92bf41c2": {
+  "fp": "429c00cd",
+  "szoveg": "egér",
+  "azonositok": [
+   "szo-eger"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:49.997Z"
+ },
+ "93985c28": {
+  "fp": "a4ebfda9",
+  "szoveg": "eső",
+  "azonositok": [
+   "szo-eso"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:31.758Z"
+ },
+ "9788893e": {
+  "fp": "31400feb",
+  "szoveg": "Vigyázz, a kérdőjel sorában egy másik hely is üres! Nézd meg az oszlopot is! Melyik kép kerül a kérdőjel helyére? Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-sudoku-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 10,
+  "kredit": 57,
+  "generalva": "2026-11-14T13:43:44.683Z"
+ },
+ "97a76a65": {
+  "fp": "3aba8c22",
+  "szoveg": "pizza",
+  "azonositok": [
+   "szo-pizza"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:05.644Z"
+ },
+ "98fb5beb": {
+  "fp": "4f75bb26",
+  "szoveg": "kenyér",
+  "azonositok": [
+   "szo-kenyer"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:04.986Z"
+ },
+ "9a7ac871": {
+  "fp": "f8d5690a",
+  "szoveg": "levél",
+  "azonositok": [
+   "szo-level"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:25.668Z"
+ },
+ "9c99e970": {
+  "fp": "50b171c5",
+  "szoveg": "leves",
+  "azonositok": [
+   "szo-leves"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:06.430Z"
+ },
+ "a0a20ec5": {
+  "fp": "f460c564",
+  "szoveg": "szaxofon",
+  "azonositok": [
+   "szo-szaxofon"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:16.423Z"
+ },
+ "a0a8f2a2": {
+  "fp": "4589f995",
+  "szoveg": "nadrág",
+  "azonositok": [
+   "szo-nadrag"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:12.685Z"
+ },
+ "a1f3723f": {
+  "fp": "5c83bdb0",
+  "szoveg": "fog",
+  "azonositok": [
+   "szo-fog"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:22.334Z"
+ },
+ "a384b349": {
+  "fp": "d3b28024",
+  "szoveg": "királylány",
+  "azonositok": [
+   "szo-kiralylany"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.2,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:33.442Z"
+ },
+ "a4050fdb": {
+  "fp": "ebe49a46",
+  "szoveg": "fánk",
+  "azonositok": [
+   "szo-fank"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:08.175Z"
+ },
+ "a4464e80": {
+  "fp": "49647381",
+  "szoveg": "fejhallgató",
+  "azonositok": [
+   "szo-fejhallgato"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.12,
+  "kredit": 5,
+  "generalva": "2026-11-14T13:44:26.528Z"
+ },
+ "a5222c13": {
+  "fp": "f69ecf76",
+  "szoveg": "kalapács",
+  "azonositok": [
+   "szo-kalapacs"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:18.951Z"
+ },
+ "a606e991": {
+  "fp": "db78fd42",
+  "szoveg": "banán",
+  "azonositok": [
+   "szo-banan"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:00.753Z"
+ },
+ "a7a2d0e3": {
+  "fp": "d2d94840",
+  "szoveg": "gomba",
+  "azonositok": [
+   "szo-gomba"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:30.823Z"
+ },
+ "aa2dcfaf": {
+  "fp": "3e33f318",
+  "szoveg": "ecset",
+  "azonositok": [
+   "szo-ecset"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:29.061Z"
+ },
+ "aa5df419": {
+  "fp": "11c269e6",
+  "szoveg": "könyv",
+  "azonositok": [
+   "szo-konyv"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:27.528Z"
+ },
+ "aab20feb": {
+  "fp": "e29431b2",
+  "szoveg": "Melyik a kép másik fele? Húzd a színes korongot a hiányzó fél mellé!",
+  "azonositok": [
+   "utasitas-felkep-0",
+   "utasitas-felkep-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.44,
+  "kredit": 27,
+  "generalva": "2026-11-14T13:43:46.916Z"
+ },
+ "aad8b8cb": {
+  "fp": "34b09dfa",
+  "szoveg": "teve",
+  "azonositok": [
+   "szo-teve"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.48,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:52.649Z"
+ },
+ "aaedd1de": {
+  "fp": "d8a3c43f",
+  "szoveg": "bicikli",
+  "azonositok": [
+   "szo-bicikli"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:09.876Z"
+ },
+ "ace79138": {
+  "fp": "c4e97d69",
+  "szoveg": "ágy",
+  "azonositok": [
+   "szo-agy"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:27.368Z"
+ },
+ "ad42acce": {
+  "fp": "7e21b60b",
+  "szoveg": "nyalóka",
+  "azonositok": [
+   "szo-nyaloka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:07.274Z"
+ },
+ "ad481364": {
+  "fp": "0d6c50f7",
+  "szoveg": "Melyik hiányzik a sor közepéről? Húzd a színes korongot a megfelelő kép mellé!",
+  "azonositok": [
+   "utasitas-minta-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.68,
+  "kredit": 31,
+  "generalva": "2026-11-14T13:43:30.021Z"
+ },
+ "adc649b8": {
+  "fp": "edfadbf3",
+  "szoveg": "hold",
+  "azonositok": [
+   "szo-hold"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:16.313Z"
+ },
+ "aea58d84": {
+  "fp": "89d403a9",
+  "szoveg": "tűz",
+  "azonositok": [
+   "szo-tuz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:30.431Z"
+ },
+ "b18688da": {
+  "fp": "cc0d50d7",
+  "szoveg": "postaláda",
+  "azonositok": [
+   "szo-postalada"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:25.920Z"
+ },
+ "b2937ae8": {
+  "fp": "06d8c1b7",
+  "szoveg": "szék",
+  "azonositok": [
+   "szo-szek"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:26.677Z"
+ },
+ "b5bfab5f": {
+  "fp": "ac03fba4",
+  "szoveg": "fagyi",
+  "azonositok": [
+   "szo-fagyi"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:07.334Z"
+ },
+ "b772d1ee": {
+  "fp": "baa91035",
+  "szoveg": "szem",
+  "azonositok": [
+   "szo-szem"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:22.334Z"
+ },
+ "b859ae0d": {
+  "fp": "8a05b910",
+  "szoveg": "ceruza",
+  "azonositok": [
+   "szo-ceruza"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:28.213Z"
+ },
+ "b901ee08": {
+  "fp": "cad19945",
+  "szoveg": "tej",
+  "azonositok": [
+   "szo-tej"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:04.810Z"
+ },
+ "b9589b46": {
+  "fp": "7054b2b5",
+  "szoveg": "kukorica",
+  "azonositok": [
+   "szo-kukorica"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.93,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:03.820Z"
+ },
+ "ba9d3a8f": {
+  "fp": "68b1af42",
+  "szoveg": "festék",
+  "azonositok": [
+   "szo-festek"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:29.064Z"
  },
  "ba9dee67": {
   "fp": "922d0cf8",
@@ -164,6 +1622,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:29:28.325Z"
  },
+ "bba80a01": {
+  "fp": "cf866ee6",
+  "szoveg": "krumpli",
+  "azonositok": [
+   "szo-krumpli"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:04.076Z"
+ },
  "be09f407": {
   "fp": "8542059e",
   "szoveg": "sajt",
@@ -174,6 +1643,116 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:29:27.510Z"
+ },
+ "be371fc4": {
+  "fp": "cae193d9",
+  "szoveg": "kocka",
+  "azonositok": [
+   "szo-kocka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.86,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:18.950Z"
+ },
+ "c2386544": {
+  "fp": "264894dd",
+  "szoveg": "kaktusz",
+  "azonositok": [
+   "szo-kaktusz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.83,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:21.043Z"
+ },
+ "c31d7086": {
+  "fp": "c4c68f73",
+  "szoveg": "pingvin",
+  "azonositok": [
+   "szo-pingvin"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:56.535Z"
+ },
+ "c3f00e2e": {
+  "fp": "a6c54089",
+  "szoveg": "rendőrautó",
+  "azonositok": [
+   "szo-rendorauto"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.2,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:11.937Z"
+ },
+ "c3f3e700": {
+  "fp": "b2f62a47",
+  "szoveg": "Nézd meg a keretben lévő betűt! Hányszor látod a betűk között? Húzd a színes korongot a megfelelő számú pötty mellé!",
+  "azonositok": [
+   "utasitas-betu-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.68,
+  "kredit": 46,
+  "generalva": "2026-11-14T13:43:33.074Z"
+ },
+ "c59fb253": {
+  "fp": "92176012",
+  "szoveg": "maci",
+  "azonositok": [
+   "szo-maci"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:18.003Z"
+ },
+ "c6355d1e": {
+  "fp": "f1266121",
+  "szoveg": "cseresznye",
+  "azonositok": [
+   "szo-cseresznye"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:01.495Z"
+ },
+ "c694d6f6": {
+  "fp": "9ab1c565",
+  "szoveg": "csavarhúzó",
+  "azonositok": [
+   "szo-csavarhuzo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.04,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:19.813Z"
+ },
+ "c7597b9b": {
+  "fp": "0b112ce4",
+  "szoveg": "keksz",
+  "azonositok": [
+   "szo-keksz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:08.174Z"
+ },
+ "c8cc76b1": {
+  "fp": "3bc13a32",
+  "szoveg": "méh",
+  "azonositok": [
+   "szo-meh"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:58.240Z"
  },
  "c8e57822": {
   "fp": "b0c2bea9",
@@ -186,6 +1765,139 @@
   "kredit": 4,
   "generalva": "2026-11-14T13:29:27.420Z"
  },
+ "caf08472": {
+  "fp": "fc919c03",
+  "szoveg": "motor",
+  "azonositok": [
+   "szo-motor"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:10.973Z"
+ },
+ "cb8ba069": {
+  "fp": "d7a4fc3a",
+  "szoveg": "fül",
+  "azonositok": [
+   "szo-ful"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:21.716Z"
+ },
+ "cc14c1fa": {
+  "fp": "89dc2475",
+  "szoveg": "hernyó",
+  "azonositok": [
+   "szo-hernyo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:59.943Z"
+ },
+ "cc76d9f9": {
+  "fp": "881cc43e",
+  "szoveg": "kulcs",
+  "azonositok": [
+   "szo-kulcs"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:23.411Z"
+ },
+ "cc9af72c": {
+  "fp": "f7d7bcd9",
+  "szoveg": "fenyő",
+  "azonositok": [
+   "szo-fenyo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:21.570Z"
+ },
+ "ce4134c1": {
+  "fp": "30c76028",
+  "szoveg": "hattyú",
+  "azonositok": [
+   "szo-hattyu"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:56.927Z"
+ },
+ "d0b6311f": {
+  "fp": "19e3c4ba",
+  "szoveg": "kecske",
+  "azonositok": [
+   "szo-kecske"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:52.306Z"
+ },
+ "d2050cef": {
+  "fp": "bacaa656",
+  "szoveg": "süni",
+  "azonositok": [
+   "szo-suni"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:54.991Z"
+ },
+ "d30c088f": {
+  "fp": "7b8dbb56",
+  "szoveg": "Minden sorban és minden oszlopban minden kép egyszer van. Melyik kép hiányzik a kérdőjel helyéről? Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-sudoku-0",
+   "utasitas-sudoku-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 10.4,
+  "kredit": 51,
+  "generalva": "2026-11-14T13:43:42.859Z"
+ },
+ "d4b7f08f": {
+  "fp": "87949b82",
+  "szoveg": "citrom",
+  "azonositok": [
+   "szo-citrom"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:01.993Z"
+ },
+ "d632a968": {
+  "fp": "626bc2f3",
+  "szoveg": "ló",
+  "azonositok": [
+   "szo-lo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.2,
+  "kredit": 1,
+  "generalva": "2026-11-14T13:43:52.058Z"
+ },
+ "d6cc8cbb": {
+  "fp": "5742c568",
+  "szoveg": "méz",
+  "azonositok": [
+   "szo-mez"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:05.046Z"
+ },
  "d89d23c3": {
   "fp": "ac71d8c0",
   "szoveg": "Koppints a képre, és meghallgatod, mit keress! A jel is megmutatja: az első hangot, az utolsó hangot, vagy tapsold el a szót. Húzd a színes korongot a párja mellé!",
@@ -196,6 +1908,72 @@
   "hossz_mp": 10.56,
   "kredit": 65,
   "generalva": "2026-11-14T13:29:25.899Z"
+ },
+ "da6394f6": {
+  "fp": "23a7ab27",
+  "szoveg": "virág",
+  "azonositok": [
+   "szo-virag"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:20.716Z"
+ },
+ "da8f364e": {
+  "fp": "18417627",
+  "szoveg": "füzet",
+  "azonositok": [
+   "szo-fuzet"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:28.215Z"
+ },
+ "db12c79e": {
+  "fp": "5561e0bb",
+  "szoveg": "csillag",
+  "azonositok": [
+   "szo-csillag"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:16.934Z"
+ },
+ "dcdf6aef": {
+  "fp": "9a8c8544",
+  "szoveg": "sál",
+  "azonositok": [
+   "szo-sal"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:13.555Z"
+ },
+ "dce37dba": {
+  "fp": "a6120fb7",
+  "szoveg": "kesztyű",
+  "azonositok": [
+   "szo-kesztyu"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:13.555Z"
+ },
+ "ddbb3b56": {
+  "fp": "01aa5b21",
+  "szoveg": "cipő",
+  "azonositok": [
+   "szo-cipo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:13.993Z"
  },
  "defd8329": {
   "fp": "c931e62a",
@@ -208,6 +1986,363 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:29:29.146Z"
  },
+ "e0827ad3": {
+  "fp": "cee5ab3a",
+  "szoveg": "ajtó",
+  "azonositok": [
+   "szo-ajto"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.63,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:24.140Z"
+ },
+ "e0bd3090": {
+  "fp": "42789f89",
+  "szoveg": "traktor",
+  "azonositok": [
+   "szo-traktor"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:10.624Z"
+ },
+ "e4006bdc": {
+  "fp": "6f3463d3",
+  "szoveg": "kivi",
+  "azonositok": [
+   "szo-kivi"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.69,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:02.826Z"
+ },
+ "e42f24fc": {
+  "fp": "bdcfa513",
+  "szoveg": "Melyik kép nem illik a többi közé? Húzd a színes korongot a kakukktojás mellé!",
+  "azonositok": [
+   "utasitas-kakukk-0",
+   "utasitas-kakukk-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.12,
+  "kredit": 31,
+  "generalva": "2026-11-14T13:43:41.096Z"
+ },
+ "e47aca23": {
+  "fp": "a9637c88",
+  "szoveg": "szarvas",
+  "azonositok": [
+   "szo-szarvas"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:52.746Z"
+ },
+ "e5a7d8af": {
+  "fp": "246635a4",
+  "szoveg": "cukorka",
+  "azonositok": [
+   "szo-cukorka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:08.035Z"
+ },
+ "e6752ea4": {
+  "fp": "8ceb9699",
+  "szoveg": "gitár",
+  "azonositok": [
+   "szo-gitar"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:14.904Z"
+ },
+ "e8028468": {
+  "fp": "6eda39d3",
+  "szoveg": "Melyik kettő való egy csoportba? Húzd a színes korongot a társa mellé!",
+  "azonositok": [
+   "utasitas-csoport-0",
+   "utasitas-csoport-1",
+   "utasitas-csoport-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.12,
+  "kredit": 28,
+  "generalva": "2026-11-14T13:43:32.067Z"
+ },
+ "e95c870e": {
+  "fp": "9cec0cc3",
+  "szoveg": "lepke",
+  "azonositok": [
+   "szo-lepke"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:58.474Z"
+ },
+ "e968c1c2": {
+  "fp": "bc11a957",
+  "szoveg": "dob",
+  "azonositok": [
+   "szo-dob"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:15.696Z"
+ },
+ "eabf0b2a": {
+  "fp": "689c8743",
+  "szoveg": "hal",
+  "azonositok": [
+   "szo-hal"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:54.182Z"
+ },
+ "eb4308e3": {
+  "fp": "206724e8",
+  "szoveg": "felhő",
+  "azonositok": [
+   "szo-felho"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:17.279Z"
+ },
+ "ec15f601": {
+  "fp": "c11650b2",
+  "szoveg": "jég",
+  "azonositok": [
+   "szo-jeg"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:34.050Z"
+ },
+ "ec1f3821": {
+  "fp": "861228a6",
+  "szoveg": "Nézd meg, mi történt az első képpel! Ugyanez történik a másodikkal is. Mi kerül a kérdőjel helyére? Húzd mellé a színes korongot!",
+  "azonositok": [
+   "utasitas-analogia-0",
+   "utasitas-analogia-1",
+   "utasitas-analogia-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 9.44,
+  "kredit": 52,
+  "generalva": "2026-11-14T13:43:39.608Z"
+ },
+ "ecb88c02": {
+  "fp": "82004955",
+  "szoveg": "alma",
+  "azonositok": [
+   "szo-alma"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:59.944Z"
+ },
+ "eee029e7": {
+  "fp": "246216b6",
+  "szoveg": "bolygó",
+  "azonositok": [
+   "szo-bolygo"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:17.730Z"
+ },
+ "f184d3df": {
+  "fp": "95850e14",
+  "szoveg": "paprika",
+  "azonositok": [
+   "szo-paprika"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:04.411Z"
+ },
+ "f18950b2": {
+  "fp": "bb8a9289",
+  "szoveg": "zsiráf",
+  "azonositok": [
+   "szo-zsiraf"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:53.472Z"
+ },
+ "f3d401da": {
+  "fp": "9b2a2dcf",
+  "szoveg": "kacsa",
+  "azonositok": [
+   "szo-kacsa"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.68,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:56.064Z"
+ },
+ "f492d7b1": {
+  "fp": "994c5d72",
+  "szoveg": "tehén",
+  "azonositok": [
+   "szo-tehen"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.71,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:51.201Z"
+ },
+ "f594fd45": {
+  "fp": "71f8d738",
+  "szoveg": "cica",
+  "azonositok": [
+   "szo-cica"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:49.106Z"
+ },
+ "f5fc4f68": {
+  "fp": "ba08ebdd",
+  "szoveg": "ház",
+  "azonositok": [
+   "szo-haz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:30.553Z"
+ },
+ "f62d19ed": {
+  "fp": "019322b6",
+  "szoveg": "malac",
+  "azonositok": [
+   "szo-malac"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.12,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:51.119Z"
+ },
+ "f7159335": {
+  "fp": "e0eb4872",
+  "szoveg": "tűzoltóautó",
+  "azonositok": [
+   "szo-tuzoltoauto"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.44,
+  "kredit": 5,
+  "generalva": "2026-11-14T13:44:11.745Z"
+ },
+ "f7d156fe": {
+  "fp": "2d3858c7",
+  "szoveg": "gombolyag",
+  "azonositok": [
+   "szo-gombolyag"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:26.527Z"
+ },
+ "f994d642": {
+  "fp": "f259b60f",
+  "szoveg": "benzinkút",
+  "azonositok": [
+   "szo-benzinkut"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.2,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:32.262Z"
+ },
+ "fa163c88": {
+  "fp": "449b753d",
+  "szoveg": "elefánt",
+  "azonositok": [
+   "szo-elefant"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:43:53.391Z"
+ },
+ "fa33eef5": {
+  "fp": "82398ff4",
+  "szoveg": "trombita",
+  "azonositok": [
+   "szo-trombita"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:44:15.761Z"
+ },
+ "fa91fdb3": {
+  "fp": "ae3e520a",
+  "szoveg": "rakéta",
+  "azonositok": [
+   "szo-raketa"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:10.324Z"
+ },
+ "fb8e8c07": {
+  "fp": "34430b88",
+  "szoveg": "hóember",
+  "azonositok": [
+   "szo-hoember"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 1.12,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:44:30.028Z"
+ },
+ "fba55f9e": {
+  "fp": "5e3dc68f",
+  "szoveg": "alvás",
+  "azonositok": [
+   "szo-alvas"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:44:33.219Z"
+ },
+ "fc1d64d4": {
+  "fp": "dcb8d025",
+  "szoveg": "Nézd meg a keretben lévő betűt! Vigyázz, vannak hozzá hasonló betűk is! Hányszor látod? Húzd a színes korongot a megfelelő számú pötty mellé!",
+  "azonositok": [
+   "utasitas-betu-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 10.32,
+  "kredit": 56,
+  "generalva": "2026-11-14T13:43:34.209Z"
+ },
  "fd16b8a7": {
   "fp": "946e3c16",
   "szoveg": "lufi",
@@ -218,5 +2353,27 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:29:28.128Z"
+ },
+ "fd1da505": {
+  "fp": "5826ffe6",
+  "szoveg": "kutya",
+  "azonositok": [
+   "szo-kutya"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.52,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:43:48.328Z"
+ },
+ "fe66b07a": {
+  "fp": "950483f3",
+  "szoveg": "Melyik más, mint a többi három? Figyeld meg, merre néz, hány darab van belőle, és milyen színű! Húzd a színes korongot a kakukktojás mellé!",
+  "azonositok": [
+   "utasitas-kakukk-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 9.92,
+  "kredit": 56,
+  "generalva": "2026-11-14T13:43:43.763Z"
  }
 }
