@@ -1,0 +1,35 @@
+{
+  "name": "szinkorong",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Színkorong – iskolára hangoló logikai játék 5 éves, még nem olvasó gyerekeknek (PWA, offline).",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host --port 4173 --strictPort",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "icons": "node scripts/make-icons.mjs",
+    "check:fonts": "node scripts/check-fonts.mjs",
+    "check": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "fontkit": "^3.0.0",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0",
+    "workbox-window": "^7.4.1"
+  },
+  "dependencies": {
+    "@fontsource/fredoka": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0"
+  }
+}

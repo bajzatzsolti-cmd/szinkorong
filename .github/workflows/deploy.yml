@@ -1,0 +1,55 @@
+name: Build és kitelepítés (GitHub Pages)
+
+# A main ágra pusholáskor: ellenőrzés, build, kitelepítés. Kézzel is indítható (Actions → Run workflow).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Egyszerre csak egy kitelepítés fusson; az újabb felváltja a régebbit.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Betűtípusok: megvan-e az ő/ű és minden magyar ékezetes betű?
+      - run: npm run check:fonts
+
+      # Típusellenőrzés + éles build (dist/)
+      - run: npm run build
+
+      # Egységtesztek: minden lap generátora és verifikátora (pontosan egy megoldás, különböző megoldások)
+      - run: npm test
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
