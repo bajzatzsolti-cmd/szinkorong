@@ -40,7 +40,7 @@ export function topicSuite(topic: Topic, extra?: { seeds?: number }): void {
           // Egy hanganyag több klip sora is lehet ("sablon+szo-macska"): mindegyik része kell.
           for (const part of c.say?.split('+') ?? []) expect(manifest[part], `${part} hiányzik a manifestből`).toBeTruthy();
         }
-        expect(manifest[topic.instructionId(sheet.spec.level)]).toBeTruthy();
+        expect(manifest[topic.instructionId(sheet.spec.level, sheet.spec.index)]).toBeTruthy();
       }
     });
   });

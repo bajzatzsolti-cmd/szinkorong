@@ -1,9 +1,10 @@
 // Képernyők közti váltás. Nincs böngészőelőzmény (history): a gyerek nem tud „visszalépni”
 // véletlenül egy másik oldalra, és a hash-útvonalakra sincs szükség egy ilyen kis appban.
-import { getTopic } from '../topics';
+import { getTile, isGame } from '../topics';
 import type { Cleanup, Nav } from './dom';
 import { mountHome } from './home-screen';
 import { mountMap } from './map-screen';
+import { mountMemory } from './memory-screen';
 import { mountSheet } from './sheet-screen';
 
 export type ScreenName = 'home' | 'map' | 'sheet';
@@ -32,10 +33,11 @@ export function createApp(root: HTMLElement, onSafeScreen: () => void): App {
   const nav: Nav = {
     home: () => show('home', () => mountHome(root, nav)),
     map: (topicId) => {
-      getTopic(topicId);
+      getTile(topicId);
       show('map', () => mountMap(root, topicId, nav));
     },
-    sheet: (topicId, index) => show('sheet', () => mountSheet(root, topicId, index, nav)),
+    sheet: (topicId, index) =>
+      show('sheet', () => (isGame(topicId) ? mountMemory(root, index, nav) : mountSheet(root, topicId, index, nav))),
     demo: (topicId, thenIndex) => show('sheet', () => mountSheet(root, topicId, thenIndex, nav, true)),
   };
 

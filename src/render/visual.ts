@@ -13,7 +13,16 @@ export const TINTS: readonly Tint[] = ['red', 'blue', 'yellow', 'green', 'purple
  * Kis jelek: nyíl (ebből lesz), elválasztó, „forgatva keresd”, „a tükörképét keresd”, és a Hangoló jelei:
  * kezdőhang (az első hangdoboz világít), végső hang (az utolsó), szótagszám (szótagívek, mint az iskolában).
  */
-export type SymId = 'arrow' | 'sep' | 'rotate' | 'mirror' | 'snd-start' | 'snd-end' | 'snd-rhyme' | 'syl' | 'listen';
+export type SymId = 'arrow' | 'sep' | 'rotate' | 'mirror' | 'snd-start' | 'snd-end' | 'snd-rhyme' | 'syl' | 'listen' | 'plus';
+
+/** Szétszórt kép a 100 × 100-as mezőben (bal felső sarok, SCATTER_SIZE méret); cross = áthúzva (elvétel). */
+export interface ScatterItem {
+  id: string;
+  x: number;
+  y: number;
+  cross?: boolean;
+}
+export const SCATTER_SIZE = 22;
 /**
  * Fél kép: true vagy 'L' = csak a bal fele látszik, 'R' = csak a jobb fele.
  * (A korábbi `half: true` jelentése változatlan: bal fél.)
@@ -54,7 +63,12 @@ export type Visual =
   /** Vonalas, betűszerű jel (rácspontok közti [x1, y1, x2, y2] élek). */
   | { t: 'rune'; edges: number[][] }
   /** „Hol van?” jelenet: szereplő (szókincs-kép) + tárgy (saját rajz) adott viszonyban; side: mellett/mögött oldala. */
-  | { t: 'scene'; fig: string; place: PlaceId; rel: RelId; side?: Side };
+  | { t: 'scene'; fig: string; place: PlaceId; rel: RelId; side?: Side }
+  /**
+   * Szétszórt képcsoport (számolás): nem tízes keretben, hogy alakra ne lehessen párosítani a pöttyökkel.
+   * w × h: a mező mérete (a darabszámhoz igazítva, hogy kevés kép ne zsugorodjon apróra).
+   */
+  | { t: 'scatter'; items: ScatterItem[]; w?: number; h?: number };
 
 export interface Drawn {
   w: number;
@@ -189,6 +203,8 @@ function drawSym(id: SymId): Drawn {
         .join('');
       return { w: 84, h: CELL, svg: boxes };
     }
+    case 'plus':
+      return { w: 40, h: CELL, svg: '<path class="vsym" d="M20 34 V66 M4 50 H36"/>' };
     case 'listen':
       // „Hallgasd meg”: kék kör, benne hangszóró és hanghullámok (a hallás utáni feladatok képe).
       return {
@@ -326,6 +342,17 @@ export function draw(v: Visual): Drawn {
     }
     case 'scene':
       return { w: SCENE_W, h: SCENE_H, svg: drawScene(v.fig, v.place, v.rel, v.side) };
+    case 'scatter': {
+      const S = SCATTER_SIZE;
+      const svg = v.items
+        .map(
+          (it) =>
+            `<use href="#w-${it.id}" x="${it.x}" y="${it.y}" width="${S}" height="${S}"/>` +
+            (it.cross ? `<path class="vcross" d="M${it.x + 1} ${it.y + 1} L${it.x + S - 1} ${it.y + S - 1} M${it.x + S - 1} ${it.y + 1} L${it.x + 1} ${it.y + S - 1}"/>` : ''),
+        )
+        .join('');
+      return { w: v.w ?? CELL, h: v.h ?? CELL, svg };
+    }
   }
 }
 
@@ -375,6 +402,8 @@ export function visualKey(v: Visual): string {
       return `rune:${JSON.stringify(normalize(v.edges))}`;
     case 'scene':
       return `scene:${v.fig}:${v.place}:${v.rel}:${v.side ?? 'R'}`;
+    case 'scatter':
+      return `scatter${v.w ?? CELL}x${v.h ?? CELL}[${v.items.map((i) => `${i.id}@${i.x},${i.y}${i.cross ? 'x' : ''}`).join(',')}]`;
   }
 }
 
@@ -382,6 +411,7 @@ export function visualKey(v: Visual): string {
 export function collectImages(v: Visual, out: { id: string; shadow: boolean }[] = []): { id: string; shadow: boolean }[] {
   if (v.t === 'img') out.push({ id: v.id, shadow: !!v.shadow });
   else if (v.t === 'scene') out.push({ id: v.fig, shadow: false });
+  else if (v.t === 'scatter') for (const it of v.items) out.push({ id: it.id, shadow: false });
   else if (v.t === 'seq' || v.t === 'grid' || v.t === 'pack') for (const item of v.items) collectImages(item, out);
   else if (v.t === 'balance') for (const item of [...v.left, ...v.right]) collectImages(item, out);
   return out;

@@ -23,6 +23,9 @@ ElevenLabs-hanggyártás (`npm run hang`, Aggie hangja), saját felvétel bárme
 **4b sprint (hang, második fele):** Hol van? (saját rajzú, szemből nézett jelenetek), Ha–akkor (érvényes
 következtetések, ütköző képek kizárva), rímek a Hangoló plusz 3. szintjén; minden szöveg Aggie hangján (339 klip, 4,8 MB).
 A kézi tartalom: [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md) (jóváhagyva).
+**5a sprint:** Számoló plusz (ugyanannyi, több, eggyel több/kevesebb, számszomszédok, összeadás/elvétel 10-ig;
+szétszórt képekkel), Memória (saját, nem korongos képernyő: melyik volt, melyik volt itt, milyen sorrendben),
+a nyitott app automatikus frissítésének javítása. Mind a 18 témakör kész; hátra: szülői menü, nyomtatás (5b).
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 

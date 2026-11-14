@@ -2,14 +2,14 @@ import { doneCount, getSettings } from '../engine/progress';
 import { SHEETS_PER_TOPIC } from '../engine/sheet';
 import { DISCS, discSpan } from '../render/disc';
 import { renderVisual } from '../render/visual';
-import { TOPICS } from '../topics';
+import { TILES } from '../topics';
 import { el, type Cleanup, type Nav } from './dom';
 
 /** Kezdőlap: témakör-csempék (csak kép), alattuk a haladás pöttyökben. */
 export function mountHome(root: HTMLElement, nav: Nav): Cleanup {
   const screen = el('section', 'screen homescreen');
   const disabled = getSettings().disabled;
-  const topics = TOPICS.filter((t) => !disabled.includes(t.id));
+  const topics = TILES.filter((t) => !disabled.includes(t.id));
 
   const strip = DISCS.map((d) => discSpan(d.id)).join('');
   const tiles = topics

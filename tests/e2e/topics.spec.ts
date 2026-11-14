@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { TOPICS } from '../../src/topics';
+import { TILES, TOPICS } from '../../src/topics';
 import { measureLayout, mode, openSheet, sheetOf, solve } from './helpers';
 
 // Minden témakör: egy könnyű (1.), egy közepes (6.) és egy nehéz (11.) lap megnyitása, méretek, képernyőkép;
@@ -43,7 +43,7 @@ for (const topic of TOPICS) {
 
 test('a kezdőlapon mind a négy témakör látszik, a lapválasztók képernyőképe', async ({ page }, info) => {
   await page.goto('/');
-  await expect(page.locator('.tile')).toHaveCount(TOPICS.length);
+  await expect(page.locator('.tile')).toHaveCount(TILES.length);
   // Minden csempe teljes egészében a képernyőn van (a lap nem görgethető, ami kilóg, az elérhetetlen).
   const vp = page.viewportSize()!;
   for (const tile of await page.locator('.tile').all()) {

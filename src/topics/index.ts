@@ -1,5 +1,8 @@
 import { hashString } from '../engine/rng';
 import { makeSpec, type Sheet, type TopicId } from '../engine/sheet';
+import { memoria } from '../games/memoria';
+import type { Game } from '../games/types';
+import type { Visual } from '../render/visual';
 import { analogia } from './analogia';
 import { arnyek } from './arnyek';
 import { betu } from './betu';
@@ -15,13 +18,32 @@ import { merleg } from './merleg';
 import { minta } from './minta';
 import { par } from './par';
 import { sudoku } from './sudoku';
+import { szamolo } from './szamolo';
 import { tukor } from './tukor';
 import type { Topic } from './types';
 
 /** A témakörök jegyzéke (a kezdőlapon ebben a sorrendben). Új témakör = új mappa + egy sor ide. */
 export const TOPICS: readonly Topic[] = [
-  arnyek, minta, par, csoport, betu, tukor, matrix, analogia, kakukk, sudoku, merleg, felkep, kodfejto, holvan, haakkor, hangolo,
+  arnyek, minta, par, csoport, betu, tukor, matrix, analogia, kakukk, sudoku, merleg, felkep, kodfejto, holvan, haakkor, szamolo, hangolo,
 ];
+
+/** Nem korongos játékok (saját képernyővel). */
+export const GAMES: readonly Game[] = [memoria];
+
+/** A kezdőlap csempéi sorrendben: a témakörök, majd a játékok. */
+export interface Tile {
+  id: string;
+  nameHu: string;
+  icon: Visual;
+  color: string;
+}
+export const TILES: readonly Tile[] = [...TOPICS, ...GAMES];
+export const isGame = (id: string): boolean => GAMES.some((g) => g.id === id);
+export function getTile(id: string): Tile {
+  const t = TILES.find((x) => x.id === id);
+  if (!t) throw new Error(`Ismeretlen témakör: ${id}`);
+  return t;
+}
 
 export function getTopic(id: TopicId): Topic {
   const t = TOPICS.find((x) => x.id === id);

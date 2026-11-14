@@ -670,6 +670,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:09.400Z"
  },
+ "30a1c18d": {
+  "fp": "64bcdca2",
+  "szoveg": "Milyen sorrendben voltak?",
+  "azonositok": [
+   "memoria-sorrend"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.84,
+  "kredit": 10,
+  "generalva": "2026-11-14T15:15:24.175Z"
+ },
  "30ba3087": {
   "fp": "42132630",
   "szoveg": "Ha álmosak vagyunk, ágyba bújunk. Álmosak vagyunk. Hová bújunk?",
@@ -691,6 +702,17 @@
   "hossz_mp": 2.24,
   "kredit": 11,
   "generalva": "2026-11-14T14:17:24.750Z"
+ },
+ "324f8d65": {
+  "fp": "e346f28e",
+  "szoveg": "Jól nézd meg, melyik kép hol van! Amikor eltűnnek, mutasd meg, melyik volt a kérdőjel helyén!",
+  "azonositok": [
+   "utasitas-memoria-1"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 7.09,
+  "kredit": 37,
+  "generalva": "2026-11-14T15:15:22.319Z"
  },
  "33130c49": {
   "fp": "7c48c32c",
@@ -1033,6 +1055,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:01.302Z"
  },
+ "46ef73dc": {
+  "fp": "a355adff",
+  "szoveg": "Jól nézd meg a képeket! Amikor eltűnnek, mutasd meg, melyik volt közöttük!",
+  "azonositok": [
+   "utasitas-memoria-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.59,
+  "kredit": 30,
+  "generalva": "2026-11-14T15:15:21.411Z"
+ },
  "473e08c6": {
   "fp": "780bf479",
   "szoveg": "A cica a két ágy között van.",
@@ -1199,6 +1232,17 @@
   "hossz_mp": 2.32,
   "kredit": 11,
   "generalva": "2026-11-14T14:17:23.381Z"
+ },
+ "523b8a36": {
+  "fp": "e073fd8d",
+  "szoveg": "Számold össze! Ha áthúztunk néhányat, azokat vedd el. Hány lett? Húzd a színes korongot a jó szám mellé!",
+  "azonositok": [
+   "utasitas-szamolo-muvelet"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 8.72,
+  "kredit": 42,
+  "generalva": "2026-11-14T15:15:21.097Z"
  },
  "52ab799e": {
   "fp": "c57eb8b5",
@@ -1454,6 +1498,17 @@
   "hossz_mp": 0.72,
   "kredit": 3,
   "generalva": "2026-11-14T13:44:25.431Z"
+ },
+ "602a65d9": {
+  "fp": "abbf8260",
+  "szoveg": "Melyik volt itt?",
+  "azonositok": [
+   "memoria-hol"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 6,
+  "generalva": "2026-11-14T15:15:23.200Z"
  },
  "6063d8d8": {
   "fp": "13507929",
@@ -2017,6 +2072,17 @@
   "kredit": 50,
   "generalva": "2026-11-14T13:43:39.259Z"
  },
+ "8c86fcc9": {
+  "fp": "76efa602",
+  "szoveg": "Jól nézd meg!",
+  "azonositok": [
+   "memoria-nezd"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.2,
+  "kredit": 5,
+  "generalva": "2026-11-14T15:15:22.319Z"
+ },
  "8d34fb3c": {
   "fp": "7a51fc77",
   "szoveg": "szivárvány",
@@ -2137,6 +2203,17 @@
   "hossz_mp": 4.08,
   "kredit": 22,
   "generalva": "2026-11-14T14:17:44.917Z"
+ },
+ "977e8208": {
+  "fp": "a56b3ea7",
+  "szoveg": "Számold meg! Hol van ugyanannyi? Húzd a színes korongot a pöttyök mellé!",
+  "azonositok": [
+   "utasitas-szamolo-ugyanannyi"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.12,
+  "kredit": 29,
+  "generalva": "2026-11-14T15:15:17.700Z"
  },
  "9788893e": {
   "fp": "31400feb",
@@ -2280,6 +2357,17 @@
   "hossz_mp": 0.56,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:22.334Z"
+ },
+ "a2386ab2": {
+  "fp": "a88d67c3",
+  "szoveg": "Melyikből van több? Húzd a színes korongot annak a képnek a mellé, amelyikből több van!",
+  "azonositok": [
+   "utasitas-szamolo-tobb"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.84,
+  "kredit": 35,
+  "generalva": "2026-11-14T15:15:18.267Z"
  },
  "a331ca18": {
   "fp": "0f3364ef",
@@ -2601,6 +2689,17 @@
   "kredit": 10,
   "generalva": "2026-11-14T14:17:24.563Z"
  },
+ "b4832604": {
+  "fp": "44c87a87",
+  "szoveg": "Melyik szám hiányzik a sorból? Húzd a színes korongot a jó szám mellé!",
+  "azonositok": [
+   "utasitas-szamolo-szomszed"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.12,
+  "kredit": 28,
+  "generalva": "2026-11-14T15:15:19.578Z"
+ },
  "b5bfab5f": {
   "fp": "ac03fba4",
   "szoveg": "fagyi",
@@ -2854,6 +2953,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:08.174Z"
  },
+ "c791c146": {
+  "fp": "1515dd0f",
+  "szoveg": "Jól nézd meg a képek sorrendjét! Amikor eltűnnek, koppints rájuk ugyanabban a sorrendben!",
+  "azonositok": [
+   "utasitas-memoria-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.84,
+  "kredit": 36,
+  "generalva": "2026-11-14T15:15:23.312Z"
+ },
  "c8cc76b1": {
   "fp": "3bc13a32",
   "szoveg": "méh",
@@ -3064,6 +3174,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:01.993Z"
  },
+ "d57ee7ff": {
+  "fp": "82a1d39e",
+  "szoveg": "Számold meg! Ha egy jön hozzá, eggyel több lesz. Ha egyet áthúztunk, eggyel kevesebb. Hány lett? Húzd a színes korongot a jó szám mellé!",
+  "azonositok": [
+   "utasitas-szamolo-egy"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 10.64,
+  "kredit": 54,
+  "generalva": "2026-11-14T15:15:19.232Z"
+ },
  "d632a968": {
   "fp": "626bc2f3",
   "szoveg": "ló",
@@ -3096,6 +3217,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:05.046Z"
+ },
+ "d7671f1a": {
+  "fp": "1d72e3ef",
+  "szoveg": "Melyik volt közöttük?",
+  "azonositok": [
+   "memoria-melyik"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.44,
+  "kredit": 8,
+  "generalva": "2026-11-14T15:15:23.201Z"
  },
  "da6394f6": {
   "fp": "23a7ab27",

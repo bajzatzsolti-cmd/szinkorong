@@ -3,7 +3,7 @@
 import { setVolume, sfx } from '../engine/audio';
 import { getSettings, resetProgress, updateSettings } from '../engine/progress';
 import { ICONS } from '../render/icons';
-import { TOPICS } from '../topics';
+import { TILES } from '../topics';
 import { el } from './dom';
 import { renderHangproba } from './hangproba';
 
@@ -44,7 +44,7 @@ function openPanel(onClose: () => void): void {
   const overlay = el('div', 'pov');
   overlay.dataset.testid = 'parent-panel';
 
-  const topicRows = TOPICS.map(
+  const topicRows = TILES.map(
     (t) =>
       `<label class="prow"><input type="checkbox" data-topic="${t.id}" ${settings.disabled.includes(t.id) ? '' : 'checked'}> ${t.nameHu}</label>`,
   ).join('');

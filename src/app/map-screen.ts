@@ -3,12 +3,13 @@ import { LEVELS, SHEETS_PER_LEVEL, SHEETS_PER_TOPIC } from '../engine/sheet';
 import { discSpan } from '../render/disc';
 import { ICONS } from '../render/icons';
 import { renderVisual } from '../render/visual';
-import { getTopic } from '../topics';
+import { getTile, getTopic, isGame } from '../topics';
 import { el, type Cleanup, type Nav } from './dom';
 
 /** Lapválasztó: 3 sáv (könnyű, közepes, nehéz) × 5 lap. A nehézséget 1–3 korong jelzi. */
 export function mountMap(root: HTMLElement, topicId: string, nav: Nav): Cleanup {
-  const topic = getTopic(topicId);
+  const topic = getTile(topicId);
+  const demoSize = isGame(topicId) ? undefined : getTopic(topicId).demoSize;
   const next = nextUndone(topic.id, SHEETS_PER_TOPIC);
   const screen = el('section', 'screen map');
   screen.dataset.topic = topic.id;
@@ -38,7 +39,7 @@ export function mountMap(root: HTMLElement, topicId: string, nav: Nav): Cleanup 
     if (!card) return;
     const index = Number(card.dataset.index);
     // A nehezebb logikai témakörök első lapja előtt egyszer lejátszódik az animált bemutató.
-    if (index === 0 && topic.demoSize && !isDemoSeen(topic.id)) nav.demo(topic.id, 0);
+    if (index === 0 && demoSize && !isDemoSeen(topic.id)) nav.demo(topic.id, 0);
     else nav.sheet(topic.id, index);
   });
   root.replaceChildren(screen);

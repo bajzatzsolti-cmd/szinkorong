@@ -34,6 +34,6 @@ export interface Topic {
   generate(spec: SheetSpec): Sheet;
   /** Szabály alapján, a generátortól függetlenül megoldja a lapot; a problémák listáját adja. */
   verify(sheet: Sheet): string[];
-  /** A lap megnyitásakor felolvasott feladat hangazonosítója. */
-  instructionId(level: number): string;
+  /** A lap megnyitásakor felolvasott feladat hangazonosítója (a lapfajta a sorszámtól is függhet, pl. Számoló). */
+  instructionId(level: number, index: number): string;
 }

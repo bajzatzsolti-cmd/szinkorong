@@ -264,7 +264,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     else nav.map(topic.id);
   });
 
-  const speakInstruction = (): void => say(topic.instructionId(sheet.spec.level));
+  const speakInstruction = (): void => say(topic.instructionId(sheet.spec.level, sheet.spec.index));
   bar.addEventListener('click', (e) => {
     const act = (e.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
     if (act === 'back') nav.map(topic.id);
