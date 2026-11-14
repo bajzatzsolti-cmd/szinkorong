@@ -7,7 +7,7 @@
     "forras": "ElevenLabs Hanggyűjtemény (Voice Library), magyar női mesélőhang; Lárus választotta, 2026-11-14"
   },
   "modell": "eleven_v3",
-  "_modell_megjegyzes": "Magyarul tud: eleven_v4, eleven_v3, eleven_flash_v2_5 (a multilingual_v2 NEM). Mért ár Aggie hangjával: v3 és v4 0,40, Flash 0,20 kredit/karakter.",
+  "_modell_megjegyzes": "A szülő döntése 2026-11-14, két próbakör után: eleven_v3 + „Alma.” módszer. Magyarul tud még: eleven_v4, eleven_flash_v2_5 (a multilingual_v2 NEM). Mért ár Aggie hangjával: v3 és v4 0,40, Flash 0,20 kredit/karakter.",
   "nyelv": "hu",
   "beallitasok": { "stability": 0.5, "similarity_boost": 0.75 },
   "egyszavas": {

@@ -17,6 +17,11 @@ async function encoderClass() {
   return Encoder;
 }
 
+/** Generálás ELŐTT hívandó: ha nincs kódoló, egyetlen kredit se menjen el feleslegesen. */
+export async function ensureEncoder() {
+  await encoderClass();
+}
+
 /** Mono Float32 minták → MP3 bájtok. */
 export async function encodeMp3(samples, rate, kbps) {
   const E = await encoderClass();

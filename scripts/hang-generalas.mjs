@@ -20,7 +20,7 @@ import readline from 'node:readline/promises';
 import { clipKey } from '../src/engine/clip-key.ts';
 import { balance, client, ROOT } from './lib/elevenlabs.mjs';
 import { pcm16ToFloat, trimAndNormalize } from './lib/audio-dsp.mjs';
-import { encodeMp3 } from './lib/mp3.mjs';
+import { encodeMp3, ensureEncoder } from './lib/mp3.mjs';
 
 const argv = process.argv.slice(2);
 const flag = (name) => argv.includes(`--${name}`);
@@ -100,6 +100,7 @@ if (estimate > max) {
   process.exit(1);
 }
 if (flag('becsles') || (todo.length === 0 && stale.length === 0)) process.exit(0);
+if (todo.length) await ensureEncoder();
 if (!flag('yes')) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   const ans = (await rl.question('Mehet? (i/n) ')).trim().toLowerCase();
