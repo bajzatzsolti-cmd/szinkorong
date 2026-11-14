@@ -15,7 +15,7 @@ ALLOWED_ORIGINS = "https://bajzatzsolti-cmd.github.io"
 [[d1_databases]]
 binding = "DB"
 database_name = "szinkorong"
-database_id = "IDE-JON-A-LETREHOZOTT-ADATBAZIS-AZONOSITOJA"
+database_id = "ee777d60-a4d7-47ba-bdce-6f1b5e6fc812"
 
 # Kérésszám-korlát: azonosítónként/IP-nként percenként 30 kérés (a Cloudflare oldalán, átmenetileg számolva).
 [[ratelimits]]

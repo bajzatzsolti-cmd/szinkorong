@@ -33,6 +33,20 @@ Profil nélkül is lehet játszani: ilyenkor minden csak a készüléken marad.
 | `src/engine/merge.ts` | az összefésülés és az ellenőrzés (a játék és a szerver is ezt használja) |
 | `src/config.ts` | a szerver címe (`SYNC_URL`); üres = a szinkron nincs bekapcsolva |
 
+### Állapot (2026-11-14): telepítve
+
+- **Szerver:** `https://szinkorong-sync.szinkorong.workers.dev`. A `workers.dev` aldomain „szinkorong”; a wrangler a
+  `server/package.json` „name” mezőjéből képezte.
+- **Adatbázis:** D1 `szinkorong`, `eu` jurisdiction (régió: EEUR). Az azonosítója a `server/wrangler.toml`-ban van; ez nem titok.
+- **Titok:** a `PEPPER` véletlenszerű, csak a Cloudflare-ben él, sehol nincs leírva. Ha elveszne vagy cserélni kell,
+  `npx wrangler secret put PEPPER`, de ezzel minden tárolt profil elérhetetlenné válik: a kulcsuk a régi borsból készült.
+- **Élő próba:**
+  - idegen és eredet nélküli kérés: 403;
+  - nem létező játékos: 404;
+  - két mentés összefésül (unió, a frissebb beállítás nyer);
+  - hibás bemenet: 400;
+  - törlés után: 404, az adatbázis üres.
+
 ### Telepítés (egyszer)
 
 **Neked kell:**

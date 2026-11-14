@@ -1,0 +1,6 @@
+{
+  "name": "szinkorong",
+  "private": true,
+  "description": "Színkorong szinkron-szerver (Cloudflare Worker + D1). A name mezőből képzi a wrangler a workers.dev aldomaint.",
+  "type": "module"
+}
