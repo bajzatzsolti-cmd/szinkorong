@@ -3,6 +3,14 @@
 A Színkorong egyetlen statikus build (`dist/`), szerver nem kell hozzá. A GitHub Pages ingyen kiteszi,
 az iPad pedig appként a Főképernyőre teszi, és a legelső betöltés után **repülő módban is fut**.
 
+| | |
+|---|---|
+| Repó | https://github.com/bajzatzsolti-cmd/szinkorong |
+| A játék címe | **https://bajzatzsolti-cmd.github.io/szinkorong/** |
+| Kitelepítések | https://github.com/bajzatzsolti-cmd/szinkorong/actions |
+
+Az 1–3. lépés már megtörtént (a repó létezik, a kód fent van); a 3. pontban a Pages bekapcsolása egyszeri teendő.
+
 ## 1. A repó létrehozása a GitHubon
 
 1. Jelentkezz be a GitHubra (vagy készíts ingyenes fiókot), majd **New repository**.
@@ -29,14 +37,17 @@ A fejlesztés sprintenként külön ágon folyik (`sprint-…`); egy sprint akko
 
 ## 3. A GitHub Pages bekapcsolása (egyszer)
 
-1. A repóban: **Settings → Pages**.
+1. A repóban: **Settings → Pages** (https://github.com/bajzatzsolti-cmd/szinkorong/settings/pages).
 2. **Build and deployment → Source:** válaszd a **GitHub Actions** lehetőséget.
 3. Nincs több teendő: a `.github/workflows/deploy.yml` workflow minden `main`-re pusholáskor buildel, teszteket futtat, és kiteszi az oldalt.
+
+Ha a Pages bekapcsolása előtt már volt feltöltés, az a futás a „configure-pages” lépésnél piros lesz: ez várható.
+A bekapcsolás után az **Actions** fülön a piros futást **Re-run all jobs**-szal újra lehet indítani, vagy elég a következő feltöltés.
 
 ## 4. Az első kitelepítés
 
 1. A repó **Actions** fülén megjelenik a „Build és kitelepítés” futás. Várd meg a zöld pipát (1–2 perc).
-2. Az oldal címe: `https://<felhasznalonev>.github.io/szinkorong/` (a **Settings → Pages** is megmutatja).
+2. Az oldal címe: `https://bajzatzsolti-cmd.github.io/szinkorong/` (a **Settings → Pages** is megmutatja).
 3. Ha a futás piros: nyisd meg, és nézd meg, melyik lépés bukott el (betűtípus-ellenőrzés, build vagy teszt).
 
 ## 5. Az iPad Főképernyőjére tétel
