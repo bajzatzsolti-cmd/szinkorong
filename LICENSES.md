@@ -31,6 +31,22 @@ Az OFL 1.1 engedélyezi a szabad használatot, beágyazást és terjesztést (a 
 A licenc teljes szövege a csomagok `LICENSE` fájljában van (`node_modules/@fontsource/*/LICENSE`).
 Az ő és ű betűk jelenlétét az `npm run check:fonts` ellenőrzi.
 
+## Hangok: ElevenLabs („Aggie” hang)
+
+| | |
+|---|---|
+| Mi | a felolvasások előre legyártott MP3-fájljai (`src/assets/audio/`), kb. 350 db |
+| Hogyan készült | ElevenLabs szövegfelolvasás, „Aggie” hang (Hanggyűjtemény / Voice Library), eleven_v3 modell, a `scripts/hang-generalas.mjs` scripttel; a generálás dátuma klipenként a `src/assets/audio/_lenyomatok.json`-ban |
+| Felhasználási jog | az ElevenLabs súgója szerint a fizetős előfizetés alatt generált tartalomra kereskedelmi licenc vonatkozik, az előfizetés lemondása után is („you will still have a commercial license to use whatever you generated during that subscription forever”) |
+| [ELLENŐRIZNI] | a szolgáltatás-specifikus feltételek (Service-Specific Terms) részletei, és hogy a Hanggyűjtemény hangjának tulajdonosa szabott-e külön feltételt |
+| Hol látszik | a szülői menü „Névjegy” oldalán |
+
+## Saját rajzok
+
+A korongok, az alakzatok, a jelek (hangdobozok, szótagív, hangszóró) és a „Hol van?” tárgyai (szék, ágy, doboz, kosár)
+saját rajzok (`src/render/`).
+
 ## Fejlesztői eszközök
 
 A Vite, TypeScript, Vitest, Playwright és társaik csak a fejlesztéshez kellenek, a kész appba nem kerülnek bele.
+Az `@breezystack/lamejs` (MP3-kódoló, LGPL-3.0) csak a hanggyártó scriptben fut, a játékba nem kerül bele.

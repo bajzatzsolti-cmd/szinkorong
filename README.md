@@ -25,7 +25,10 @@ következtetések, ütköző képek kizárva), rímek a Hangoló plusz 3. szintj
 A kézi tartalom: [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md) (jóváhagyva).
 **5a sprint:** Számoló plusz (ugyanannyi, több, eggyel több/kevesebb, számszomszédok, összeadás/elvétel 10-ig;
 szétszórt képekkel), Memória (saját, nem korongos képernyő: melyik volt, melyik volt itt, milyen sorrendben),
-a nyitott app automatikus frissítésének javítása. Mind a 18 témakör kész; hátra: szülői menü, nyomtatás (5b).
+a nyitott app automatikus frissítésének javítása. Mind a 18 témakör kész.
+**5b sprint:** nyomtatás a szülői menüből (számítógépről, A4: laponként egy oldal üres körökkel, jelmagyarázattal,
+megoldókulccsal a végén vagy minden lap után; fekete-fehérben is használható; a hallás utáni témakörök és a Memória
+kimaradnak), Névjegy oldal (licencek, adatvédelem).
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 

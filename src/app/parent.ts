@@ -4,8 +4,11 @@ import { setVolume, sfx } from '../engine/audio';
 import { getSettings, resetProgress, updateSettings } from '../engine/progress';
 import { ICONS } from '../render/icons';
 import { TILES } from '../topics';
+import { SHEETS_PER_LEVEL } from '../engine/sheet';
+import { renderAbout } from './about';
 import { el } from './dom';
 import { renderHangproba } from './hangproba';
+import { PRINTABLE, printSheets, type KeyMode } from './print';
 
 export const HOLD_MS = 3000;
 
@@ -48,6 +51,22 @@ function openPanel(onClose: () => void): void {
     (t) =>
       `<label class="prow"><input type="checkbox" data-topic="${t.id}" ${settings.disabled.includes(t.id) ? '' : 'checked'}> ${t.nameHu}</label>`,
   ).join('');
+  const printTopics = PRINTABLE.map((t) => `<option value="${t.id}">${t.nameHu}</option>`).join('');
+  const printBox =
+    `<div class="pprint">` +
+    `<label class="prow col">Témakör<select data-print="topic">${printTopics}</select></label>` +
+    `<div class="prow wrap">Lapok: ` +
+    `<label><input type="checkbox" data-print="lvl" value="0" checked> könnyű (1–5)</label>` +
+    `<label><input type="checkbox" data-print="lvl" value="1" checked> közepes (6–10)</label>` +
+    `<label><input type="checkbox" data-print="lvl" value="2" checked> nehéz (11–15)</label></div>` +
+    `<div class="prow wrap">Megoldókulcs: ` +
+    `<label><input type="radio" name="pkey" value="end" checked> a végén, külön oldalon</label>` +
+    `<label><input type="radio" name="pkey" value="back"> minden lap után (kétoldalas nyomtatáshoz)</label>` +
+    `<label><input type="radio" name="pkey" value="none"> nincs</label></div>` +
+    `<button class="pbtn" data-act="print">Nyomtatás (A4)</button>` +
+    `<p class="pnote">Számítógépről: a nyomtatási ablakban A4, álló, és kapcsold be a „Háttérgrafikák” (háttérszínek) nyomtatását, ` +
+    `hogy a pöttyök színesek legyenek. Fekete-fehérben is használható: minden pöttyön saját jel van. ` +
+    `A hallás utáni témakörök és a Memória nem nyomtathatók.</p></div>`;
 
   overlay.innerHTML =
     `<div class="pcard" data-scroll>` +
@@ -58,8 +77,9 @@ function openPanel(onClose: () => void): void {
     `<button class="pbtn danger" data-act="reset">Haladás törlése</button>` +
     `<div class="psec">Hangok</div>` +
     `<button class="pbtn" data-act="hangproba">Hangpróba: minden hang meghallgatása, rossz jelölése</button>` +
-    `<div class="psec">Nyomtatás</div>` +
-    `<button class="pbtn" disabled>Nyomtatható lapok (hamarosan)</button>` +
+    `<div class="psec">Nyomtatás</div>${printBox}` +
+    `<div class="psec">Névjegy</div>` +
+    `<button class="pbtn" data-act="about">Névjegy, licencek, adatvédelem</button>` +
     `<div class="pfoot"><span>Színkorong ${typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : ''}<br>` +
     `Képek: OpenMoji (openmoji.org), CC BY-SA 4.0</span>` +
     `<button class="pbtn primary" data-act="close">Bezár</button></div></div>`;
@@ -76,6 +96,22 @@ function openPanel(onClose: () => void): void {
     if (t === overlay) return close();
     const act = t.closest<HTMLElement>('[data-act]')?.dataset.act;
     if (act === 'close') close();
+    if (act === 'print') {
+      const topicId = overlay.querySelector<HTMLSelectElement>('[data-print="topic"]')!.value;
+      const levels = [...overlay.querySelectorAll<HTMLInputElement>('[data-print="lvl"]:checked')].map((x) => Number(x.value));
+      const key = (overlay.querySelector<HTMLInputElement>('input[name="pkey"]:checked')?.value ?? 'end') as KeyMode;
+      const indices = levels.flatMap((l) => Array.from({ length: SHEETS_PER_LEVEL }, (_, k) => l * SHEETS_PER_LEVEL + k));
+      if (indices.length) printSheets({ topicId, indices, key });
+      return;
+    }
+    if (act === 'about') {
+      e.stopPropagation();
+      renderAbout(overlay.querySelector<HTMLElement>('.pcard')!, () => {
+        overlay.remove();
+        openPanel(onClose);
+      });
+      return;
+    }
     if (act === 'hangproba') {
       // A Hangpróba ugyanabban a kártyában nyílik; a „Vissza” újranyitja a beállításokat.
       e.stopPropagation();
