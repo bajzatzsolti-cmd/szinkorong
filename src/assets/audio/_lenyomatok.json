@@ -1,0 +1,222 @@
+{
+ "55068734": {
+  "fp": "16e59173",
+  "szoveg": "béka",
+  "azonositok": [
+   "szo-beka"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:26.354Z"
+ },
+ "00e01d46": {
+  "fp": "cee3c91d",
+  "szoveg": "Figyeld meg a sort! Mi következik? Húzd a színes korongot a megfelelő kép mellé!",
+  "azonositok": [
+   "utasitas-minta-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 5.92,
+  "kredit": 32,
+  "generalva": "2026-11-14T13:29:22.083Z"
+ },
+ "01d6efb3": {
+  "fp": "0a956d4a",
+  "szoveg": "Melyik kezdődik ugyanazzal a hanggal, mint ez:",
+  "azonositok": [
+   "hangolo-kezdo"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 3.28,
+  "kredit": 18,
+  "generalva": "2026-11-14T13:29:23.797Z"
+ },
+ "038515b9": {
+  "fp": "12b742c6",
+  "szoveg": "ananász",
+  "azonositok": [
+   "szo-ananasz"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:29:27.130Z"
+ },
+ "1329c96f": {
+  "fp": "ad3b1782",
+  "szoveg": "Melyik árnyék kié? Húzd a színes korongot az árnyék mellé!",
+  "azonositok": [
+   "utasitas-arnyek-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 4.48,
+  "kredit": 23,
+  "generalva": "2026-11-14T13:29:21.404Z"
+ },
+ "1ef4b4b3": {
+  "fp": "eabb4306",
+  "szoveg": "Mondd ki hangosan a képek nevét! Melyik kezdődik ugyanazzal a hanggal? Húzd a színes korongot a párja mellé!",
+  "azonositok": [
+   "utasitas-hangolo-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 6.48,
+  "kredit": 43,
+  "generalva": "2026-11-14T13:29:24.312Z"
+ },
+ "21409b21": {
+  "fp": "cd30a16c",
+  "szoveg": "Melyik végződik ugyanazzal a hanggal, mint ez:",
+  "azonositok": [
+   "hangolo-veg"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 3.2,
+  "kredit": 18,
+  "generalva": "2026-11-14T13:29:25.399Z"
+ },
+ "2b64cc66": {
+  "fp": "af2d5afb",
+  "szoveg": "tojás",
+  "azonositok": [
+   "szo-tojas"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:27.920Z"
+ },
+ "40e003aa": {
+  "fp": "1c623a15",
+  "szoveg": "Mi tartozik össze? Húzd a színes korongot a párja mellé!",
+  "azonositok": [
+   "utasitas-par-0"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 3.68,
+  "kredit": 22,
+  "generalva": "2026-11-14T13:29:21.069Z"
+ },
+ "51b57e0b": {
+  "fp": "7d900e8a",
+  "szoveg": "teknős",
+  "azonositok": [
+   "szo-teknos"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:29:26.822Z"
+ },
+ "639dc774": {
+  "fp": "cf889819",
+  "szoveg": "láb",
+  "azonositok": [
+   "szo-lab"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:28.526Z"
+ },
+ "7499948f": {
+  "fp": "59f25248",
+  "szoveg": "zebra",
+  "azonositok": [
+   "szo-zebra"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.72,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:26.701Z"
+ },
+ "7d8d39b4": {
+  "fp": "5ce61737",
+  "szoveg": "Tapsold el, és számold meg a tapsokat:",
+  "azonositok": [
+   "hangolo-szotag"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 2.88,
+  "kredit": 15,
+  "generalva": "2026-11-14T13:29:25.900Z"
+ },
+ "8536fedf": {
+  "fp": "827fcc4c",
+  "szoveg": "ajándék",
+  "azonositok": [
+   "szo-ajandek"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:29:29.028Z"
+ },
+ "ba9dee67": {
+  "fp": "922d0cf8",
+  "szoveg": "zongora",
+  "azonositok": [
+   "szo-zongora"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-14T13:29:28.325Z"
+ },
+ "be09f407": {
+  "fp": "8542059e",
+  "szoveg": "sajt",
+  "azonositok": [
+   "szo-sajt"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:27.510Z"
+ },
+ "c8e57822": {
+  "fp": "b0c2bea9",
+  "szoveg": "brokkoli",
+  "azonositok": [
+   "szo-brokkoli"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 4,
+  "generalva": "2026-11-14T13:29:27.420Z"
+ },
+ "d89d23c3": {
+  "fp": "ac71d8c0",
+  "szoveg": "Koppints a képre, és meghallgatod, mit keress! A jel is megmutatja: az első hangot, az utolsó hangot, vagy tapsold el a szót. Húzd a színes korongot a párja mellé!",
+  "azonositok": [
+   "utasitas-hangolo-2"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 10.56,
+  "kredit": 65,
+  "generalva": "2026-11-14T13:29:25.899Z"
+ },
+ "defd8329": {
+  "fp": "c931e62a",
+  "szoveg": "sín",
+  "azonositok": [
+   "szo-sin"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.56,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:29.146Z"
+ },
+ "fd16b8a7": {
+  "fp": "946e3c16",
+  "szoveg": "lufi",
+  "azonositok": [
+   "szo-lufi"
+  ],
+  "modszer": "pont",
+  "hossz_mp": 0.64,
+  "kredit": 2,
+  "generalva": "2026-11-14T13:29:28.128Z"
+ }
+}

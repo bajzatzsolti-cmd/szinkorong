@@ -1047,10 +1047,12 @@ svg {
   display: flex;
   gap: 8px;
   justify-content: space-between;
+  /* A kártya felső belső margóját (18 px) is takarja, hogy görgetéskor ne látsszon ki fölötte semmi. */
   position: sticky;
-  top: -1px;
-  padding: 6px 0;
-  background: inherit;
+  top: -18px;
+  margin-top: -6px;
+  padding: 12px 0 6px;
+  background: var(--card);
   z-index: 1;
 }
 .hcopy {

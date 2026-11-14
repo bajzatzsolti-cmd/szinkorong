@@ -16,6 +16,9 @@ export default defineConfig({
   build: {
     target: 'es2020',
     sourcemap: false,
+    // A hangfájlok mindig külön fájlok maradjanak (a nagyon rövid klipet se ágyazza be a kódba):
+    // így pontos a hangcsomag mérete, és az offline gyorsítótár fájlonként kezeli őket.
+    assetsInlineLimit: (file: string) => (/\.(mp3|m4a)$/.test(file) ? false : undefined),
   },
   plugins: [
     {
