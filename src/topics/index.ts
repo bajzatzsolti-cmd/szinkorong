@@ -4,14 +4,21 @@ import { analogia } from './analogia';
 import { arnyek } from './arnyek';
 import { betu } from './betu';
 import { csoport } from './csoport';
+import { felkep } from './felkep';
+import { kakukk } from './kakukk';
+import { kodfejto } from './kodfejto';
 import { matrix } from './matrix';
+import { merleg } from './merleg';
 import { minta } from './minta';
 import { par } from './par';
+import { sudoku } from './sudoku';
 import { tukor } from './tukor';
 import type { Topic } from './types';
 
 /** A témakörök jegyzéke (a kezdőlapon ebben a sorrendben). Új témakör = új mappa + egy sor ide. */
-export const TOPICS: readonly Topic[] = [arnyek, minta, par, csoport, betu, tukor, matrix, analogia];
+export const TOPICS: readonly Topic[] = [
+  arnyek, minta, par, csoport, betu, tukor, matrix, analogia, kakukk, sudoku, merleg, felkep, kodfejto,
+];
 
 export function getTopic(id: TopicId): Topic {
   const t = TOPICS.find((x) => x.id === id);

@@ -144,6 +144,48 @@ svg {
   stroke-width: 5;
   stroke-linejoin: round;
 }
+/* Színes alakzatok (Kakukktojás: szín, Mérleg: játékok). A telt alak kitöltése és szegélye is színes. */
+.tint-red { fill: #e5484d; stroke: #a8282c; }
+.tint-blue { fill: #2d7fe0; stroke: #1a55a0; }
+.tint-yellow { fill: #f7c81e; stroke: #b38b00; }
+.tint-green { fill: #33a55a; stroke: #1e6e3a; }
+.tint-purple { fill: #8b5cd6; stroke: #5b3699; }
+.tint-orange { fill: #f5892b; stroke: #b05c12; }
+.vo.tint-red, .vo.tint-blue, .vo.tint-yellow, .vo.tint-green, .vo.tint-purple, .vo.tint-orange { fill: none; }
+.vempty {
+  fill: #f1ecdd;
+  stroke: #d8d0b8;
+  stroke-width: 2;
+}
+/* Kivágott darab (Fél kép) */
+.vhole {
+  fill: var(--paper);
+  stroke: #9aa3b5;
+  stroke-width: 2.5;
+  stroke-dasharray: 5 4;
+}
+.vpiece-bg {
+  fill: #fff;
+}
+.vpiece {
+  fill: none;
+  stroke: #9aa3b5;
+  stroke-width: 2.5;
+}
+/* Mérleg */
+.vbal-post,
+.vbal-beam,
+.vbal-str {
+  fill: none;
+  stroke: #6b7489;
+  stroke-linecap: round;
+}
+.vbal-post { stroke-width: 7; }
+.vbal-beam { stroke-width: 8; }
+.vbal-str { stroke-width: 2.5; }
+.vbal-base { fill: #8f96a8; }
+.vbal-pivot { fill: #4d6079; }
+.vbal-pan { fill: #c9c2ad; stroke: #8f96a8; stroke-width: 2.5; }
 /* Vonalas, betűszerű jelek */
 .vr path {
   fill: none;
@@ -339,8 +381,8 @@ svg {
 }
 @media (orientation: landscape) {
   .tiles {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    width: min(100%, 1000px);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: min(100%, 1060px);
   }
 }
 .tile {
@@ -541,6 +583,24 @@ svg {
   background: var(--paper);
   color: var(--ink);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+/* Közös fejléc a lap tetején (Kódfejtő jelkulcsa) */
+.paper.has-header {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.sheet-header {
+  grid-column: 1 / -1;
+  position: relative;
+  height: clamp(64px, 9vh, 96px);
+  border: 3px dashed var(--sun);
+  border-radius: 16px;
+  background: #fff8dc;
+}
+.sheet-header > .vis {
+  position: absolute;
+  inset: 6px 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 12px);
 }
 .tasks {
   min-width: 0;

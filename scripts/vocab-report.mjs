@@ -12,7 +12,20 @@ const read = async (p) => JSON.parse(await readFile(path.join(root, p), 'utf8'))
 const { words } = await read('content/szokincs.json');
 const cats = await read('content/kategoriak.json');
 const { pairs, also } = await read('content/parok.json');
+const props = (await read('content/kepjellemzok.json')).images;
+const weights = (await read('content/suly.json')).classes;
 const byId = new Map(words.map((w) => [w.id, w]));
+const WEIGHT_NAMES = ['1 g alatt', '~10 g', '~100 g', '~1 kg', '~10 kg', '~100 kg', '~1 t', '~10 t'];
+
+/** A kép mért jellemzői röviden: szín, irányos-e, féloldalas-e, súlyosztály. */
+const imageInfo = (w) => {
+  const p = props[w.id] ?? {};
+  const parts = [w.color ?? p.color];
+  if (w.directional ?? p.directional) parts.push('irányos');
+  if (p.halfBalance !== undefined && p.halfBalance < 0.55) parts.push('féloldalas');
+  if (weights[w.id] !== undefined) parts.push(`súly: ${WEIGHT_NAMES[weights[w.id]]}`);
+  return parts.filter(Boolean).join(' · ');
+};
 
 const catIds = Object.keys(cats).filter((k) => !k.startsWith('_'));
 const yes = (b) => (b ? 'igen' : '–');
@@ -27,7 +40,7 @@ const rows = (list) =>
       const flags = [...d.flags, ...(w.flags ?? [])];
       const remark = [w.note, ...flags].filter(Boolean).join('; ');
       const groups = [w.similar && `hasonló: ${w.similar}`, w.twin && `iker: ${w.twin}`].filter(Boolean).join(', ');
-      return `| ${w.emoji} | **${esc(w.hu)}** | \`${w.id}\` | ${phon[0]} | ${phon[phon.length - 1]} | ${syll} | ${yes(w.goodShadow)} | ${w.clearName === false ? '**nem**' : 'igen'} | ${esc(groups)} | ${esc(remark)} |`;
+      return `| ${w.emoji} | **${esc(w.hu)}** | \`${w.id}\` | ${phon[0]} | ${phon[phon.length - 1]} | ${syll} | ${yes(w.goodShadow)} | ${w.clearName === false ? '**nem**' : 'igen'} | ${esc(groups)} | ${esc(imageInfo(w))} | ${esc(remark)} |`;
     })
     .join('\n');
 
@@ -52,7 +65,9 @@ A szókincs a Színkorong központi szótára: minden képes feladat (árnyék, 
 - ${words.length} szó, ${catIds.length} kategória, ${shadow.length} szó jó árnyékú, ${unclear.length} szónak nem egyértelmű a neve egy ötévesnek.
 - ${pairs.length} pár és ${also.length} további összetartozás („also”) a „Mi tartozik össze?” témakörhöz.
 - A képek az OpenMoji készletéből valók (CC BY-SA 4.0, lásd LICENSES.md).
-- **Még üres, szándékosan:** a rímcsoport (a Hangoló plusz 4. sprintben, a rímpárokkal együtt) és a jelzők (tags: szín, élőhely stb.; a Kakukktojással a 3. sprintben).
+- **Mért képjellemzők** (content/kepjellemzok.json, \`npm run image-props\`): a kép uralkodó színe, hogy van-e jól látható iránya (Kakukktojás: „másfelé néz”), és hogy féloldalas-e (az egyik felén alig van rajz: a Fél kép nem használja). Ezeket a gép méri a képekből; ha egy szín vagy irány nem stimmel, a szókincsben felülírható.
+- **Súlyosztályok** (content/suly.json, tervezet): a Mérleg könnyű szintjéhez, ${Object.keys(weights).length} tárgyhoz.
+- **Még üres, szándékosan:** a rímcsoport (a Hangoló plusz 4. sprintben, a rímpárokkal együtt).
 - A kezdő- és végső hang, valamint a szótagszám a magyar névből automatikusan készül (kétjegyű betű = egy hang: cs, sz, zs, gy, ny, ty, ly, dz, dzs; a kettőzött hosszú mássalhangzó két hang). A bizonytalan esetek [ELLENŐRIZNI] jelzést kapnak.
 
 ## Amit külön kérek, hogy ellenőrizz (${open.length})
@@ -77,14 +92,14 @@ ${catIds
 
 ## A szavak kategóriánként
 
-Oszlopok: kép, név, azonosító, **kezdőhang**, **végső hang**, **szótagszám**, **jó árnyék** (felismerhető az árnyéka), **egyértelmű név**, csoportok (hasonló alakú árnyékok / iker-képek), megjegyzés.
+Oszlopok: kép, név, azonosító, **kezdőhang**, **végső hang**, **szótagszám**, **jó árnyék** (felismerhető az árnyéka), **egyértelmű név**, csoportok (hasonló alakú árnyékok / iker-képek), **képjellemzők** (mért szín, irányos, féloldalas, súlyosztály), megjegyzés.
 
 `;
 
 for (const id of catIds) {
   const list = words.filter((w) => w.category === id);
   if (!list.length) continue;
-  out += `### ${cats[id].name} (\`${id}\`, ${list.length} szó)\n\n| Kép | Név | Azonosító | Kezdő | Végső | Szótag | Árnyék | Egyért. név | Csoport | Megjegyzés |\n|---|---|---|---|---|---|---|---|---|---|\n${rows(list)}\n\n`;
+  out += `### ${cats[id].name} (\`${id}\`, ${list.length} szó)\n\n| Kép | Név | Azonosító | Kezdő | Végső | Szótag | Árnyék | Egyért. név | Csoport | Képjellemzők | Megjegyzés |\n|---|---|---|---|---|---|---|---|---|---|---|\n${rows(list)}\n\n`;
 }
 
 const pairLine = ([a, b]) => `| ${byId.get(a)?.emoji ?? '?'} ${byId.get(a)?.hu ?? a} | ${byId.get(b)?.emoji ?? '?'} ${byId.get(b)?.hu ?? b} |`;

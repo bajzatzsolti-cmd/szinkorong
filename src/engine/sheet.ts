@@ -41,6 +41,8 @@ export interface AnswerCell {
 
 export interface Sheet {
   spec: SheetSpec;
+  /** A lap tetején, a feladatok és megoldások fölött látszó közös rész (pl. a Kódfejtő jelkulcsa). */
+  header?: Visual;
   /** A feladatok sorrendje a lapon (bal oldal). */
   tasks: TaskCell[];
   /** A megoldások sorrendje a lapon (jobb oldal); más sorrend, mint a feladatoké. */

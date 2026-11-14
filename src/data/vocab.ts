@@ -2,8 +2,20 @@
 // A hangtani adatok (hangok, kezdő/végső hang, szótagszám) a magyar névből készülnek (phonetics.ts),
 // a forrásban felülírhatók.
 import categoriesRaw from '../../content/kategoriak.json' with { type: 'json' };
+import imagePropsRaw from '../../content/kepjellemzok.json' with { type: 'json' };
+import weightsRaw from '../../content/suly.json' with { type: 'json' };
 import vocabRaw from '../../content/szokincs.json' with { type: 'json' };
 import { derive } from './phonetics';
+
+interface ImageProps {
+  color: string;
+  share: number;
+  asym: number;
+  directional: boolean;
+  halfBalance: number;
+}
+const IMAGE_PROPS = (imagePropsRaw as unknown as { images: Record<string, ImageProps> }).images;
+const WEIGHTS = (weightsRaw as unknown as { classes: Record<string, number> }).classes;
 
 export interface WordSource {
   id: string;
@@ -22,6 +34,9 @@ export interface WordSource {
   phon?: string[];
   rhymeGroup?: string;
   tags?: string[];
+  /** Felülírások a mért képjellemzőkre (content/kepjellemzok.json). */
+  color?: string;
+  directional?: boolean;
 }
 
 export interface Word {
@@ -47,6 +62,16 @@ export interface Word {
   syllables: number;
   rhymeGroup?: string;
   tags: string[];
+  /** A kép uralkodó színe (mérve, felülírható). */
+  color: string;
+  /** Mennyire tér el a kép a tükörképétől (0..1). */
+  asym: number;
+  /** Van-e a képnek jól látható iránya (balra / jobbra néz). */
+  directional: boolean;
+  /** A bal és a jobb fél rajzának aránya (0..1; 1 = egyforma sok). A Fél kép csak kiegyensúlyozott képet használ. */
+  halfBalance: number;
+  /** Súlyosztály a Mérleghez (0 = 1 g alatt … 7 = kb. 10 tonna), ha meg van adva (content/suly.json). */
+  weight?: number;
 }
 
 export interface Category {
@@ -78,6 +103,11 @@ export function buildWord(src: WordSource): Word {
     syllables: src.syllables ?? d.syllables,
     rhymeGroup: src.rhymeGroup,
     tags: src.tags ?? [],
+    color: src.color ?? IMAGE_PROPS[src.id]?.color ?? 'ismeretlen',
+    asym: IMAGE_PROPS[src.id]?.asym ?? 0,
+    directional: src.directional ?? IMAGE_PROPS[src.id]?.directional ?? false,
+    halfBalance: IMAGE_PROPS[src.id]?.halfBalance ?? 0,
+    weight: WEIGHTS[src.id],
   };
 }
 

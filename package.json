@@ -16,7 +16,8 @@
     "icons": "node scripts/make-icons.mjs",
     "sprite": "node scripts/build-sprite.mjs",
     "manifest": "node scripts/sync-manifest.mjs",
-    "content": "npm run sprite && npm run manifest && npm run vocab:report",
+    "image-props": "node scripts/image-props.mjs",
+    "content": "npm run sprite && npm run image-props && npm run manifest && npm run vocab:report",
     "vocab:report": "node scripts/vocab-report.mjs",
     "check:fonts": "node scripts/check-fonts.mjs",
     "check": "npm run build && npm test"

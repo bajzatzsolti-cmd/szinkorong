@@ -20,7 +20,7 @@ export const ROTATIONS = [90, 180, 270] as const;
 export const shadowPool = (): Word[] => WORDS.filter((w) => w.goodShadow && isPictureSafe(w));
 
 /** Közepes szinten a képek lehetőleg különböző alakcsoportból (similar) valók, hogy jól elkülönüljenek. */
-function pickSpread(r: Rng, pool: readonly Word[], n: number): Word[] {
+export function pickSpread(r: Rng, pool: readonly Word[], n: number): Word[] {
   const chosen: Word[] = [];
   const twins = new Set<string>();
   const groups = new Set<string>();
@@ -38,7 +38,7 @@ function pickSpread(r: Rng, pool: readonly Word[], n: number): Word[] {
 }
 
 /** Nehéz szinten a képek 2–3 fős, hasonló alakú csoportokban állnak. */
-function pickSimilar(r: Rng, pool: readonly Word[], n: number): Word[] {
+export function pickSimilar(r: Rng, pool: readonly Word[], n: number): Word[] {
   const groups = new Map<string, Word[]>();
   for (const w of pool) {
     if (!w.similar) continue;

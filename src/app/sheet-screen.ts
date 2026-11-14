@@ -59,6 +59,11 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   const tasksEl = el('div', 'tasks');
   tasksEl.dataset.cols = String(topic.taskCols);
   const answersEl = el('div', 'answers');
+  if (sheet.header) {
+    const header = el('div', 'sheet-header', renderVisual(sheet.header));
+    paper.classList.add('has-header');
+    paper.append(header);
+  }
   paper.append(tasksEl, answersEl);
   const homesEl = el('div', 'homes');
   const go = el('button', 'go');
@@ -289,10 +294,18 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     // Álló nézetben a megoldásoszlop szélesebb, ha a feladatok két oszlopban állnak (a feladat-képek bőven elférnek),
     // mert az árnyékok és a megoldás-képek különben túl kicsik lennének. Hosszú sorok (Sorminta) mellett a feladatoké a hely.
     const portrait = screen.clientHeight > screen.clientWidth;
-    paper.style.setProperty('--acol', cols === 2 ? '48%' : portrait && topic.taskCols === 2 ? '42%' : '34%');
+    const acol = topic.answerWide
+      ? cols === 2 ? '62%' : '54%'
+      : cols === 2 ? '48%' : portrait && topic.taskCols === 2 ? '42%' : '34%';
+    paper.style.setProperty('--acol', acol);
     answersEl.classList.toggle('two-col', cols === 2);
 
-    const taskRows = Math.ceil(n / topic.taskCols);
+    // 3) Feladatok: rövid feladatsorok két oszlopba törhetnek, ha egy oszlopban túl alacsonyak lennének.
+    let tcols: number = topic.taskCols;
+    if (topic.flexTaskCols && tcols === 1 && (tasksEl.clientHeight - GAP * (n - 1)) / n < ROW_MIN) tcols = 2;
+    paper.style.setProperty('--tcols', String(tcols));
+    tasksEl.dataset.cols = String(tcols);
+    const taskRows = Math.ceil(n / tcols);
     const taskRowH = (tasksEl.clientHeight - GAP * (taskRows - 1)) / taskRows;
     const slot = clamp(Math.floor(rowH - 8), SLOT_MIN, SLOT_MAX);
     const dot = clamp(Math.floor(Math.min(taskRowH, rowH) * 0.62), 32, 46);

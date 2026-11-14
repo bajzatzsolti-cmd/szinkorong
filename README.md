@@ -14,8 +14,12 @@ A zöld pipa megmutatja a helyes színeket.
 (Árnyékvadász, Sorminta, Mi tartozik össze?, Csoportosító), 15–15 lap szinten. A szókincs és a párok jóváhagyásra várnak:
 [docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md).
 **3a sprint (vizuális és logikai témakörök, első fele):** Betűkereső, Tükör és forgatás, Mátrix, Analógia, valamint az animált,
-szöveg nélküli bemutató a Mátrix és az Analógia első lapja előtt. A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
-A sprintek listája és a nyitott kérdések a fejlesztési tervben vannak.
+szöveg nélküli bemutató a Mátrix és az Analógia első lapja előtt.
+**3b sprint (logikai témakörök, második fele):** Kakukktojás, Képes sudoku (bemutatóval), Mérleg, Fél kép, Kódfejtő.
+A Mérleg könnyű szintje súlyosztályokat használ (`content/suly.json`, tervezet); a képek színét, irányát és féloldalasságát
+a gép méri (`npm run image-props`, `content/kepjellemzok.json`), a szókincsben felülírható.
+A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
+Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 
 ## Parancsok
 
@@ -44,7 +48,7 @@ PowerShellben `. .\scripts\env.ps1` betölti a PATH-ba.
 ## Felépítés
 
 ```
-content/            kód nélkül szerkeszthető tartalom (hangszövegek, később: szókincs, párok, mondatok)
+content/            kód nélkül szerkeszthető tartalom: szókincs, kategóriák, párok, súlyosztályok, hangszövegek, mért képjellemzők
 src/engine/         motor: véletlen (rng), lap-modell, húzás, pattanás, haladás, hang, gyerekzár
 src/render/         SVG-rajzolás: alakzatok, korongok, ikonok, a feladatok „jelenetfája” (Visual)
 src/topics/<téma>/  témakörönként: generate.ts (lapok gyártása) + verify.ts (független megoldó)

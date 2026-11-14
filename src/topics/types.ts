@@ -13,6 +13,10 @@ export interface Topic {
   sizes: readonly [number, number, number];
   /** Hány oszlopban álljanak a feladatok a lap bal oldalán. */
   taskCols: 1 | 2;
+  /** Széles megoldásoszlop (pl. a Kódfejtő képsorai): a megoldások kapják a lap nagyobb részét. */
+  answerWide?: boolean;
+  /** Ha egy oszlopban túl alacsonyak lennének a feladatsorok, két oszlopba törhetnek (rövid feladatoknál). */
+  flexTaskCols?: boolean;
   /**
    * Ha meg van adva: a témakör első lapja előtt egyszer animált, szöveg nélküli bemutató játszódik le
    * egy ekkora (2 korongos) példalapon. A nehezebb logikai témakörökhöz való.

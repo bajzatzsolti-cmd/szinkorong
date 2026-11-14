@@ -1,0 +1,1300 @@
+{
+ "_info": "GENERÁLT FÁJL (scripts/image-props.mjs, npm run image-props) – ne szerkeszd kézzel. A kép uralkodó színe (color, és hogy a festett rész mekkora hányada: share), hogy van-e jól látható iránya (directional, asym = eltérés a tükörképtől), és hogy a bal és a jobb fele mennyire egyformán rajzolt (halfBalance, 1 = egyformán). Felülírni a szokincs.json \"color\" / \"directional\" mezőjével lehet.",
+ "images": {
+  "kutya": {
+   "color": "narancs",
+   "share": 0.56,
+   "asym": 0.408,
+   "directional": true,
+   "halfBalance": 0.91
+  },
+  "cica": {
+   "color": "narancs",
+   "share": 0.55,
+   "asym": 0.365,
+   "directional": true,
+   "halfBalance": 0.94
+  },
+  "eger": {
+   "color": "szürke",
+   "share": 0.67,
+   "asym": 0.322,
+   "directional": true,
+   "halfBalance": 0.87
+  },
+  "nyuszi": {
+   "color": "szürke",
+   "share": 0.46,
+   "asym": 0.558,
+   "directional": true,
+   "halfBalance": 0.67
+  },
+  "roka": {
+   "color": "narancs",
+   "share": 0.51,
+   "asym": 0.003,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "medve": {
+   "color": "barna",
+   "share": 0.78,
+   "asym": 0.011,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "malac": {
+   "color": "rózsaszín",
+   "share": 0.69,
+   "asym": 0.302,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "tehen": {
+   "color": "barna",
+   "share": 0.46,
+   "asym": 0.399,
+   "directional": true,
+   "halfBalance": 0.88
+  },
+  "beka": {
+   "color": "zöld",
+   "share": 0.78,
+   "asym": 0.018,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "majom": {
+   "color": "barna",
+   "share": 0.56,
+   "asym": 0.525,
+   "directional": true,
+   "halfBalance": 0.54
+  },
+  "lo": {
+   "color": "barna",
+   "share": 0.64,
+   "asym": 0.674,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "barany": {
+   "color": "fehér",
+   "share": 0.52,
+   "asym": 0.522,
+   "directional": true,
+   "halfBalance": 0.98
+  },
+  "kecske": {
+   "color": "barna",
+   "share": 0.62,
+   "asym": 0.649,
+   "directional": true,
+   "halfBalance": 0.99
+  },
+  "szarvas": {
+   "color": "barna",
+   "share": 0.58,
+   "asym": 0.567,
+   "directional": true,
+   "halfBalance": 0.71
+  },
+  "teve": {
+   "color": "narancs",
+   "share": 0.51,
+   "asym": 0.628,
+   "directional": true,
+   "halfBalance": 0.51
+  },
+  "krokodil": {
+   "color": "zöld",
+   "share": 0.6,
+   "asym": 0.481,
+   "directional": true,
+   "halfBalance": 0.66
+  },
+  "elefant": {
+   "color": "szürke",
+   "share": 0.72,
+   "asym": 0.328,
+   "directional": true,
+   "halfBalance": 0.96
+  },
+  "zsiraf": {
+   "color": "narancs",
+   "share": 0.46,
+   "asym": 0.847,
+   "directional": true,
+   "halfBalance": 0.73
+  },
+  "oroszlan": {
+   "color": "narancs",
+   "share": 0.52,
+   "asym": 0.044,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "zebra": {
+   "color": "fehér",
+   "share": 0.38,
+   "asym": 0.612,
+   "directional": true,
+   "halfBalance": 0.94
+  },
+  "teknos": {
+   "color": "zöld",
+   "share": 0.62,
+   "asym": 0.33,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "kigyo": {
+   "color": "zöld",
+   "share": 0.62,
+   "asym": 0.678,
+   "directional": true,
+   "halfBalance": 0.72
+  },
+  "hal": {
+   "color": "kék",
+   "share": 0.77,
+   "asym": 0.386,
+   "directional": true,
+   "halfBalance": 0.68
+  },
+  "delfin": {
+   "color": "szürke",
+   "share": 0.63,
+   "asym": 0.558,
+   "directional": true,
+   "halfBalance": 0.59
+  },
+  "suni": {
+   "color": "barna",
+   "share": 0.43,
+   "asym": 0.276,
+   "directional": true,
+   "halfBalance": 0.8
+  },
+  "mokus": {
+   "color": "barna",
+   "share": 0.63,
+   "asym": 0.403,
+   "directional": true,
+   "halfBalance": 0.69
+  },
+  "csiga": {
+   "color": "barna",
+   "share": 0.61,
+   "asym": 0.496,
+   "directional": true,
+   "halfBalance": 0.87
+  },
+  "kakas": {
+   "color": "barna",
+   "share": 0.53,
+   "asym": 0.416,
+   "directional": true,
+   "halfBalance": 0.95
+  },
+  "tyuk": {
+   "color": "fehér",
+   "share": 0.45,
+   "asym": 0.071,
+   "directional": false,
+   "halfBalance": 0.95
+  },
+  "kacsa": {
+   "color": "barna",
+   "share": 0.5,
+   "asym": 0.611,
+   "directional": true,
+   "halfBalance": 0.61
+  },
+  "bagoly": {
+   "color": "szürke",
+   "share": 0.52,
+   "asym": 0.348,
+   "directional": true,
+   "halfBalance": 0.94
+  },
+  "pingvin": {
+   "color": "fehér",
+   "share": 0.37,
+   "asym": 0.243,
+   "directional": true,
+   "halfBalance": 0.85
+  },
+  "hattyu": {
+   "color": "fehér",
+   "share": 0.61,
+   "asym": 0.44,
+   "directional": true,
+   "halfBalance": 0.63
+  },
+  "csibe": {
+   "color": "sárga",
+   "share": 0.67,
+   "asym": 0.034,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "galamb": {
+   "color": "fehér",
+   "share": 0.42,
+   "asym": 0.537,
+   "directional": true,
+   "halfBalance": 0.81
+  },
+  "papagaj": {
+   "color": "piros",
+   "share": 0.38,
+   "asym": 0.414,
+   "directional": true,
+   "halfBalance": 0.79
+  },
+  "madar": {
+   "color": "barna",
+   "share": 0.55,
+   "asym": 0.657,
+   "directional": true,
+   "halfBalance": 0.73
+  },
+  "meh": {
+   "color": "sárga",
+   "share": 0.31,
+   "asym": 0.475,
+   "directional": true,
+   "halfBalance": 0.57
+  },
+  "lepke": {
+   "color": "kék",
+   "share": 0.69,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "katica": {
+   "color": "piros",
+   "share": 0.54,
+   "asym": 0.109,
+   "directional": false,
+   "halfBalance": 0.94
+  },
+  "hangya": {
+   "color": "barna",
+   "share": 0.34,
+   "asym": 0.089,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "pok": {
+   "color": "szürke",
+   "share": 0.32,
+   "asym": 0.352,
+   "directional": true,
+   "halfBalance": 0.99
+  },
+  "hernyo": {
+   "color": "zöld",
+   "share": 0.62,
+   "asym": 0.128,
+   "directional": false,
+   "halfBalance": 0.89
+  },
+  "tucsok": {
+   "color": "zöld",
+   "share": 0.51,
+   "asym": 0.42,
+   "directional": true,
+   "halfBalance": 0.94
+  },
+  "alma": {
+   "color": "piros",
+   "share": 0.81,
+   "asym": 0.088,
+   "directional": false,
+   "halfBalance": 0.97
+  },
+  "korte": {
+   "color": "zöld",
+   "share": 0.82,
+   "asym": 0.625,
+   "directional": true,
+   "halfBalance": 0.61
+  },
+  "banan": {
+   "color": "sárga",
+   "share": 0.5,
+   "asym": 0.819,
+   "directional": true,
+   "halfBalance": 0.4
+  },
+  "eper": {
+   "color": "piros",
+   "share": 0.63,
+   "asym": 0.025,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "cseresznye": {
+   "color": "piros",
+   "share": 0.47,
+   "asym": 0.394,
+   "directional": true,
+   "halfBalance": 0.64
+  },
+  "szolo": {
+   "color": "lila",
+   "share": 0.53,
+   "asym": 0.15,
+   "directional": false,
+   "halfBalance": 0.97
+  },
+  "dinnye": {
+   "color": "piros",
+   "share": 0.59,
+   "asym": 0.664,
+   "directional": true,
+   "halfBalance": 0.34
+  },
+  "citrom": {
+   "color": "sárga",
+   "share": 0.71,
+   "asym": 0.281,
+   "directional": true,
+   "halfBalance": 0.95
+  },
+  "narancs": {
+   "color": "sárga",
+   "share": 0.57,
+   "asym": 0.101,
+   "directional": false,
+   "halfBalance": 0.92
+  },
+  "barack": {
+   "color": "rózsaszín",
+   "share": 0.64,
+   "asym": 0.103,
+   "directional": false,
+   "halfBalance": 0.94
+  },
+  "ananasz": {
+   "color": "barna",
+   "share": 0.53,
+   "asym": 0.124,
+   "directional": false,
+   "halfBalance": 0.89
+  },
+  "kivi": {
+   "color": "zöld",
+   "share": 0.78,
+   "asym": 0.01,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "repa": {
+   "color": "narancs",
+   "share": 0.51,
+   "asym": 0.842,
+   "directional": true,
+   "halfBalance": 0.88
+  },
+  "paradicsom": {
+   "color": "piros",
+   "share": 0.76,
+   "asym": 0.029,
+   "directional": false,
+   "halfBalance": 0.97
+  },
+  "uborka": {
+   "color": "zöld",
+   "share": 0.76,
+   "asym": 0.807,
+   "directional": true,
+   "halfBalance": 0.85
+  },
+  "kukorica": {
+   "color": "zöld",
+   "share": 0.45,
+   "asym": 0.588,
+   "directional": true,
+   "halfBalance": 0.95
+  },
+  "krumpli": {
+   "color": "barna",
+   "share": 0.8,
+   "asym": 0.338,
+   "directional": true,
+   "halfBalance": 0.85
+  },
+  "hagyma": {
+   "color": "narancs",
+   "share": 0.62,
+   "asym": 0.035,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "brokkoli": {
+   "color": "zöld",
+   "share": 0.76,
+   "asym": 0.021,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "paprika": {
+   "color": "piros",
+   "share": 0.68,
+   "asym": 0.114,
+   "directional": false,
+   "halfBalance": 0.93
+  },
+  "kenyer": {
+   "color": "sárga",
+   "share": 0.79,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "sajt": {
+   "color": "sárga",
+   "share": 0.77,
+   "asym": 0.094,
+   "directional": false,
+   "halfBalance": 0.91
+  },
+  "tojas": {
+   "color": "fehér",
+   "share": 0.6,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "tej": {
+   "color": "fehér",
+   "share": 0.54,
+   "asym": 0.041,
+   "directional": false,
+   "halfBalance": 0.97
+  },
+  "mez": {
+   "color": "narancs",
+   "share": 0.56,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "kifli": {
+   "color": "narancs",
+   "share": 0.49,
+   "asym": 0.002,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "pizza": {
+   "color": "sárga",
+   "share": 0.43,
+   "asym": 0.002,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "palacsinta": {
+   "color": "sárga",
+   "share": 0.51,
+   "asym": 0.037,
+   "directional": false,
+   "halfBalance": 0.96
+  },
+  "vaj": {
+   "color": "sárga",
+   "share": 0.57,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "leves": {
+   "color": "fehér",
+   "share": 0.51,
+   "asym": 0.17,
+   "directional": false,
+   "halfBalance": 0.97
+  },
+  "torta": {
+   "color": "sárga",
+   "share": 0.5,
+   "asym": 0.144,
+   "directional": false,
+   "halfBalance": 0.86
+  },
+  "fagyi": {
+   "color": "sárga",
+   "share": 0.38,
+   "asym": 0.073,
+   "directional": false,
+   "halfBalance": 0.93
+  },
+  "nyaloka": {
+   "color": "piros",
+   "share": 0.59,
+   "asym": 0.601,
+   "directional": true,
+   "halfBalance": 0.45
+  },
+  "csoki": {
+   "color": "piros",
+   "share": 0.55,
+   "asym": 0.017,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "keksz": {
+   "color": "barna",
+   "share": 0.82,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "cukorka": {
+   "color": "zöld",
+   "share": 0.67,
+   "asym": 0.555,
+   "directional": true,
+   "halfBalance": 1
+  },
+  "fank": {
+   "color": "sárga",
+   "share": 0.63,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "auto": {
+   "color": "piros",
+   "share": 0.53,
+   "asym": 0.219,
+   "directional": true,
+   "halfBalance": 0.83
+  },
+  "busz": {
+   "color": "piros",
+   "share": 0.31,
+   "asym": 0.212,
+   "directional": true,
+   "halfBalance": 0.84
+  },
+  "vonat": {
+   "color": "szürke",
+   "share": 0.32,
+   "asym": 0.308,
+   "directional": true,
+   "halfBalance": 0.76
+  },
+  "repulo": {
+   "color": "szürke",
+   "share": 0.68,
+   "asym": 0.421,
+   "directional": true,
+   "halfBalance": 0.86
+  },
+  "helikopter": {
+   "color": "piros",
+   "share": 0.3,
+   "asym": 0.564,
+   "directional": true,
+   "halfBalance": 0.72
+  },
+  "bicikli": {
+   "color": "fehér",
+   "share": 0.44,
+   "asym": 0.405,
+   "directional": true,
+   "halfBalance": 0.95
+  },
+  "hajo": {
+   "color": "kék",
+   "share": 0.53,
+   "asym": 0.256,
+   "directional": true,
+   "halfBalance": 0.83
+  },
+  "raketa": {
+   "color": "piros",
+   "share": 0.4,
+   "asym": 0.641,
+   "directional": true,
+   "halfBalance": 0.91
+  },
+  "traktor": {
+   "color": "zöld",
+   "share": 0.17,
+   "asym": 0.282,
+   "directional": true,
+   "halfBalance": 0.75
+  },
+  "roller": {
+   "color": "szürke",
+   "share": 0.22,
+   "asym": 0.568,
+   "directional": true,
+   "halfBalance": 0.65
+  },
+  "motor": {
+   "color": "piros",
+   "share": 0.36,
+   "asym": 0.393,
+   "directional": true,
+   "halfBalance": 0.88
+  },
+  "tuzoltoauto": {
+   "color": "piros",
+   "share": 0.36,
+   "asym": 0.152,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "mento": {
+   "color": "fehér",
+   "share": 0.45,
+   "asym": 0.231,
+   "directional": true,
+   "halfBalance": 0.8
+  },
+  "rendorauto": {
+   "color": "szürke",
+   "share": 0.62,
+   "asym": 0.242,
+   "directional": true,
+   "halfBalance": 0.82
+  },
+  "polo": {
+   "color": "kék",
+   "share": 0.77,
+   "asym": 0.006,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "nadrag": {
+   "color": "kék",
+   "share": 0.81,
+   "asym": 0.269,
+   "directional": true,
+   "halfBalance": 0.93
+  },
+  "ruha": {
+   "color": "kék",
+   "share": 0.76,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "zokni": {
+   "color": "narancs",
+   "share": 0.45,
+   "asym": 0.629,
+   "directional": true,
+   "halfBalance": 0.6
+  },
+  "kesztyu": {
+   "color": "piros",
+   "share": 0.76,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "sal": {
+   "color": "piros",
+   "share": 0.72,
+   "asym": 0.418,
+   "directional": true,
+   "halfBalance": 0.58
+  },
+  "cipo": {
+   "color": "szürke",
+   "share": 0.65,
+   "asym": 0.238,
+   "directional": true,
+   "halfBalance": 0.82
+  },
+  "sapka": {
+   "color": "zöld",
+   "share": 0.65,
+   "asym": 0.35,
+   "directional": true,
+   "halfBalance": 0.86
+  },
+  "csizma": {
+   "color": "barna",
+   "share": 0.72,
+   "asym": 0.825,
+   "directional": true,
+   "halfBalance": 0.23
+  },
+  "kabat": {
+   "color": "barna",
+   "share": 0.71,
+   "asym": 0.013,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "kalap": {
+   "color": "sárga",
+   "share": 0.38,
+   "asym": 0.019,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "gitar": {
+   "color": "piros",
+   "share": 0.29,
+   "asym": 0.938,
+   "directional": true,
+   "halfBalance": 0.32
+  },
+  "zongora": {
+   "color": "fehér",
+   "share": 0.41,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "dob": {
+   "color": "piros",
+   "share": 0.67,
+   "asym": 0.071,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "trombita": {
+   "color": "sárga",
+   "share": 0.42,
+   "asym": 0.511,
+   "directional": true,
+   "halfBalance": 0.78
+  },
+  "hegedu": {
+   "color": "barna",
+   "share": 0.54,
+   "asym": 0.773,
+   "directional": true,
+   "halfBalance": 0.5
+  },
+  "szaxofon": {
+   "color": "sárga",
+   "share": 0.48,
+   "asym": 0.95,
+   "directional": true,
+   "halfBalance": 0.17
+  },
+  "nap": {
+   "color": "sárga",
+   "share": 0.68,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "hold": {
+   "color": "sárga",
+   "share": 0.64,
+   "asym": 0.675,
+   "directional": true,
+   "halfBalance": 0.36
+  },
+  "csillag": {
+   "color": "sárga",
+   "share": 0.77,
+   "asym": 0.002,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "felho": {
+   "color": "szürke",
+   "share": 0.85,
+   "asym": 0.062,
+   "directional": false,
+   "halfBalance": 0.95
+  },
+  "szivarvany": {
+   "color": "piros",
+   "share": 0.13,
+   "asym": 0.635,
+   "directional": true,
+   "halfBalance": 0.95
+  },
+  "bolygo": {
+   "color": "piros",
+   "share": 0.63,
+   "asym": 0.245,
+   "directional": true,
+   "halfBalance": 0.98
+  },
+  "maci": {
+   "color": "barna",
+   "share": 0.61,
+   "asym": 0.004,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "labda": {
+   "color": "fehér",
+   "share": 0.49,
+   "asym": 0.003,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "lufi": {
+   "color": "piros",
+   "share": 0.81,
+   "asym": 0.612,
+   "directional": true,
+   "halfBalance": 0.47
+  },
+  "sarkany": {
+   "color": "rózsaszín",
+   "share": 0.3,
+   "asym": 0.982,
+   "directional": true,
+   "halfBalance": 0.1
+  },
+  "kocka": {
+   "color": "szürke",
+   "share": 0.68,
+   "asym": 0.047,
+   "directional": false,
+   "halfBalance": 0.95
+  },
+  "kalapacs": {
+   "color": "szürke",
+   "share": 0.22,
+   "asym": 0.25,
+   "directional": true,
+   "halfBalance": 0.92
+  },
+  "furesz": {
+   "color": "szürke",
+   "share": 0.49,
+   "asym": 0.818,
+   "directional": true,
+   "halfBalance": 0.8
+  },
+  "csavarkulcs": {
+   "color": "szürke",
+   "share": 0.71,
+   "asym": 0.144,
+   "directional": false,
+   "halfBalance": 0.88
+  },
+  "csavarhuzo": {
+   "color": "narancs",
+   "share": 0.29,
+   "asym": 0.917,
+   "directional": true,
+   "halfBalance": 0.52
+  },
+  "fa": {
+   "color": "zöld",
+   "share": 0.77,
+   "asym": 0.213,
+   "directional": true,
+   "halfBalance": 1
+  },
+  "virag": {
+   "color": "narancs",
+   "share": 0.32,
+   "asym": 0.756,
+   "directional": true,
+   "halfBalance": 0.76
+  },
+  "napraforgo": {
+   "color": "sárga",
+   "share": 0.37,
+   "asym": 0.586,
+   "directional": true,
+   "halfBalance": 0.71
+  },
+  "kaktusz": {
+   "color": "zöld",
+   "share": 0.72,
+   "asym": 0.308,
+   "directional": true,
+   "halfBalance": 1
+  },
+  "fenyo": {
+   "color": "zöld",
+   "share": 0.7,
+   "asym": 0.019,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "lab": {
+   "color": "sárga",
+   "share": 0.71,
+   "asym": 0.745,
+   "directional": true,
+   "halfBalance": 0.33
+  },
+  "kez": {
+   "color": "sárga",
+   "share": 0.76,
+   "asym": 0.381,
+   "directional": true,
+   "halfBalance": 0.62
+  },
+  "ful": {
+   "color": "sárga",
+   "share": 0.71,
+   "asym": 0.388,
+   "directional": true,
+   "halfBalance": 0.92
+  },
+  "fog": {
+   "color": "fehér",
+   "share": 0.61,
+   "asym": 0.012,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "szem": {
+   "color": "fehér",
+   "share": 0.57,
+   "asym": 0.002,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "letra": {
+   "color": "barna",
+   "share": 0.46,
+   "asym": 0.674,
+   "directional": true,
+   "halfBalance": 0.89
+  },
+  "sepru": {
+   "color": "sárga",
+   "share": 0.28,
+   "asym": 0.952,
+   "directional": true,
+   "halfBalance": 0.43
+  },
+  "vodor": {
+   "color": "kék",
+   "share": 0.65,
+   "asym": 0.024,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "kulcs": {
+   "color": "narancs",
+   "share": 0.55,
+   "asym": 0.865,
+   "directional": true,
+   "halfBalance": 0.72
+  },
+  "lampa": {
+   "color": "sárga",
+   "share": 0.62,
+   "asym": 0.053,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "ora": {
+   "color": "fehér",
+   "share": 0.69,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "ajto": {
+   "color": "barna",
+   "share": 0.71,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "esernyo": {
+   "color": "lila",
+   "share": 0.59,
+   "asym": 0.107,
+   "directional": false,
+   "halfBalance": 0.97
+  },
+  "ajandek": {
+   "color": "sárga",
+   "share": 0.43,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "telefon": {
+   "color": "piros",
+   "share": 0.67,
+   "asym": 0.004,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "fogkefe": {
+   "color": "kék",
+   "share": 0.36,
+   "asym": 0.955,
+   "directional": true,
+   "halfBalance": 0.58
+  },
+  "cumisuveg": {
+   "color": "kék",
+   "share": 0.55,
+   "asym": 0.604,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "gyertya": {
+   "color": "fehér",
+   "share": 0.29,
+   "asym": 0.167,
+   "directional": false,
+   "halfBalance": 0.83
+  },
+  "level": {
+   "color": "szürke",
+   "share": 0.77,
+   "asym": 0.002,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "postalada": {
+   "color": "piros",
+   "share": 0.46,
+   "asym": 0.017,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "fejhallgato": {
+   "color": "szürke",
+   "share": 0.51,
+   "asym": 0.009,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "gombolyag": {
+   "color": "narancs",
+   "share": 0.33,
+   "asym": 0.439,
+   "directional": true,
+   "halfBalance": 0.61
+  },
+  "szek": {
+   "color": "sárga",
+   "share": 0.43,
+   "asym": 0.709,
+   "directional": true,
+   "halfBalance": 0.71
+  },
+  "agy": {
+   "color": "kék",
+   "share": 0.37,
+   "asym": 0.064,
+   "directional": false,
+   "halfBalance": 0.95
+  },
+  "kanape": {
+   "color": "kék",
+   "share": 0.59,
+   "asym": 0.368,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "konyv": {
+   "color": "fehér",
+   "share": 0.3,
+   "asym": 0.088,
+   "directional": false,
+   "halfBalance": 0.91
+  },
+  "ollo": {
+   "color": "piros",
+   "share": 0.3,
+   "asym": 0.754,
+   "directional": true,
+   "halfBalance": 0.91
+  },
+  "ceruza": {
+   "color": "narancs",
+   "share": 0.27,
+   "asym": 0.836,
+   "directional": true,
+   "halfBalance": 0.94
+  },
+  "fuzet": {
+   "color": "szürke",
+   "share": 0.79,
+   "asym": 0.056,
+   "directional": false,
+   "halfBalance": 0.96
+  },
+  "ecset": {
+   "color": "kék",
+   "share": 0.56,
+   "asym": 0.827,
+   "directional": true,
+   "halfBalance": 0.87
+  },
+  "festek": {
+   "color": "barna",
+   "share": 0.65,
+   "asym": 0.192,
+   "directional": true,
+   "halfBalance": 0.96
+  },
+  "papir": {
+   "color": "szürke",
+   "share": 0.82,
+   "asym": 0.196,
+   "directional": true,
+   "halfBalance": 0.8
+  },
+  "kanal": {
+   "color": "szürke",
+   "share": 0.52,
+   "asym": 0.578,
+   "directional": true,
+   "halfBalance": 0.42
+  },
+  "villa": {
+   "color": "szürke",
+   "share": 0.38,
+   "asym": 0.293,
+   "directional": true,
+   "halfBalance": 0.8
+  },
+  "hoember": {
+   "color": "fehér",
+   "share": 0.39,
+   "asym": 0.01,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "tuz": {
+   "color": "sárga",
+   "share": 0.78,
+   "asym": 0.178,
+   "directional": false,
+   "halfBalance": 0.87
+  },
+  "haz": {
+   "color": "fehér",
+   "share": 0.28,
+   "asym": 0.087,
+   "directional": false,
+   "halfBalance": 0.91
+  },
+  "gomba": {
+   "color": "piros",
+   "share": 0.45,
+   "asym": 0.019,
+   "directional": false,
+   "halfBalance": 0.98
+  },
+  "csont": {
+   "color": "fehér",
+   "share": 0.46,
+   "asym": 0.929,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "pokhalo": {
+   "color": "szürke",
+   "share": 0.48,
+   "asym": 0.01,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "feszek": {
+   "color": "barna",
+   "share": 0.53,
+   "asym": 0.003,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "eso": {
+   "color": "szürke",
+   "share": 0.71,
+   "asym": 0.124,
+   "directional": false,
+   "halfBalance": 0.96
+  },
+  "kapu": {
+   "color": "szürke",
+   "share": 0.48,
+   "asym": 0,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "sin": {
+   "color": "barna",
+   "share": 0.29,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "benzinkut": {
+   "color": "szürke",
+   "share": 0.52,
+   "asym": 0.31,
+   "directional": true,
+   "halfBalance": 0.82
+  },
+  "viz": {
+   "color": "kék",
+   "share": 0.8,
+   "asym": 0.475,
+   "directional": true,
+   "halfBalance": 0.65
+  },
+  "hopehely": {
+   "color": "fekete",
+   "share": 0,
+   "asym": 0.016,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "korona": {
+   "color": "sárga",
+   "share": 0.63,
+   "asym": 0.007,
+   "directional": false,
+   "halfBalance": 1
+  },
+  "kiralylany": {
+   "color": "sárga",
+   "share": 0.34,
+   "asym": 0.01,
+   "directional": false,
+   "halfBalance": 0.99
+  },
+  "alvas": {
+   "color": "sárga",
+   "share": 0.79,
+   "asym": 0.062,
+   "directional": false,
+   "halfBalance": 0.94
+  },
+  "szemuveg": {
+   "color": "szürke",
+   "share": 0.71,
+   "asym": 0.191,
+   "directional": true,
+   "halfBalance": 0.97
+  },
+  "jeg": {
+   "color": "kék",
+   "share": 0.59,
+   "asym": 0.055,
+   "directional": false,
+   "halfBalance": 0.95
+  },
+  "baba": {
+   "color": "kék",
+   "share": 0.44,
+   "asym": 0.001,
+   "directional": false,
+   "halfBalance": 1
+  }
+ }
+}
