@@ -7,7 +7,7 @@ import { el, type Cleanup, type Nav } from './dom';
 
 /** Kezdőlap: témakör-csempék (csak kép), alattuk a haladás pöttyökben. */
 export function mountHome(root: HTMLElement, nav: Nav): Cleanup {
-  const screen = el('section', 'screen home');
+  const screen = el('section', 'screen homescreen');
   const disabled = getSettings().disabled;
   const topics = TOPICS.filter((t) => !disabled.includes(t.id));
 

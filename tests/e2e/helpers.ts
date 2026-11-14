@@ -1,17 +1,15 @@
 import type { Locator, Page } from '@playwright/test';
-import { buildSheet } from '../../src/topics';
-import { minta } from '../../src/topics/minta';
+import { buildSheet, getTopic } from '../../src/topics';
 import type { Sheet } from '../../src/engine/sheet';
 
-export const sheetOf = (index: number): Sheet => buildSheet(minta, index);
+export const sheetOf = (index: number, topicId = 'minta'): Sheet => buildSheet(getTopic(topicId), index);
 
 /** Kezdőlap → témakör → lap (a gyerek útvonala). */
-export async function openSheet(page: Page, index: number): Promise<void> {
+export async function openSheet(page: Page, index: number, topicId = 'minta'): Promise<void> {
   await page.goto('/');
-  await page.locator('.tile[data-topic="minta"]').click();
+  await page.locator(`.tile[data-topic="${topicId}"]`).click();
   await page.locator(`.card[data-index="${index}"]`).click();
   await page.locator('.sheet').waitFor();
-  await page.locator('.sheet').evaluate((el) => (el as HTMLElement).dataset.index);
 }
 
 export const disc = (page: Page, id: number): Locator => page.locator(`.dbtn[data-disc="${id}"]`);
@@ -45,3 +43,46 @@ export async function solve(page: Page, sheet: Sheet): Promise<void> {
 }
 
 export const mode = (page: Page): Promise<string | null> => page.locator('.go').getAttribute('data-mode');
+
+/** Az elrendezés mérése: méretek, kilóg-e valami, takarja-e valamit a szülői gomb. */
+export function measureLayout(page: Page) {
+  return page.evaluate(() => {
+    const rect = (e: Element) => e.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const discs = [...document.querySelectorAll('.dbtn')].map(rect);
+    const slots = [...document.querySelectorAll('.slot')].map(rect);
+    const homes = [...document.querySelectorAll('.home')].map(rect);
+    const rows = [...document.querySelectorAll('.row')].map(rect);
+    const tasks = [...document.querySelectorAll('.task')].map(rect);
+    const paper = rect(document.querySelector('.paper')!);
+    const parent = rect(document.querySelector('.parent-btn')!);
+    const interactive = [...document.querySelectorAll('.dbtn, .go, .rb, .row, .task')].map(rect);
+    const overlaps = interactive.filter(
+      (r) => r.left < parent.right && r.right > parent.left && r.top < parent.bottom && r.bottom > parent.top,
+    ).length;
+    const inside = (r: DOMRect, o: DOMRect) =>
+      r.left >= o.left - 1 && r.right <= o.right + 1 && r.top >= o.top - 1 && r.bottom <= o.bottom + 1;
+    const el = document.documentElement;
+    // Minden kép (svg) a saját dobozán belül marad-e és legalább 36 px széles/magas-e
+    const imgs = [...document.querySelectorAll('.vis-wrap > .vis')].map(rect);
+    return {
+      vw,
+      vh,
+      n: Number((document.querySelector('.sheet') as HTMLElement).dataset.n),
+      minDisc: Math.min(...discs.map((r) => Math.min(r.width, r.height))),
+      minSlot: Math.min(...slots.map((r) => Math.min(r.width, r.height))),
+      minRowH: Math.min(...rows.map((r) => r.height)),
+      minTaskH: Math.min(...tasks.map((r) => r.height)),
+      minImgH: Math.min(...imgs.map((r) => r.height)),
+      twoCol: document.querySelector('.answers')!.classList.contains('two-col'),
+      trayRows: new Set(homes.map((r) => Math.round(r.top))).size,
+      allInViewport: [paper, ...homes, ...rows, ...tasks].every(
+        (r) => r.left >= -1 && r.top >= -1 && r.right <= vw + 1 && r.bottom <= vh + 1,
+      ),
+      rowsInPaper: [...rows, ...tasks].every((r) => inside(r, paper)),
+      noScroll: el.scrollHeight <= vh && el.scrollWidth <= vw,
+      parentOverlaps: overlaps,
+    };
+  });
+}

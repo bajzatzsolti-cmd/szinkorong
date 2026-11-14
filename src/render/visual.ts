@@ -4,6 +4,8 @@ import { SHAPES, type ShapeId } from './shapes';
 
 export type Visual =
   | { t: 'shape'; id: ShapeId; fill: 'solid' | 'outline'; rot?: number; flip?: boolean }
+  /** Szókincs-kép (OpenMoji, w-<id>) vagy az árnyéka (s-<id>); a sprite-ot a render/sprite.ts tölti be. */
+  | { t: 'img'; id: string; shadow?: boolean; rot?: number; flip?: boolean }
   | { t: 'blank' } // kérdőjeles, üres hely
   | { t: 'seq'; items: Visual[]; gap?: number };
 
@@ -14,7 +16,7 @@ export interface Drawn {
 }
 
 const CELL = 100;
-const DEFAULT_GAP = 14;
+const DEFAULT_GAP = 8;
 
 /** Az alakzat belső SVG-jelölése (100 × 100-as térben). A kitöltést a megadott osztály adja. */
 export function shapeMarkup(id: ShapeId, cls: string, rot = 0, flip = false): string {
@@ -33,6 +35,18 @@ export function draw(v: Visual): Drawn {
         h: CELL,
         svg: shapeMarkup(v.id, v.fill === 'solid' ? 'vs' : 'vo', v.rot, v.flip),
       };
+    case 'img': {
+      const tf: string[] = [];
+      if (v.rot) tf.push(`rotate(${v.rot} 50 50)`);
+      if (v.flip) tf.push('translate(100 0) scale(-1 1)');
+      const attr = tf.length ? ` transform="${tf.join(' ')}"` : '';
+      const ref = `${v.shadow ? 's' : 'w'}-${v.id}`;
+      return {
+        w: CELL,
+        h: CELL,
+        svg: `<g class="${v.shadow ? 'sh' : 'im'}"${attr}><use href="#${ref}" x="3" y="3" width="94" height="94"/></g>`,
+      };
+    }
     case 'blank':
       return {
         w: CELL,
@@ -71,6 +85,8 @@ export function visualKey(v: Visual): string {
   switch (v.t) {
     case 'shape':
       return `shape:${v.id}:${v.fill}:${v.rot ?? 0}:${v.flip ? 1 : 0}`;
+    case 'img':
+      return `img:${v.id}:${v.shadow ? 's' : 'w'}:${v.rot ?? 0}:${v.flip ? 1 : 0}`;
     case 'blank':
       return 'blank';
     case 'seq':

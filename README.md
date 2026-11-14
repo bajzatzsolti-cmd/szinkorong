@@ -9,8 +9,10 @@ A zöld pipa megmutatja a helyes színeket.
 
 ## Állapot
 
-**1. sprint kész:** projektváz, PWA, gyerekzár, játékmotor, Sorminta (ideiglenes szabályokkal).
-A sprintek listája és a nyitott kérdések a fejlesztési tervben vannak.
+**1. sprint kész:** projektváz, PWA, gyerekzár, játékmotor.
+**2. sprint (képkészlet és szókincs):** OpenMoji SVG-képkészlet, központi szókincs, négy témakör
+(Árnyékvadász, Sorminta, Mi tartozik össze?, Csoportosító), 15–15 lap szinten. A szókincs és a párok jóváhagyásra várnak:
+[docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md). A sprintek listája és a nyitott kérdések a fejlesztési tervben vannak.
 
 ## Parancsok
 
@@ -22,6 +24,7 @@ npm test               # egységtesztek: minden lap generátora és verifikátor
 npm run test:e2e       # iPad mini méretű Playwright-tesztek (előbb: npm run build)
 npm run check:fonts    # megvan-e az ő/ű a csomagolt betűtípusban
 npm run icons          # az ikonok újragyártása (public/icons/icon.svg → PNG)
+npm run content        # szókincs-változás után: képek (sprite), hang-manifest, jóváhagyási tábla
 ```
 
 Ha a gépen nincs rendszerszintű Node.js, a projekt hordozható Node-ot is használhat a `.tools/node` mappában:
@@ -31,7 +34,9 @@ PowerShellben `. .\scripts\env.ps1` betölti a PATH-ba.
 
 - [docs/TELEPITES.md](docs/TELEPITES.md): GitHub Pages beállítása, kitétel az iPad Főképernyőjére, frissítés
 - [docs/GYEREKZAR.md](docs/GYEREKZAR.md): mit old meg a kód, és az iPad Irányított hozzáférés beállítása
-- [LICENSES.md](LICENSES.md): harmadik féltől származó elemek
+- [docs/TARTALOM-SZERKESZTES.md](docs/TARTALOM-SZERKESZTES.md): a szókincs, a párok és a hangszövegek szerkesztése kód nélkül
+- [docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md): minden szó, besorolás és pár jóváhagyásra (generált)
+- [LICENSES.md](LICENSES.md): harmadik féltől származó elemek (OpenMoji CC BY-SA 4.0, betűtípusok OFL)
 
 ## Felépítés
 

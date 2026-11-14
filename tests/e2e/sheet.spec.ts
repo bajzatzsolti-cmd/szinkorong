@@ -1,72 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { disc, dragDisc, dragTo, mode, openSheet, sheetOf, slot, solve } from './helpers';
 
-const INDEXES = [0, 5, 10]; // könnyű (6), közepes (8), nehéz (10)
-
-test.describe('lap megnyitása, méretek, képernyőképek', () => {
-  for (const index of INDEXES) {
-    test(`${index + 1}. lap: nem lóg ki semmi, a korong ≥ 56 px, az üres hely ≥ 52 px`, async ({ page }, info) => {
-      await openSheet(page, index);
-      await page.waitForTimeout(200);
-
-      const m = await page.evaluate(() => {
-        const rect = (e: Element) => e.getBoundingClientRect();
-        const vw = window.innerWidth;
-        const vh = window.innerHeight;
-        const discs = [...document.querySelectorAll('.dbtn')].map(rect);
-        const slots = [...document.querySelectorAll('.slot')].map(rect);
-        const homes = [...document.querySelectorAll('.home')].map(rect);
-        const rows = [...document.querySelectorAll('.row')].map(rect);
-        const tasks = [...document.querySelectorAll('.task')].map(rect);
-        const paper = rect(document.querySelector('.paper')!);
-        const parent = rect(document.querySelector('.parent-btn')!);
-        const interactive = [...document.querySelectorAll('.dbtn, .go, .rb, .row, .task')].map(rect);
-        const overlaps = interactive.filter(
-          (r) => r.left < parent.right && r.right > parent.left && r.top < parent.bottom && r.bottom > parent.top,
-        ).length;
-        const inside = (r: DOMRect, o: DOMRect) =>
-          r.left >= o.left - 1 && r.right <= o.right + 1 && r.top >= o.top - 1 && r.bottom <= o.bottom + 1;
-        const el = document.documentElement;
-        return {
-          vw,
-          vh,
-          n: Number((document.querySelector('.sheet') as HTMLElement).dataset.n),
-          minDisc: Math.min(...discs.map((r) => Math.min(r.width, r.height))),
-          minSlot: Math.min(...slots.map((r) => Math.min(r.width, r.height))),
-          minRowH: Math.min(...rows.map((r) => r.height)),
-          minTaskH: Math.min(...tasks.map((r) => r.height)),
-          twoCol: document.querySelector('.answers')!.classList.contains('two-col'),
-          trayRows: new Set(homes.map((r) => Math.round(r.top))).size,
-          allInViewport: [paper, ...homes, ...rows, ...tasks].every((r) => r.left >= -1 && r.top >= -1 && r.right <= vw + 1 && r.bottom <= vh + 1),
-          rowsInPaper: [...rows, ...tasks].every((r) => inside(r, paper)),
-          noScroll: el.scrollHeight <= vh && el.scrollWidth <= vw,
-          parentOverlaps: overlaps,
-        };
-      });
-
-      console.log(`[${info.project.name}] ${index + 1}. lap (n=${m.n}) ${JSON.stringify(m)}`);
-      expect(m.minDisc).toBeGreaterThanOrEqual(56);
-      expect(m.minSlot).toBeGreaterThanOrEqual(52);
-      expect(m.allInViewport).toBe(true);
-      expect(m.rowsInPaper).toBe(true);
-      expect(m.noScroll).toBe(true);
-      expect(m.parentOverlaps).toBe(0);
-      expect(m.minRowH).toBeGreaterThan(40);
-
-      await page.screenshot({ path: `screenshots/${info.project.name}-lap${index + 1}.png` });
-    });
-  }
-
-  test('kezdőlap és lapválasztó képernyőképe', async ({ page }, info) => {
-    await page.goto('/');
-    await page.locator('.tile').waitFor();
-    await page.screenshot({ path: `screenshots/${info.project.name}-kezdolap.png` });
-    await page.locator('.tile').click();
-    await page.locator('.card').first().waitFor();
-    await page.screenshot({ path: `screenshots/${info.project.name}-lapvalaszto.png` });
-  });
-});
-
+// A játékmenet részletes tesztjei a Sorminta témakörön (a méretek és a képernyőképek: topics.spec.ts).
 test.describe('játékmenet', () => {
   test('húzás, ellenőrzés, hibajavítás, továbblépés, haladás megmarad', async ({ page }) => {
     const sheet = sheetOf(0);
@@ -109,7 +44,7 @@ test.describe('játékmenet', () => {
 
     // A haladás újratöltés után is megvan.
     await page.reload();
-    await page.locator('.tile').click();
+    await page.locator('.tile[data-topic="minta"]').click();
     await expect(page.locator('.card.done')).toHaveCount(1);
     await expect(page.locator('.card.done')).toHaveAttribute('data-index', '0');
     await expect(page.locator('.card.next')).toHaveAttribute('data-index', '1');
@@ -122,7 +57,7 @@ test.describe('játékmenet', () => {
     await page.locator('.go').click();
     expect(await mode(page)).toBe('next');
     await expect(page.locator('.party')).toHaveCount(1);
-    await page.locator('.go').click(); // az utolsó előtti lap után a következő lap
+    await page.locator('.go').click();
     await expect(page.locator('.sheet')).toHaveAttribute('data-index', '11');
   });
 

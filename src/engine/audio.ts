@@ -1,7 +1,7 @@
 // Hang: feloldás első érintésre (iOS), hangeffektek, felolvasás.
 // Felolvasás: előre legenerált mp3 (src/assets/audio/<azonosító>.mp3), ha az még nincs meg,
 // tartalékként a böngésző magyar hangja (speechSynthesis, hu-HU). A szövegek: content/audio/manifest.json.
-import manifest from '../../content/audio/manifest.json';
+import manifest from '../../content/audio/manifest.json' with { type: 'json' };
 
 const clipUrls = import.meta.glob('../assets/audio/*.mp3', {
   query: '?url',

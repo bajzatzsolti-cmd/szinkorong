@@ -1,0 +1,23 @@
+{
+  "_info": "A szókincs kategóriái. groupable = a Csoportosító használhatja (legalább 4 jól felismerhető szóval). family = ugyanabba a családba tartozó kategóriák nem szerepelhetnek egy lapon (pl. a madár is állat).",
+  "al": { "name": "állat", "family": "allat", "groupable": true },
+  "ma": { "name": "madár", "family": "allat", "groupable": true },
+  "bo": { "name": "bogár", "family": "allat", "groupable": true },
+  "gy": { "name": "gyümölcs", "groupable": true },
+  "zo": { "name": "zöldség", "groupable": true },
+  "et": { "name": "étel, ital", "groupable": true },
+  "ed": { "name": "édesség", "groupable": true },
+  "ja": { "name": "jármű", "groupable": true },
+  "ru": { "name": "ruha", "groupable": true },
+  "ha": { "name": "hangszer", "groupable": true },
+  "eg": { "name": "az égen, az űrben", "groupable": true },
+  "jt": { "name": "játék", "groupable": true },
+  "sz": { "name": "szerszám", "groupable": true },
+  "no": { "name": "növény", "groupable": true },
+  "te": { "name": "testrész", "groupable": true },
+  "hz": { "name": "háztartási tárgy", "groupable": false },
+  "bu": { "name": "bútor", "groupable": false },
+  "is": { "name": "iskolai, rajzoló eszköz", "groupable": false },
+  "ko": { "name": "evőeszköz", "groupable": false },
+  "eb": { "name": "egyéb", "groupable": false }
+}

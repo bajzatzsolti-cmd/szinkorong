@@ -30,8 +30,8 @@ test.describe('PWA', () => {
 
     await context.setOffline(true);
     await page.reload();
-    await expect(page.locator('.tile')).toBeVisible();
-    await page.locator('.tile').click();
+    await expect(page.locator('.tile[data-topic="minta"]')).toBeVisible();
+    await page.locator('.tile[data-topic="minta"]').click();
     await page.locator('.card[data-index="0"]').click();
     await expect(page.locator('.sheet')).toBeVisible();
     await expect(page.locator('.dbtn')).toHaveCount(6);

@@ -7,11 +7,13 @@ import { setVolume, unlockAudio } from './engine/audio';
 import { installChildLock } from './engine/lock';
 import { getSettings } from './engine/progress';
 import { setupPwa, tryApplyUpdate } from './pwa';
+import { installSprite } from './render/sprite';
 
 const root = document.getElementById('app');
 if (!root) throw new Error('Hiányzik a #app elem.');
 
 installChildLock();
+installSprite();
 setVolume(getSettings().volume);
 
 // iOS-en hang csak érintés után indulhat: az első koppintáskor feloldjuk.

@@ -1,9 +1,12 @@
 import { makeSpec, type Sheet, type TopicId } from '../engine/sheet';
+import { arnyek } from './arnyek';
+import { csoport } from './csoport';
 import { minta } from './minta';
+import { par } from './par';
 import type { Topic } from './types';
 
-/** A témakörök jegyzéke. Új témakör = új mappa + egy sor ide. */
-export const TOPICS: readonly Topic[] = [minta];
+/** A témakörök jegyzéke (a kezdőlapon ebben a sorrendben). Új témakör = új mappa + egy sor ide. */
+export const TOPICS: readonly Topic[] = [arnyek, minta, par, csoport];
 
 export function getTopic(id: TopicId): Topic {
   const t = TOPICS.find((x) => x.id === id);

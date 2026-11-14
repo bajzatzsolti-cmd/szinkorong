@@ -138,6 +138,11 @@ svg {
   stroke-width: 5;
   stroke-dasharray: 10 8;
 }
+/* Szókincs-képek: az .im a színes kép, az .sh az árnyék (az árnyék színe a currentColor) */
+.sh {
+  color: #2d3a55;
+  opacity: 0.9;
+}
 .vq {
   fill: #9aa3b5;
   font-family: var(--font-num);
@@ -226,8 +231,9 @@ svg {
   }
 }
 
-/* ===== Kezdőlap ===== */
-.home {
+/* ===== Kezdőlap =====
+   (A .home osztály a korongtálca fészkeié: a kezdőlap képernyője ezért .homescreen.) */
+.homescreen {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,8 +462,8 @@ svg {
   min-height: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 2px 10px;
+  gap: 8px;
+  padding: 2px 8px;
   border: 2px solid var(--paper-line);
   border-radius: 16px;
   background: #fff;

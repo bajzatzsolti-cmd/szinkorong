@@ -74,7 +74,7 @@ test.describe('gyerekzár', () => {
 
     const hrefs = async () => page.evaluate(() => document.querySelectorAll('a[href]').length);
     expect(await hrefs()).toBe(0);
-    await page.locator('.tile').click();
+    await page.locator('.tile[data-topic="minta"]').click();
     expect(await hrefs()).toBe(0);
     await page.locator('.card').first().click();
     expect(await hrefs()).toBe(0);
@@ -93,7 +93,7 @@ test.describe('gyerekzár', () => {
       });
     // A kezdőlapon csak a témakör-csempe képe látszik (benne a "?" jel az SVG-ben), szó nem.
     expect((await visibleText()).filter((t) => t !== '?')).toEqual([]);
-    await page.locator('.tile').click();
+    await page.locator('.tile[data-topic="minta"]').click();
     // A lapválasztón csak a lapok sorszámai látszanak.
     const map = (await visibleText()).filter((t) => t !== '?'); // a "?" a témakör ikonjában van
     expect(map.every((t) => /^\d+$/.test(t))).toBe(true);
@@ -134,7 +134,7 @@ test.describe('szülői menü', () => {
       localStorage.setItem('szinkorong:v1', JSON.stringify({ v: 1, done: { 'minta:0': { at: 1, tries: 1 } }, settings: { volume: 0.8, disabled: [] } })),
     );
     await page.reload();
-    await expect(page.locator('.dots i.on')).toHaveCount(1);
+    await expect(page.locator('.tile[data-topic="minta"] .dots i.on')).toHaveCount(1);
 
     const open = async () => {
       const b = (await page.locator('.parent-btn').boundingBox())!;
@@ -150,19 +150,19 @@ test.describe('szülői menü', () => {
     await page.locator('[data-act="reset"]').click();
     await expect(page.locator('[data-act="reset"]')).toContainText('Biztosan');
     await page.locator('[data-act="close"]').click();
-    await expect(page.locator('.dots i.on')).toHaveCount(1);
+    await expect(page.locator('.tile[data-topic="minta"] .dots i.on')).toHaveCount(1);
 
     await open();
     await page.locator('[data-act="reset"]').click();
     await page.locator('[data-act="reset"]').click();
     await expect(page.locator('[data-act="reset"]')).toContainText('Törölve');
     await page.locator('[data-act="close"]').click();
-    await expect(page.locator('.dots i.on')).toHaveCount(0);
+    await expect(page.locator('.tile[data-topic="minta"] .dots i.on')).toHaveCount(0);
 
     // Témakör kikapcsolása: eltűnik a kezdőlapról.
     await open();
     await page.locator('input[data-topic="minta"]').uncheck();
     await page.locator('[data-act="close"]').click();
-    await expect(page.locator('.tile')).toHaveCount(0);
+    await expect(page.locator('.tile[data-topic="minta"]')).toHaveCount(0);
   });
 });

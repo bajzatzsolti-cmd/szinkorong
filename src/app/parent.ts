@@ -57,7 +57,8 @@ function openPanel(onClose: () => void): void {
     `<button class="pbtn danger" data-act="reset">Haladás törlése</button>` +
     `<div class="psec">Nyomtatás</div>` +
     `<button class="pbtn" disabled>Nyomtatható lapok (hamarosan)</button>` +
-    `<div class="pfoot"><span>Színkorong ${typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : ''}</span>` +
+    `<div class="pfoot"><span>Színkorong ${typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : ''}<br>` +
+    `Képek: OpenMoji (openmoji.org), CC BY-SA 4.0</span>` +
     `<button class="pbtn primary" data-act="close">Bezár</button></div></div>`;
   document.body.append(overlay);
 

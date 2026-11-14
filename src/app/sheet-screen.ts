@@ -60,6 +60,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   for (const t of sheet.tasks) {
     const row = el('div', 'task');
     row.dataset.disc = String(t.disc);
+    if (t.say) row.dataset.say = t.say;
     row.innerHTML = `${discSpan(t.disc, 'dot')}<div class="vis-wrap">${renderVisual(t.visual)}</div>`;
     tasksEl.append(row);
   }
@@ -70,6 +71,7 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
   sheet.answers.forEach((a, j) => {
     const row = el('div', 'row');
     row.dataset.j = String(j);
+    if (a.say) row.dataset.say = a.say;
     row.innerHTML = `<div class="vis-wrap">${renderVisual(a.visual)}</div><div class="slot"></div><div class="key"></div>`;
     const slot = row.querySelector<HTMLElement>('.slot')!;
     const key = row.querySelector<HTMLElement>('.key')!;
@@ -148,12 +150,21 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     });
   }
 
-  // Alternatív vezérlés: koppintás a korongra, majd a sorra.
+  // Alternatív vezérlés: koppintás a korongra, majd a sorra. Ha nincs kijelölt korong, a képre
+  // koppintva elhangzik a neve (csak ahol ez nem árulja el a megoldást: ezt a témakör dönti el a say mezővel).
   answersEl.addEventListener('click', (e) => {
     const row = (e.target as HTMLElement).closest<HTMLElement>('.row');
-    if (!row || locked || selected === null) return;
-    placeInto(selected, Number(row.dataset.j));
-    select(null);
+    if (!row) return;
+    if (!locked && selected !== null) {
+      placeInto(selected, Number(row.dataset.j));
+      select(null);
+      return;
+    }
+    if (row.dataset.say) say(row.dataset.say);
+  });
+  tasksEl.addEventListener('click', (e) => {
+    const task = (e.target as HTMLElement).closest<HTMLElement>('.task');
+    if (task?.dataset.say) say(task.dataset.say);
   });
   homesEl.addEventListener('click', () => {
     if (locked || selected === null) return;
@@ -256,7 +267,10 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
       rowH = (H - GAP * (rows - 1)) / rows;
     }
     paper.style.setProperty('--acols', String(cols));
-    paper.style.setProperty('--acol', cols === 2 ? '48%' : '34%');
+    // Álló nézetben a megoldásoszlop szélesebb, ha a feladatok két oszlopban állnak (a feladat-képek bőven elférnek),
+    // mert az árnyékok és a megoldás-képek különben túl kicsik lennének. Hosszú sorok (Sorminta) mellett a feladatoké a hely.
+    const portrait = screen.clientHeight > screen.clientWidth;
+    paper.style.setProperty('--acol', cols === 2 ? '48%' : portrait && topic.taskCols === 2 ? '42%' : '34%');
     answersEl.classList.toggle('two-col', cols === 2);
 
     const taskRows = Math.ceil(n / topic.taskCols);
