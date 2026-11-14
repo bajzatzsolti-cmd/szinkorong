@@ -9,6 +9,10 @@ import { renderAbout } from './about';
 import { el } from './dom';
 import { renderHangproba } from './hangproba';
 import { PRINTABLE, printSheets, type KeyMode } from './print';
+import { renderPlayers } from './profile-ui';
+import { activeProfile } from '../engine/profiles';
+
+const esc = (s: string): string => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 
 export const HOLD_MS = 3000;
 
@@ -71,6 +75,8 @@ function openPanel(onClose: () => void): void {
   overlay.innerHTML =
     `<div class="pcard" data-scroll>` +
     `<h2>Szülői beállítások</h2>` +
+    `<div class="psec">Játékos</div>` +
+    `<button class="pbtn" data-act="players">${esc(activeProfile().name)} · játékosok kezelése, szinkron</button>` +
     `<label class="prow col">Hangerő<input type="range" min="0" max="100" value="${Math.round(settings.volume * 100)}" data-act="volume"></label>` +
     `<div class="psec">Témakörök (a kikapcsoltak nem látszanak a kezdőlapon)</div>${topicRows}` +
     `<div class="psec">Haladás</div>` +
@@ -102,6 +108,14 @@ function openPanel(onClose: () => void): void {
       const key = (overlay.querySelector<HTMLInputElement>('input[name="pkey"]:checked')?.value ?? 'end') as KeyMode;
       const indices = levels.flatMap((l) => Array.from({ length: SHEETS_PER_LEVEL }, (_, k) => l * SHEETS_PER_LEVEL + k));
       if (indices.length) printSheets({ topicId, indices, key });
+      return;
+    }
+    if (act === 'players') {
+      e.stopPropagation();
+      renderPlayers(overlay.querySelector<HTMLElement>('.pcard')!, () => {
+        overlay.remove();
+        openPanel(onClose);
+      });
       return;
     }
     if (act === 'about') {

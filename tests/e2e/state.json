@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:4173",
+      "localStorage": [
+        {
+          "name": "szinkorong:profilok",
+          "value": "{\"v\":1,\"active\":\"helyi\",\"list\":[{\"local\":\"helyi\",\"name\":\"Első játékos\"}]}"
+        }
+      ]
+    }
+  ]
+}

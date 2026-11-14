@@ -20,7 +20,9 @@ export default defineConfig({
   reporter: [['list']],
   // reducedMotion: a pulzáló elemek (következő lap, kijelölt korong) miatt a Playwright
   // sosem látná „megállónak” a gombot; a CSS a csökkentett mozgásnál kikapcsolja a pulzálást.
-  use: { baseURL: 'http://localhost:4173', trace: 'off', reducedMotion: 'reduce' },
+  // storageState: a profil-nyilvántartás „már járt itt” állapotban, hogy az első indítás üdvözlő kártyája ne takarjon
+  // (azt a profile.spec külön, üres tárolóval teszteli). Minden más tároló üres.
+  use: { baseURL: 'http://localhost:4173', trace: 'off', reducedMotion: 'reduce', storageState: 'tests/e2e/state.json' },
   projects: [
     { name: 'ipad-mini-allo', use: { ...common, viewport: { width: 744, height: 1133 } } },
     { name: 'ipad-mini-fekvo', use: { ...common, viewport: { width: 1133, height: 744 } } },

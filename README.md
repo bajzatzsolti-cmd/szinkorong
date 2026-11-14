@@ -29,6 +29,9 @@ a nyitott app automatikus frissítésének javítása. Mind a 18 témakör kész
 **5b sprint:** nyomtatás a szülői menüből (számítógépről, A4: laponként egy oldal üres körökkel, jelmagyarázattal,
 megoldókulccsal a végén vagy minden lap után; fekete-fehérben is használható; a hallás utáni témakörök és a Memória
 kimaradnak), Névjegy oldal (licencek, adatvédelem).
+**Profil-sprint (SPEC-2, A):** játékosok egy készüléken (váltás a szülői menüben), szinkron más készülékkel játékosnév +
+4 jegyű szülői kód alapján (csak a lenyomat megy ki, a kész lapok uniója marad meg), Cloudflare Workers + D1 (EU) szerver:
+[docs/PROFIL.md](docs/PROFIL.md). A szerver telepítése a szülő két lépésére vár.
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 

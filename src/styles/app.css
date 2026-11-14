@@ -1355,6 +1355,34 @@ svg {
   }
 }
 
+/* Szülői menü: játékosok */
+.pinput {
+  min-height: 42px;
+  padding: 6px 10px;
+  font: inherit;
+  border: 2px solid rgba(127, 127, 127, 0.35);
+  border-radius: 10px;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.pmuted {
+  opacity: 0.7;
+}
+.pmsg {
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(247, 200, 30, 0.18);
+  font-size: 14px;
+}
+.pbar.wrap {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: static;
+}
+.pcode[hidden] {
+  display: none;
+}
 /* Szülői menü: nyomtatás, névjegy */
 .prow.wrap {
   flex-wrap: wrap;
