@@ -399,7 +399,8 @@ svg {
   width: 30px;
   height: 30px;
 }
-/* Csempék: álló nézetben 3, fekvőben 4 oszlop. */
+/* Csempék: álló nézetben 3, fekvőben 6 oszlop (18 csempe = 6 + 3 sor). Ha így sem férnek ki (pl. Safari
+   címsorával), a home-screen.ts kisebbíti a képeket (--icon-h), hogy mindig minden csempe látsszon. */
 .tiles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -408,8 +409,15 @@ svg {
 }
 @media (orientation: landscape) {
   .tiles {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     width: min(100%, 1060px);
+  }
+  .tiles .dots {
+    gap: 5px;
+  }
+  .tiles .dots i {
+    width: 12px;
+    height: 12px;
   }
 }
 .tile {
@@ -429,7 +437,7 @@ svg {
 .tile-icon {
   position: relative;
   width: 100%;
-  height: 76px;
+  height: var(--icon-h, 76px);
 }
 .tile-icon .vis {
   position: absolute;

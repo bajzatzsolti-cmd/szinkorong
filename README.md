@@ -31,7 +31,9 @@ megoldókulccsal a végén vagy minden lap után; fekete-fehérben is használha
 kimaradnak), Névjegy oldal (licencek, adatvédelem).
 **Profil-sprint (SPEC-2, A):** játékosok egy készüléken (váltás a szülői menüben), szinkron más készülékkel játékosnév +
 4 jegyű szülői kód alapján (csak a lenyomat megy ki, a kész lapok uniója marad meg), Cloudflare Workers + D1 (EU) szerver:
-[docs/PROFIL.md](docs/PROFIL.md). A szerver telepítése a szülő két lépésére vár.
+[docs/PROFIL.md](docs/PROFIL.md). Élesben.
+**Felhő:** a szerver a GitHubról is települ (`.github/workflows/server.yml`), a fejlesztés felhős Claude-munkamenetben
+is mehet, a fejlesztői gép nélkül: [docs/FELHO.md](docs/FELHO.md). A kezdőlap csempéi mindig kiférnek (Safari címsorával is).
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 
@@ -63,6 +65,7 @@ PowerShellben `. .\scripts\env.ps1` betölti a PATH-ba.
 - [docs/SZOKINCS-JOVAHAGYAS.md](docs/SZOKINCS-JOVAHAGYAS.md): minden szó, besorolás és pár jóváhagyásra (generált)
 - [docs/HANGOK.md](docs/HANGOK.md): hanggyártás (ElevenLabs), API-kulcs, rossz klipek javítása, saját felvétel, betűhangok, licenc
 - [docs/TERVEZET-4B.md](docs/TERVEZET-4B.md): Hol van?, Ha–akkor, rímpárok tervezete jóváhagyásra (generált)
+- [docs/FELHO.md](docs/FELHO.md): fejlesztés és élesítés a gép nélkül (Cloudflare-kulcs, felhős Claude, PR-ből élesítés)
 - [SPEC-2-profil-hang.md](SPEC-2-profil-hang.md): kiegészítő specifikáció (játékosprofil, ElevenLabs-hangok)
 - [LICENSES.md](LICENSES.md): harmadik féltől származó elemek (OpenMoji CC BY-SA 4.0, betűtípusok OFL)
 

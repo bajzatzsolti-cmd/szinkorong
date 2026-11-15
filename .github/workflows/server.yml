@@ -1,0 +1,56 @@
+name: Szinkron-szerver telepítése (Cloudflare)
+
+# Ha a main ágon változik a szerver kódja (vagy az összefésülés, amit a szerver is használ), a szervert
+# a GitHub telepíti, nem kell hozzá a fejlesztői gép. Kézzel is indítható (Actions → Run workflow).
+#
+# Kell hozzá egy GitHub-titok: CLOUDFLARE_API_TOKEN (Settings → Secrets and variables → Actions).
+# Ha nincs beállítva, a tesztek lefutnak, a telepítés kimarad (a folyamat nem lesz piros). Lásd docs/FELHO.md.
+# A PEPPER titok a Cloudflare-ben él, ez a folyamat nem nyúl hozzá.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'server/**'
+      - 'src/engine/merge.ts'
+      - '.github/workflows/server.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # A szerver és a játék szinkronja a valódi szerverkóddal, memóriabeli adatbázison.
+      - run: npx vitest run tests/unit/sync-server.test.ts tests/unit/sync-client.test.ts
+
+      - name: Nincs Cloudflare-kulcs
+        if: env.CLOUDFLARE_API_TOKEN == ''
+        run: echo "::notice::A CLOUDFLARE_API_TOKEN titok nincs beállítva, a szerver telepítése kimaradt (docs/FELHO.md)."
+
+      # A tábla létrehozása ismételhető (CREATE TABLE IF NOT EXISTS), meglévő adatot nem érint.
+      - name: Adatbázis-séma
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        working-directory: server
+        run: ../node_modules/.bin/wrangler d1 execute szinkorong --remote --file schema.sql --yes
+
+      - name: Telepítés
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        working-directory: server
+        run: ../node_modules/.bin/wrangler deploy

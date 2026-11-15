@@ -29,5 +29,32 @@ export function mountHome(root: HTMLElement, nav: Nav): Cleanup {
     if (tile) nav.map(tile.dataset.topic!);
   });
   root.replaceChildren(screen);
-  return () => undefined;
+  // Forgatáskor és a Safari címsorának megjelenésekor/eltűnésekor is újraszámoljuk.
+  const fit = (): void => fitTiles(screen);
+  fit();
+  window.addEventListener('resize', fit);
+  return () => window.removeEventListener('resize', fit);
+}
+
+const ICON_MAX = 76;
+const ICON_MIN = 30;
+
+/**
+ * Minden csempe férjen ki a képernyőre, görgetés nélkül (a lap nem görgethető): ha nem fér ki, a csempék
+ * képét annyival kisebbítjük, amennyivel a rács túllóg (pl. fekvő iPadon a Safari címsorával).
+ */
+export function fitTiles(screen: HTMLElement): void {
+  const grid = screen.querySelector<HTMLElement>('.tiles');
+  if (!grid || !grid.firstElementChild) return;
+  grid.style.removeProperty('--icon-h');
+  const cs = getComputedStyle(screen);
+  const gap = parseFloat(cs.rowGap) || 0;
+  const strip = screen.querySelector<HTMLElement>('.strip');
+  const avail =
+    screen.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - (strip ? strip.offsetHeight + gap : 0);
+  const over = grid.offsetHeight - avail;
+  if (over <= 0) return;
+  const rows = new Set([...grid.children].map((t) => (t as HTMLElement).offsetTop)).size;
+  const icon = Math.max(ICON_MIN, Math.floor(ICON_MAX - over / rows));
+  grid.style.setProperty('--icon-h', `${icon}px`);
 }

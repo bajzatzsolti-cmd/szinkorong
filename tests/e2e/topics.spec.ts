@@ -45,15 +45,24 @@ test('a kezdőlapon mind a négy témakör látszik, a lapválasztók képernyő
   await page.goto('/');
   await expect(page.locator('.tile')).toHaveCount(TILES.length);
   // Minden csempe teljes egészében a képernyőn van (a lap nem görgethető, ami kilóg, az elérhetetlen).
-  const vp = page.viewportSize()!;
-  for (const tile of await page.locator('.tile').all()) {
-    const b = (await tile.boundingBox())!;
-    expect(b.x).toBeGreaterThanOrEqual(0);
-    expect(b.y).toBeGreaterThanOrEqual(0);
-    expect(b.x + b.width).toBeLessThanOrEqual(vp.width);
-    expect(b.y + b.height).toBeLessThanOrEqual(vp.height);
-  }
+  const allOnScreen = async (): Promise<void> => {
+    const vp = page.viewportSize()!;
+    for (const tile of await page.locator('.tile').all()) {
+      const b = (await tile.boundingBox())!;
+      expect(b.x).toBeGreaterThanOrEqual(0);
+      expect(b.y).toBeGreaterThanOrEqual(0);
+      expect(b.x + b.width).toBeLessThanOrEqual(vp.width);
+      expect(b.y + b.height).toBeLessThanOrEqual(vp.height);
+    }
+  };
+  await allOnScreen();
   await page.screenshot({ path: `screenshots/${info.project.name}-kezdolap.png` });
+  // Safariban (nem a Főképernyőről indítva) a címsor és a lapfülek elvesznek kb. 100–140 pontot a magasságból.
+  const full = page.viewportSize()!;
+  await page.setViewportSize({ width: full.width, height: full.height - 140 });
+  await allOnScreen();
+  await page.screenshot({ path: `screenshots/${info.project.name}-kezdolap-safari.png` });
+  await page.setViewportSize(full);
   await page.locator('.tile[data-topic="arnyek"]').click();
   await page.locator('.card').first().waitFor();
   await page.screenshot({ path: `screenshots/${info.project.name}-lapvalaszto.png` });
