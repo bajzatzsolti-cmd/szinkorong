@@ -49,8 +49,8 @@ export type Visual =
   | { t: 'blank' } // kérdőjeles, üres hely
   | { t: 'empty' } // üres, nem kérdezett hely (pl. a sudoku másik hiányzó mezője)
   | { t: 'seq'; items: Visual[]; gap?: number }
-  /** Betű vagy számjegy (1–2 karakter); boxed = kiemelt keretben (a keresett betű). */
-  | { t: 'glyph'; ch: string; boxed?: boolean }
+  /** Betű vagy számjegy (1–2 karakter); boxed = kiemelt keretben (a keresett betű); say = koppintásra ez szól (pl. „Pé betű”). */
+  | { t: 'glyph'; ch: string; boxed?: boolean; say?: string }
   /** Mennyiség tízes keretben (pöttyök), 0–10. */
   | { t: 'dots'; k: number }
   /** Rács: minden elem egy cellába kerül. frame = keretes cellák (mátrix). */
@@ -270,7 +270,10 @@ export function draw(v: Visual): Drawn {
       const two = [...v.ch].length > 1;
       const text = `<text class="vg" x="50" y="${two ? 69 : 76}" text-anchor="middle" font-size="${two ? 52 : 74}">${esc(v.ch)}</text>`;
       const box = v.boxed ? '<rect class="vgbox" x="4" y="4" width="92" height="92" rx="20"/>' : '';
-      return { w: CELL, h: CELL, svg: box + text };
+      if (!v.say) return { w: CELL, h: CELL, svg: box + text };
+      // Koppintható betű: a teljes cella érzékeny (átlátszó téglalap), nem csak a betű vonalai.
+      const hit = `<rect class="vhit" width="${CELL}" height="${CELL}"/>`;
+      return { w: CELL, h: CELL, svg: `<g class="vsay" data-say="${esc(v.say)}">${hit}${box}${text}</g>` };
     }
     case 'dots': {
       const parts: string[] = [];

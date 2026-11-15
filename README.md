@@ -34,6 +34,7 @@ kimaradnak), Névjegy oldal (licencek, adatvédelem).
 [docs/PROFIL.md](docs/PROFIL.md). Élesben.
 **Felhő:** a szerver a GitHubról is települ (`.github/workflows/server.yml`), a fejlesztés felhős Claude-munkamenetben
 is mehet, a fejlesztői gép nélkül: [docs/FELHO.md](docs/FELHO.md). A kezdőlap csempéi mindig kiférnek (Safari címsorával is).
+A Betűkeresőben bármelyik betűre koppintva elhangzik a neve („Pé betű.”).
 A szintek szabályai ideiglenesek, a generátorok fejlécében olvashatók.
 Élő változat: <https://bajzatzsolti-cmd.github.io/szinkorong/> (a `main` ág minden push után kikerül).
 

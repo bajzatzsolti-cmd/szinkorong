@@ -48,5 +48,22 @@ const LOOKALIKE: readonly (readonly [string, string])[] = [['I', 'l']];
 export const lookalikes = (ch: string): string[] =>
   LOOKALIKE.flatMap(([a, b]) => (a === ch ? [b] : b === ch ? [a] : []));
 
+/**
+ * A betűk neve, ahogy koppintásra elhangzik („Pé betű.”). A gépi hang a betű puszta alakját („P betű”) néha
+ * rosszul olvassa, ezért a hangszöveg a kiejtett nevet írja. A kis- és nagybetű ugyanazt a hangot kapja.
+ */
+export const LETTER_NAMES: Readonly<Record<string, string>> = {
+  A: 'A', Á: 'Á', B: 'Bé', C: 'Cé', D: 'Dé', E: 'E', É: 'É', F: 'Ef', G: 'Gé', H: 'Há', I: 'I', J: 'Jé', K: 'Ká',
+  L: 'El', M: 'Em', N: 'En', O: 'O', Ö: 'Ö', P: 'Pé', R: 'Er', S: 'Es', T: 'Té', U: 'U', Ü: 'Ü', V: 'Vé', Z: 'Zé',
+};
+
+const ASCII: Readonly<Record<string, string>> = { Á: 'aa', É: 'ee', Ö: 'oe', Ü: 'ue' };
+
+/** A betű hang-azonosítója a manifestben (ékezet nélkül, hogy a saját felvétel fájlneve is egyszerű legyen): betu-p, betu-aa. */
+export const letterSayId = (ch: string): string => {
+  const up = [...ch][0]!.toUpperCase();
+  return `betu-${ASCII[up] ?? up.toLowerCase()}`;
+};
+
 export const isUpper = (ch: string): boolean => UPPER.includes(ch);
 export const isLower = (ch: string): boolean => LOWER.includes(ch);

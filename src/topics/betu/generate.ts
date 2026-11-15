@@ -8,11 +8,12 @@
 //  • 3. szint (11–15. lap, 8 korong): 20 betű, kis- és nagybetű vegyesen; a keretben a betű nagy és kis
 //    alakja is látszik, mindkettőt számolni kell (1–8). Megoldás: számjegy.
 // A lapon belül minden darabszám különböző (ez adja, hogy minden megoldás más), és minden feladat más betűt keres.
+// Bármelyik betűre koppintva elhangzik a neve („Pé betű.”), hogy a betű és a neve összekapcsolódjon (a szülő kérése).
 import { int, mulberry32, pick, range, shuffle, type Rng } from '../../engine/rng';
 import type { Sheet, SheetSpec } from '../../engine/sheet';
 import type { Visual } from '../../render/visual';
 import { sheetFromPairs, type Matched } from '../common';
-import { LOWER, UPPER, isLower, isUpper, lookalikes, similar } from './letters';
+import { LOWER, UPPER, isLower, isUpper, letterSayId, lookalikes, similar } from './letters';
 
 export const CONTENT_VERSION = 1;
 export const SIZES = [6, 6, 8] as const;
@@ -72,8 +73,13 @@ export function generate(spec: SheetSpec): Sheet {
       t: 'seq',
       gap: 18,
       items: [
-        { t: 'glyph', ch: level === 2 ? target + target.toLowerCase() : target, boxed: true },
-        { t: 'grid', cols: field.length / 2, cell: 50, items: field.map((ch) => ({ t: 'glyph', ch })) },
+        { t: 'glyph', ch: level === 2 ? target + target.toLowerCase() : target, boxed: true, say: letterSayId(target) },
+        {
+          t: 'grid',
+          cols: field.length / 2,
+          cell: 50,
+          items: field.map((ch) => ({ t: 'glyph', ch, say: letterSayId(ch) })),
+        },
       ],
     };
     const answer: Visual = level === 2 ? { t: 'glyph', ch: String(count) } : { t: 'dots', k: count };

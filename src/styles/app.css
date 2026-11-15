@@ -204,6 +204,48 @@ svg {
   stroke: var(--sun);
   stroke-width: 5;
 }
+/* Koppintható betű (Betűkereső): az egész cella érzékeny; koppintáskor a betű röviden kiemelkedik. */
+.vhit {
+  fill: transparent;
+}
+.vsay {
+  cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.vsay.said {
+  animation: said 0.6s ease-out;
+}
+.vsay.said .vg {
+  animation: said-ink 0.6s ease-out;
+}
+@keyframes said-ink {
+  35% {
+    fill: #d97706;
+  }
+}
+@keyframes said {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vsay.said {
+    animation: none;
+  }
+}
+@media print {
+  .vsay.said,
+  .vsay.said .vg {
+    animation: none;
+  }
+}
 /* Tízes keret pöttyei */
 .vdot-on {
   fill: #2a3550;

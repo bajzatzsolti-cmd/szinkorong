@@ -81,6 +81,13 @@ A rossznak jelölt egyszavas klipeket a script `keret` módszerrel gyártja újr
 A `content/audio/sajat/` mappába tett `<azonosító>.mp3` vagy `.m4a` fájl **minden gépi hangnál előbbre való**.
 Az iPhone Diktafon `.m4a`-t ment, az is jó. Részletek: `content/audio/sajat/OLVASSEL.md`.
 
+### Betűnevek (Betűkereső)
+
+A Betűkeresőben bármelyik betűre koppintva elhangzik a neve: „Pé betű.” (a szülő kérése, hogy a betű és a neve
+összekapcsolódjon). A kis- és nagybetű ugyanazt mondja. Azonosítók: `betu-a`, `betu-aa` (Á), `betu-b` … `betu-oe` (Ö),
+`betu-ue` (Ü) … `betu-z`; a szövegük a `manifest.json`-ban. A hangszöveg a kiejtett nevet írja („Pé”, „Ef”, „Há”),
+mert a gépi hang a puszta betűt („P betű”) néha rosszul olvassa. Saját felvétel: `content/audio/sajat/betu-p.m4a` stb.
+
 ### Betűhangok (hangoztatva, nem betűnévvel)
 
 A gépi hang ezeket gyakran rosszul ejti (betűnevet mond: „em”, nem „mmm”). A játék jelenleg **nem** játszik le önálló betűhangot:

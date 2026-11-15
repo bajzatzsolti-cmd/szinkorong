@@ -24,11 +24,13 @@ const server = await createServer({ root, logLevel: 'error', server: { middlewar
 let used;
 try {
   const { TOPICS, buildSheet, buildDemo } = await server.ssrLoadModule('/src/topics/index.ts');
+  const { sayIds } = await server.ssrLoadModule('/src/engine/say-ids.ts');
   used = new Set();
   for (const topic of TOPICS) {
     const sheets = Array.from({ length: 15 }, (_, i) => buildSheet(topic, i));
     if (topic.demoSize) sheets.push(buildDemo(topic));
-    for (const s of sheets) for (const c of [...s.tasks, ...s.answers]) for (const part of c.say?.split('+') ?? []) used.add(part);
+    // A feladatok, megoldások és a képeken belüli hangos elemek (pl. a Betűkereső betűi) azonosítói.
+    for (const s of sheets) sayIds([s.tasks, s.answers], used);
   }
 } finally {
   await server.close();

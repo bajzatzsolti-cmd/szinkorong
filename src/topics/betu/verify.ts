@@ -3,7 +3,7 @@ import type { Sheet } from '../../engine/sheet';
 import { verifyCommon } from '../../engine/verify';
 import type { Visual } from '../../render/visual';
 import { FIELD, MAX_COUNT, SIZES } from './generate';
-import { LOWER, UPPER, isLower, isUpper, lookalikes, similar } from './letters';
+import { LOWER, UPPER, isLower, isUpper, letterSayId, lookalikes, similar } from './letters';
 
 /** A megoldás értéke: pöttyök száma vagy számjegy. */
 function valueOf(v: Visual): { value: number; kind: 'dots' | 'digit' } | null {
@@ -44,6 +44,11 @@ export function verify(sheet: Sheet): string[] {
     const key = targets[0]!.toUpperCase();
     if (seenTargets.has(key)) problems.push(`${label}: ezt a betűt már egy másik feladat is keresi.`);
     seenTargets.add(key);
+
+    // Koppintásra minden betű a saját nevét mondja (rossz név rosszul tanítana).
+    for (const g of [box, ...grid.items] as Extract<Visual, { t: 'glyph' }>[]) {
+      if (g.say !== letterSayId(g.ch)) problems.push(`${label}: a(z) ${g.ch} betű koppintásra nem a saját nevét mondja.`);
+    }
 
     // A mező.
     if (field.length !== FIELD[level]) problems.push(`${label}: a mező ${field.length} betű, kellene: ${FIELD[level]}.`);

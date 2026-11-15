@@ -179,9 +179,19 @@ export function mountSheet(root: HTMLElement, topicId: string, index: number, na
     }
     if (row.dataset.say) say(row.dataset.say);
   });
+  // A feladatban a legbelső hangos elem szól: egy betű a képen belül (Betűkereső), különben az egész feladat.
   tasksEl.addEventListener('click', (e) => {
-    const task = (e.target as HTMLElement).closest<HTMLElement>('.task');
-    if (!demo && task?.dataset.say) say(task.dataset.say);
+    if (demo) return;
+    const hit = (e.target as Element).closest('[data-say]');
+    const id = hit && tasksEl.contains(hit) ? hit.getAttribute('data-say') : null;
+    if (!id) return;
+    say(id);
+    if (hit!.classList.contains('vsay')) {
+      // Rövid kiemelés: látszódjon, melyik betű szólt.
+      hit!.classList.remove('said');
+      void hit!.getBoundingClientRect(); // az animáció újraindításához
+      hit!.classList.add('said');
+    }
   });
   homesEl.addEventListener('click', () => {
     if (locked || demo || selected === null) return;

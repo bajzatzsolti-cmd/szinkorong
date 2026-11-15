@@ -2,6 +2,7 @@
 // verifikátor valóban elkapja a hibákat. Új témakörnél csak meg kell hívni: topicSuite(topic).
 import { describe, expect, it } from 'vitest';
 import { range } from '../../src/engine/rng';
+import { sayIds } from '../../src/engine/say-ids';
 import { SHEETS_PER_TOPIC, levelOf, type Sheet, type SheetSpec } from '../../src/engine/sheet';
 import { buildSheet } from '../../src/topics';
 import type { Topic } from '../../src/topics/types';
@@ -36,10 +37,9 @@ export function topicSuite(topic: Topic, extra?: { seeds?: number }): void {
       const manifest = (await import('../../content/audio/manifest.json')).default as Record<string, string>;
       for (const index of range(SHEETS_PER_TOPIC)) {
         const sheet = buildSheet(topic, index);
-        for (const c of [...sheet.tasks, ...sheet.answers]) {
-          // Egy hanganyag több klip sora is lehet ("sablon+szo-macska"): mindegyik része kell.
-          for (const part of c.say?.split('+') ?? []) expect(manifest[part], `${part} hiányzik a manifestből`).toBeTruthy();
-        }
+        // Egy hanganyag több klip sora is lehet ("sablon+szo-macska"): mindegyik része kell; a képeken belüli
+        // hangos elemek (pl. a Betűkereső betűi) is.
+        for (const part of sayIds([sheet.tasks, sheet.answers])) expect(manifest[part], `${part} hiányzik a manifestből`).toBeTruthy();
         expect(manifest[topic.instructionId(sheet.spec.level, sheet.spec.index)]).toBeTruthy();
       }
     });

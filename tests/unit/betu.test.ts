@@ -5,9 +5,12 @@ import type { Visual } from '../../src/render/visual';
 import { buildSheet } from '../../src/topics';
 import { betu } from '../../src/topics/betu';
 import { FIELD } from '../../src/topics/betu/generate';
-import { LOWER, UPPER, lookalikes, similar } from '../../src/topics/betu/letters';
+import manifest from '../../content/audio/manifest.json' with { type: 'json' };
+import { LETTER_NAMES, LOWER, UPPER, letterSayId, lookalikes, similar } from '../../src/topics/betu/letters';
 import { verify } from '../../src/topics/betu/verify';
 import { clone, topicSuite } from './topic-suite';
+
+const texts = manifest as Record<string, string>;
 
 topicSuite(betu);
 
@@ -36,6 +39,20 @@ describe('Betűkereső – betűkészlet', () => {
     expect(similar('O')).toEqual(expect.arrayContaining(['Ö', 'C']));
     expect(similar('E')).toContain('F');
     expect(similar('M')).toContain('N');
+  });
+
+  it('minden betűnek van neve és saját hangja; kis- és nagybetű ugyanazt mondja', () => {
+    const ids = new Set<string>();
+    for (const ch of UPPER) {
+      const id = letterSayId(ch);
+      expect(id, ch).toMatch(/^betu-[a-z]+$/);
+      expect(letterSayId(ch.toLowerCase())).toBe(id);
+      expect(texts[id], id).toBe(`${LETTER_NAMES[ch]} betű.`);
+      ids.add(id);
+    }
+    expect(ids.size).toBe(UPPER.length);
+    expect(letterSayId('Pp')).toBe('betu-p');
+    expect(letterSayId('ö')).toBe('betu-oe');
   });
 
   it('a nagy I és a kis l összetéveszthető', () => {
@@ -123,6 +140,14 @@ describe('Betűkereső – a verifikátor elkapja a hibákat', () => {
     const grid = task.items[1] as Grid;
     grid.items.forEach((g, i) => ((g as Glyph).ch = i === 0 ? 'I' : i === 1 ? 'l' : i % 2 ? 'M' : 'm'));
     expect(verify(s).some((p) => p.includes('összetéveszthető'))).toBe(true);
+  });
+
+  it('a betű koppintásra rossz nevet mondana', () => {
+    const s = base(3);
+    const { grid } = parts(s.tasks[0]!.visual);
+    const g = grid.items[0] as Glyph;
+    g.say = letterSayId(g.ch === 'A' ? 'B' : 'A');
+    expect(verify(s).some((p) => p.includes('saját nevét'))).toBe(true);
   });
 
   it('kisbetű az 1. szint mezőjében', () => {
