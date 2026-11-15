@@ -32,6 +32,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:29:26.354Z"
  },
+ "60928298": {
+  "fp": "4786ce8d",
+  "szoveg": "Á betű.",
+  "azonositok": [
+   "betu-aa"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:53.105Z"
+ },
  "79746507": {
   "fp": "6894842a",
   "szoveg": "eper",
@@ -164,6 +175,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:18.324Z"
  },
+ "0924f4d7": {
+  "fp": "dc29dd34",
+  "szoveg": "Ü betű.",
+  "azonositok": [
+   "betu-ue"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:58.630Z"
+ },
  "098f30a2": {
   "fp": "8db27b79",
   "szoveg": "Ha hideg van, kesztyűt húzunk. Kint minden fehér, és befagyott a tó. Mit húzunk?",
@@ -185,6 +207,17 @@
   "hossz_mp": 11.92,
   "kredit": 69,
   "generalva": "2026-11-14T14:17:06.041Z"
+ },
+ "0cd02005": {
+  "fp": "2f4d2580",
+  "szoveg": "Ká betű.",
+  "azonositok": [
+   "betu-k"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:56.014Z"
  },
  "0ce11c08": {
   "fp": "f152d205",
@@ -648,6 +681,17 @@
   "kredit": 24,
   "generalva": "2026-11-14T14:17:40.749Z"
  },
+ "2e2fdb19": {
+  "fp": "8272de24",
+  "szoveg": "Gé betű.",
+  "azonositok": [
+   "betu-g"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:54.713Z"
+ },
  "2f2493d3": {
   "fp": "9d3f213a",
   "szoveg": "uborka",
@@ -824,6 +868,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:43:54.880Z"
  },
+ "3c9af30e": {
+  "fp": "41e66a21",
+  "szoveg": "Há betű.",
+  "azonositok": [
+   "betu-h"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:55.241Z"
+ },
  "3cb1112a": {
   "fp": "ecf253b3",
   "szoveg": "cumisüveg",
@@ -944,6 +999,28 @@
   "hossz_mp": 0.72,
   "kredit": 3,
   "generalva": "2026-11-14T13:43:56.733Z"
+ },
+ "4191cb8d": {
+  "fp": "7169afa6",
+  "szoveg": "Ö betű.",
+  "azonositok": [
+   "betu-oe"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.28,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:57.103Z"
+ },
+ "41a95028": {
+  "fp": "1b57fa3f",
+  "szoveg": "Jé betű.",
+  "azonositok": [
+   "betu-j"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:55.443Z"
  },
  "42111dfc": {
   "fp": "e7a2f7fd",
@@ -1134,6 +1211,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:29.691Z"
  },
+ "4b574380": {
+  "fp": "7c3c4097",
+  "szoveg": "El betű.",
+  "azonositok": [
+   "betu-l"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:56.098Z"
+ },
  "4c2e4d27": {
   "fp": "8e61cf4a",
   "szoveg": "Ha levelet kapunk, a postaládában találjuk. Levelet kaptunk. Hol találjuk?",
@@ -1290,6 +1378,17 @@
   "kredit": 28,
   "generalva": "2026-11-14T14:17:40.418Z"
  },
+ "54db0f60": {
+  "fp": "ee636a85",
+  "szoveg": "É betű.",
+  "azonositok": [
+   "betu-ee"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:54.348Z"
+ },
  "54db0fed": {
   "fp": "7ecf2284",
   "szoveg": "Ha születésnapi zsúr van, lufit fújunk. Ma van a maci zsúrja, jönnek a vendégek. Mit fújunk?",
@@ -1355,6 +1454,28 @@
   "hossz_mp": 0.72,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:29.880Z"
+ },
+ "57f7ca54": {
+  "fp": "2583936b",
+  "szoveg": "Vé betű.",
+  "azonositok": [
+   "betu-v"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:59.049Z"
+ },
+ "5866edf8": {
+  "fp": "6eb98bcf",
+  "szoveg": "Zé betű.",
+  "azonositok": [
+   "betu-z"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:59.361Z"
  },
  "5baae36f": {
   "fp": "5a2fd32e",
@@ -1521,6 +1642,17 @@
   "kredit": 12,
   "generalva": "2026-11-14T14:17:18.765Z"
  },
+ "60adb2be": {
+  "fp": "c8f552c1",
+  "szoveg": "Pé betű.",
+  "azonositok": [
+   "betu-p"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.89,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:57.676Z"
+ },
  "61ba76f9": {
   "fp": "c6d14a32",
   "szoveg": "kéz",
@@ -1619,6 +1751,17 @@
   "hossz_mp": 0.4,
   "kredit": 1,
   "generalva": "2026-11-14T13:44:20.181Z"
+ },
+ "644b5e2d": {
+  "fp": "69d71a64",
+  "szoveg": "Es betű.",
+  "azonositok": [
+   "betu-s"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:57.852Z"
  },
  "652072ec": {
   "fp": "19778f09",
@@ -1730,6 +1873,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:05.641Z"
  },
+ "6d4ba115": {
+  "fp": "a2e4bf60",
+  "szoveg": "Cé betű.",
+  "azonositok": [
+   "betu-c"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:53.748Z"
+ },
  "6dde5128": {
   "fp": "9815c457",
   "szoveg": "helikopter",
@@ -1840,6 +1994,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:29:26.701Z"
  },
+ "758cd154": {
+  "fp": "a40f8519",
+  "szoveg": "E betű.",
+  "azonositok": [
+   "betu-e"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:53.784Z"
+ },
  "761c0091": {
   "fp": "234fe8a8",
   "szoveg": "galamb",
@@ -1884,6 +2049,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:15.055Z"
+ },
+ "7a94bae0": {
+  "fp": "9577dd05",
+  "szoveg": "I betű.",
+  "azonositok": [
+   "betu-i"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:55.390Z"
  },
  "7ca2cb81": {
   "fp": "788ed71c",
@@ -1939,6 +2115,17 @@
   "hossz_mp": 6.32,
   "kredit": 30,
   "generalva": "2026-11-14T14:18:12.394Z"
+ },
+ "81d334ab": {
+  "fp": "4dcdad9a",
+  "szoveg": "Em betű.",
+  "azonositok": [
+   "betu-m"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:56.145Z"
  },
  "81fe88b4": {
   "fp": "265a084b",
@@ -2006,6 +2193,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:44:19.504Z"
  },
+ "864c2e18": {
+  "fp": "3d175b0d",
+  "szoveg": "A betű.",
+  "azonositok": [
+   "betu-a"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:53.010Z"
+ },
  "886c6229": {
   "fp": "25a72c36",
   "szoveg": "Ha esik a hó, hóembert építünk. Esik a hó. Mit építünk?",
@@ -2028,6 +2226,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:32.477Z"
  },
+ "88f9fbc2": {
+  "fp": "ca05f7c5",
+  "szoveg": "Té betű.",
+  "azonositok": [
+   "betu-t"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.64,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:58.222Z"
+ },
  "89cd2bba": {
   "fp": "9ea767ed",
   "szoveg": "Melyik darab hiányzik a képből? Húzd a színes korongot a kivágott darab mellé!",
@@ -2038,6 +2247,17 @@
   "hossz_mp": 5.28,
   "kredit": 31,
   "generalva": "2026-11-14T13:43:47.650Z"
+ },
+ "89eea444": {
+  "fp": "d0e41389",
+  "szoveg": "U betű.",
+  "azonositok": [
+   "betu-u"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:58.631Z"
  },
  "8a71ef7d": {
   "fp": "ad13dd12",
@@ -2170,6 +2390,17 @@
   "hossz_mp": 0.64,
   "kredit": 2,
   "generalva": "2026-11-14T13:44:06.330Z"
+ },
+ "928ab9f2": {
+  "fp": "00e7fbb5",
+  "szoveg": "Dé betű.",
+  "azonositok": [
+   "betu-d"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:53.928Z"
  },
  "92bf41c2": {
   "fp": "429c00cd",
@@ -2412,6 +2643,17 @@
   "hossz_mp": 1.2,
   "kredit": 4,
   "generalva": "2026-11-14T13:44:33.442Z"
+ },
+ "a3b2bd00": {
+  "fp": "bff3ef27",
+  "szoveg": "Bé betű.",
+  "azonositok": [
+   "betu-b"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.88,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:53.178Z"
  },
  "a4050fdb": {
   "fp": "ebe49a46",
@@ -2953,6 +3195,17 @@
   "kredit": 2,
   "generalva": "2026-11-14T13:44:08.174Z"
  },
+ "c769a846": {
+  "fp": "3170c31d",
+  "szoveg": "En betű.",
+  "azonositok": [
+   "betu-n"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:56.781Z"
+ },
  "c791c146": {
   "fp": "1515dd0f",
   "szoveg": "Jól nézd meg a képek sorrendjét! Amikor eltűnnek, koppints rájuk ugyanabban a sorrendben!",
@@ -3206,6 +3459,17 @@
   "hossz_mp": 2.64,
   "kredit": 12,
   "generalva": "2026-11-14T14:17:08.276Z"
+ },
+ "d6578762": {
+  "fp": "95910c8b",
+  "szoveg": "O betű.",
+  "azonositok": [
+   "betu-o"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:56.818Z"
  },
  "d6cc8cbb": {
   "fp": "5742c568",
@@ -3663,6 +3927,17 @@
   "kredit": 3,
   "generalva": "2026-11-14T13:43:53.472Z"
  },
+ "f2ca3fca": {
+  "fp": "438972d1",
+  "szoveg": "Er betű.",
+  "azonositok": [
+   "betu-r"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 0.96,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:57.552Z"
+ },
  "f3d401da": {
   "fp": "9b2a2dcf",
   "szoveg": "kacsa",
@@ -3739,6 +4014,17 @@
   "hossz_mp": 0.88,
   "kredit": 4,
   "generalva": "2026-11-14T13:44:26.527Z"
+ },
+ "f854a73e": {
+  "fp": "7318f395",
+  "szoveg": "Ef betű.",
+  "azonositok": [
+   "betu-f"
+  ],
+  "modszer": "mondat",
+  "hossz_mp": 1.04,
+  "kredit": 3,
+  "generalva": "2026-11-15T10:17:54.713Z"
  },
  "f994d642": {
   "fp": "f259b60f",

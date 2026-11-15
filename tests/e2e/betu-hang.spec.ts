@@ -29,7 +29,7 @@ test('Betűkereső: a betűre koppintva elhangzik a neve', async ({ page }) => {
   // Az első feladat mezőjének első betűje (a keretes keresett betű után).
   const letter = page.locator('.task').first().locator('.vsay').nth(1);
   const id = await letter.getAttribute('data-say');
-  const seq = sheet.tasks[0]!.visual as { items: [unknown, { items: { ch: string; say: string }[] }] };
+  const seq = sheet.tasks[0]!.visual as unknown as { items: [unknown, { items: { ch: string; say: string }[] }] };
   expect(id).toBe(seq.items[1].items[0]!.say);
 
   const before = (await said()).length;
